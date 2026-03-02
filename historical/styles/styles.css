@@ -1,3 +1,5 @@
+
+
 .sentence {
 	color: #ffffff55;
 	text-shadow: none;
@@ -171,7 +173,7 @@ ul li.coptic {
 	//background: linear-gradient(to right, oklch(0.56 0.09 210.12), oklch(0.51 0 0));
 	//-webkit-background-clip: text;
 	//color: transparent;
-	//font-size: 2em;
+	font-size: 2em;
 }
 
 ::selection {
@@ -210,7 +212,7 @@ ul li.coptic {
 
 .languages li.coptic:before {
 	content: "CO";
-	color: white;
+	color: #ffffff33;
 	position: absolute;
 	left: 0;
 	font-family: rk_sans-serif;
@@ -218,7 +220,7 @@ ul li.coptic {
 
 .languages li.italian:before {
 	content: "IT";
-	color: white;
+	color: #ffffff33;
 	position: absolute;
 	left: 0;
 	font-family: rk_sans-serif;
@@ -226,7 +228,7 @@ ul li.coptic {
 
 .languages li.english:before {
 	content: "EN";
-	color: white;
+	color: #ffffff33;
 	position: absolute;
 	left: 0;
 	font-family: rk_sans-serif;
@@ -242,11 +244,11 @@ ul li.coptic {
 }
 
 .review {
-	color: #d29e3f;
+	//color: #d29e3f;
 }
 
 .review * {
-	color: inherit !important;
+	//color: inherit !important;
 }
 
 /*
