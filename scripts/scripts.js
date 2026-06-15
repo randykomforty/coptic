@@ -24,7 +24,7 @@ function applyRegexesDictionary(x) {
 
 		let headword = x[randomLemma].headword;
 		for (let key in arrayStyling) {
-			let regexStyling = new RegExp(arrayStyling[key][0], "msg");
+			let regexStyling = new RegExp(arrayStyling[key][0], "msgu");
 			headword = headword.replace(regexStyling, arrayStyling[key][1]);
 		}
 		processedText = headword;

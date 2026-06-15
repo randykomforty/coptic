@@ -16,7 +16,7 @@ function applyRegexesAdditions(y) {
 	let cellContent = [];
 	cellContent[0] = y.innerHTML;
 	for (let key in arrayStyling) {
-		let regexStyling = new RegExp(arrayStyling[key][0], "msg");
+		let regexStyling = new RegExp(arrayStyling[key][0], "msgu");
 		cellContent[0] = cellContent[0].replace(regexStyling, arrayStyling[key][1]);
 		cellContent[0] = cellContent[0].replace(/\\\\(\[|\]|\(|\))/mgs, "$1");
 	}

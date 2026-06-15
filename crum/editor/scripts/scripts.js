@@ -31,7 +31,7 @@ function applyRegexes(x) {
 	let processedText = (x.innerHTML||this.innerHTML);
 	//let processedText = editorText.innerHTML;
 	for (let key in arrayStyling) {
-		let regexStyling = new RegExp(arrayStyling[key][0], "msg");
+		let regexStyling = new RegExp(arrayStyling[key][0], "msgu");
 		processedText = processedText.replace(regexStyling, arrayStyling[key][1]);
 	}
 	previewRendered.innerHTML = processedText;

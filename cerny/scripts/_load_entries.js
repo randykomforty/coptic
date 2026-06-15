@@ -55,7 +55,7 @@ function applyRegexes(x) {
 	}
 	let y = processedText;
 	for (let i = 0; i < arrayStyling.length; i++) {
-		let regexStyling = new RegExp(arrayStyling[i][0], "msg");
+		let regexStyling = new RegExp(arrayStyling[i][0], "msgu");
 		y = y.replace(regexStyling, arrayStyling[i][1]);
 	}
 	return y;
@@ -63,7 +63,7 @@ function applyRegexes(x) {
 
 function countReplacements(z) {
 	for (let i = 0; i < arrayListing.length; i++) {
-	let regexListing = new RegExp(arrayListing[i][0], "msg");
+	let regexListing = new RegExp(arrayListing[i][0], "msgu");
 		z = z.replace(regexListing, arrayListing[i][1]);
 	}
 	return z;

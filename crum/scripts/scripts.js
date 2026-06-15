@@ -34,7 +34,7 @@ function applyRegexesDictionary(x) {
 	for (let i = 0; i < x.length; i++) {
 		let headword = x[i].headword;
 		for (let key in arrayStyling) {
-			let regexStyling = new RegExp(arrayStyling[key][0], "msg");
+			let regexStyling = new RegExp(arrayStyling[key][0], "msgu");
 			if (!headword) {
 				 continue;
 			}
@@ -157,7 +157,7 @@ addAndCorrectNote.forEach(x => {
 function applyRegexesAdditions(y) {
 	let cellContent = y.innerHTML;
 	for (let key in arrayStyling) {
-		let regexStyling = new RegExp(arrayStyling[key][0], "msg");
+		let regexStyling = new RegExp(arrayStyling[key][0], "msgu");
 		cellContent = cellContent.replace(regexStyling, arrayStyling[key][1]);
 	}
 	return cellContent;
