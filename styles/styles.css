@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* Noto Sans Symbols 2 supplies the Ancient Greek Numbers (e.g. 𐅵 = U+10175
-   GREEK ONE HALF SIGN), which rk_greek (Gentium Plus) lacks. */
+   GREEK ONE HALF SIGN, 𐆎 = U+1018E NOMISMA SIGN), which rk_greek
+   (Gentium Plus) lacks. */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap");
 
 /* universal properties */

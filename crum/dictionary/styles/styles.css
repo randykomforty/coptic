@@ -68,7 +68,7 @@ i {
 }
 
 .greek {
-	font-family: rk_greek, rk_coptic;
+	font-family: rk_greek, "Noto Sans Symbols 2", rk_coptic;
 	color: #54b0c3;
 }
 
