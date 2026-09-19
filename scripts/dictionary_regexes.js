@@ -24,13 +24,13 @@ function language_replace(_, g1) {
 	return `<span class="${lang}">${g1}</span>`;
 }
 
-	const arrayStyling = {
+const arrayStyling = {
 	//ampersand: [/&(?!amp;)/, "&amp;"],
 	//ampersand: [/&amp\;/, "&"],
 	//verbose: [/@(.+?)@/, "<span class=\"verbose\">$1<\/span>"],
 	asterisk: [/\\\*/, "&ast;"],
 	paragraph: [/(\n)/, "</p><p>"],
-	tab: [/\\t/, "&nbsp; &nbsp; &nbsp; &nbsp;"],
+	tab: [/\\t/, "&nbsp; &nbsp; &nbsp;"],
 	em: [/__(.+?)__/, "<em>$1<\/em>"],
 	bold: [/\*(.+?)\*/, "<b>$1<\/b>"],
 	italic: [/_(.+?)_/, "<i>$1<\/i>"],
