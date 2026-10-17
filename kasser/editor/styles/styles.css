@@ -1,0 +1,70 @@
+body,
+#container {
+	max-width: revert;
+}
+
+header {
+	display: none;
+}
+
+main {
+	font-size: 1.5em;
+	overflow-y: hidden;
+	background: #111;
+	padding-left: 0;
+}
+
+#interface {
+	display: flex;
+	height: 100dvh;
+	scrollbar-color: currentColor transparent;
+}
+
+#editor_text,
+#rendered_view {
+	background: #000000;
+	outline: 1px solid #ffffff55;
+	width: 50dvw;
+	margin: .5em;
+	padding: .5em;
+	overflow-y: scroll;
+	line-height: 1.5;
+}
+
+#editor_text {
+	white-space: pre-wrap;
+	font-family: rk_coptic, rk_greek;
+	caret-color: lightgreen;
+	padding-bottom: 2em;
+}
+
+#rendered_view::selection {
+	background: #144b76;
+	color: #eeeeee;
+}
+
+#rendered_view .entry {
+	border-bottom: 1px solid #ffffff33;
+	padding: .5em 0;
+}
+
+#rendered_view p {
+	margin: 0;
+}
+
+#rendered_view p + p {
+	margin-top: .5em;
+}
+
+.coptic {
+	color: goldenrod;
+}
+
+.dialect {
+	color: steelblue;
+}
+
+sup,
+sub {
+	line-height: 0;
+}
