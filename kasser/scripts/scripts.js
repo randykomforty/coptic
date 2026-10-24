@@ -18,10 +18,8 @@ function parse(tsv) {
 	const kasser = column("Kasser");
 	const vide = column("_v_");
 	const entry = column("Entry");
-	const wip = column("WIP");
 	return lines
-		// A partially written entry is treated as if it were empty.
-		.filter(cells => cells[entry] && !cells[wip])
+		.filter(cells => cells[entry])
 		.map(cells => ({ kasser: cells[kasser], vide: !!cells[vide], entry: cells[entry] }));
 }
 

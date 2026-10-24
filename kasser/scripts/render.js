@@ -48,13 +48,17 @@ const substitutions = [
 	[/&/g, "&amp;"],
 	[/</g, "&lt;"],
 	[/>/g, "&gt;"],
-	[/_(.+?)_/g, "<i>$1</i>"],
+	// Italics take a single underscore or a double one, rendered alike.
+	[/(__?)(.+?)\1/g, "<i>$2</i>"],
 	// A siglum must be matched before other bracketed text.
 	[/(?<!\[)\[\[(\*?\p{Script=Latin}[^\[\]]*)\]\](?!\])/gu, siglumReplace],
 	[/(?<!\[)\[\[(.*?)\]\](?!\])/gu, languageReplace],
-	// Outside sigla, a subscript only occurs in the manuscript numbers M₁ to M₁₀.
-	[/M~([1-9]|10)(?!\d)/g, "M<sub>$1</sub>"],
+	// A subscript outside a siglum is parenthesized, a number, or a word:
+	// [[ⲁⲁ]]~(h), (ManiP~(qq)), M~2M~4, (C 206,46 ~vl?).
+	[/~(\([^()]*\)|\d+|[a-z?]+)/g, "<sub>$1</sub>"],
 	[/\\n/g, "</p><p>"],
+	// A superscript outside a siglum.
+	[/\^([-–—\w\p{L}]+)/gu, "<sup>$1</sup>"],
 	[/\/\/(.*?)\/\/(.*?)\/\//g, addendumReplace],
 ];
 
