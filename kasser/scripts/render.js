@@ -58,7 +58,7 @@ const substitutions = [
 	// A subscript outside a siglum is parenthesized, a number, or a word:
 	// [[ⲁⲁ]]~(h), (ManiP~(qq)), M~2M~4, (C 206,46 ~vl?).
 	[/~(\([^()]*\)|\d+|[a-z?]+)/g, "<sub>$1</sub>"],
-	[/\\n/g, "</p><p>"],
+	[/\\\\?n/g, "</p><p>"],
 	// A superscript outside a siglum.
 	[/\^([-–—\w\p{L}]+)/gu, "<sup>$1</sup>"],
 	[/\/\/(.*?)\/\/(.*?)\/\//g, addendumReplace],
