@@ -1,7 +1,3 @@
-body {
-	background: #111111;
-	margin: 0em 1em 1em;
-}
 
 h3 {
 	color: goldenrod !important;
@@ -27,10 +23,6 @@ h4 {
 	padding: 1em 2em;
 }
 
-p {
-	//margin-top: 0;
-}
-
 .ready {
 	color: #90ee90;
 	color: goldenrod;
@@ -50,18 +42,6 @@ audio {
 
 .morpheme span.c {
 	transition: color .5s;
-}
-
-.punct {
-	//color: gray;
-}
-
-main {
-	//display: flex;
-}
-
-main > div {
-	//border: 1px solid;
 }
 
 #ap_218,

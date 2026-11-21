@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<title>Kasser (1966)</title>
+		<title>CopticWiki: Kasser (1966)</title>
 		<link rel="icon" type="image/x-icon" href="/styles/images/favicon_02112026.png">
 		<link rel="stylesheet" href="/styles/fonts.css">
 		<link rel="stylesheet" href="/styles/styles.css">
-		<link rel="stylesheet" href="./styles/styles.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="format-detection" content="telephone=no">
 		<meta charset="UTF-8">
 		<style>
+			body {
+				line-height: 1.5;
+			}
+			.text-align-center {
+				text-align: center;
+			}
+			.uppercase {
+				text-transform: uppercase;
+			}
+			.italicize {
+				font-style: italic;
+			}
+			.paragraph-indent {
+				text-indent: 1em;
+			}
 			.coptic {
 				color: goldenrod;
 			}
 			.dialect {
 				color: steelblue;
 			}
+			#introduction p sup a {
+				text-decoration: none;
+			}
 			table {
 				border-collapse: collapse;
+			}
+			tr {
 			}
 			td {
 				vertical-align: top;
@@ -30,43 +49,663 @@
 			.coptic sup {
 				font-family: sans-serif;
 			}
-			#dictionary tr {
+			#dictionary tr,
+			#sigles-et-abreviations tr,
+			#addenda tr {
 				border: 1px solid;
+			}
+			#noms-dauteurs {
+				border: 1px solid;
+			}
+			#noms-dauteurs tr td:nth-child(1),
+			#noms-dauteurs tr td:nth-child(2) {
+				color: goldenrod;
+			}
+			#noms-dauteurs tr td:nth-child(1),
+			#addenda td:nth-child(1),
+			#addenda td:nth-child(2),
+			#addenda td:nth-child(3) {
+				white-space: nowrap;
+			}
+			#noms-dauteurs tr td:nth-child(2) {
+				font-variant: small-caps;
+			}
+			.author-initials,
+			.author-case {
+				color: goldenrod;
+			}
+			.author-case,
+			.roman-small-caps {
+				font-variant: small-caps;
+			}
+			.ibid-arrow {
+				text-align: center;
+			}
+			#sigles-et-abreviations .square-brackets {
+				border-top: 1px solid transparent;
+				padding-top: 0;
+			}
+			#sigles-et-abreviations tr:has(+ .square-brackets) {
+				border-bottom: 1px solid transparent;
+				padding-bottom: 0;
+			}
+			#sigles-et-abreviations .square-brackets td {
+				padding-top: 0;
+			}
+			#sigles-et-abreviations tr:has(+ .square-brackets) td {
+				padding-bottom: 0;
+			}
+			table {
+				width: 100%;
+			}
+			th, td {
+				border: 1px solid;
+				padding: .5em;
+			}
+			td.nombre {
+				border-bottom: 1px solid transparent;
+			}
+			td.schema {
+				border-right: 1px solid transparent;
+			}
+			#tripartite tr.infinitif td {
+				border-right: 1px solid transparent;
+			}
+			#tripartite tr.infinitif td:last-child {
+				border-right: 1px solid;
+			}
+			#container nav {
+				//font-size: .8em;
+				//position: fixed;
+				//left: -0%;
+				//background: #ffffff33;
 			}
 		</style>
 	</head>
 	<body>
+		<header>
+			<h1><a href="/">CopticWiki</a></h1>
+		</header>
 		<div id="container">
-			<header>
-				<div id="logos">
-					<h1><a href="/">CopticWiki</a></h1>
-					<div class="socials">
-						<a href="https://ko-fi.com/copticwiki"><img class="logo-kofi" src="/styles/images/logos/kofi_symbol.svg" alt="Ko-Fi"></a>
-						<a href="https://buymeacoffee.com/copticwiki"><img class="logo-buymeacoffee" src="/styles/images/logos/buymeacoffee.png" alt="Buy Me a Coffee"></a>
-						<a href="https://www.patreon.com/c/CopticWiki"><img class="logo-patreon" src="/styles/images/logos/Patreon_logo.svg.png" alt="Patreon"></a>
-						<a href="https://www.youtube.com/@coptic.wiki.official"><img class="logo-youtube" src="/styles/images/logos/yt_icon_white_digital.png" alt="YouTube"></a>
-					</div>
-				</div>
-				<div class="title">
-					<h2>Compléments Morphologiques au Dictionnaire de Crum</h2>
-					<h3>Rodolphe Kasser</h3>
-				</div>
-				<div class="linkpath">
-					<a href="/">Home</a> &gt; Kasser (1966)</div>
-			</header>
+			<nav>
+				<ul>
+					<li>
+						<a href="/lambdin/"><span class="author">[Lambdin]</span> Introduction to Sahidic Coptic</a>
+					</li>
+					<li>
+						<a href="/lambdin_bohairic/"><b>WIP</b> Lambdin (Bohairic version)</a>
+					</li>
+					<li>
+						<a href="/mallon/"><span class="author">[Mallon]</span> Grammaire Copte</a>
+					</li>
+					<li>
+						<a href="/crum/"><span class="author">[Crum]</span> A Coptic Dictionary</a>
+					</li>
+					<li>
+						<a href="/kasser/"><b>WIP</b> [Kasser] Compléments au Dictionnaire Copte de Crum</a>
+					</li>
+					<li>
+						<a href="/kasser1966/"><b>WIP</b> [Kasser] Compléments Morphologiques au Dictionnaire de Crum</a>
+					</li>
+					<li>
+						<a href="/vycichl/"><b>WIP</b> [Vycichl] Dictionnaire Étymologique de la Langue Copte</a>
+					</li>
+					<li>
+						<a href="/spiegelberg/"><b>WIP</b> [Spiegelberg] Koptisches Handwörterbuch</a>
+					</li>
+					<li>
+						<a href="/westendorf/"><b>WIP</b> [Westendorf] Koptisches Handwörterbuch</a>
+					</li>
+					<li>
+						<a href="/cerny/"><b>WIP</b> [Černý] Coptic Etymological Dictionary</a>
+					</li>
+				</ul>
+			</nav>
 			<main>
-				<div id="introduction">
-					<h3>Introduction</h3>
+				<h2>Compléments Morphologiques au Dictionnaire de Crum</h2>
+				<h3>Rodolphe Kasser</h3>
+				<div>
+					<h3 class="text-align-center uppercase">Le Vocabulaire Caractéristique des Quatre Nouveaux Dialectes Coptes: <span class="dialect"><i>P</i></span>, <span class="dialect"><i>M</i></span>, <span class="dialect"><i>H</i></span> et <span class="dialect"><i>G</i></span></h3>
+					<p class="paragraph-indent">
+						Dans une publication récente, «<i>Compléments au dictionnaire copte de Crum</i>», IFAO, Le Caire 1964, nous avions cherché à rassembler, d'une manière aussi exhaustive que possible, toutes les formes coptes absentes du dictionnaire de Crum, soit que ce grand coptisant les eût considérées comme négligeables^1, soit qu'il lui eût été impossible de les connaître, parce que les textes qui les attestent apparurent seulement après sa mort. La moisson que nous avons pu amasser ainsi est extrêmement riche ... mais on peut regretter que les formes les plus intéressantes, caractéristiques de dialectes purs, déjà connus ou nouveaux, s'y trouvent noyées dans la foule bigarrée des formes corrompues, nées d'accidents graphiques ou de mélanges dialectaux.
+					</p>
+					<p class="paragraph-indent">
+						Par conséquent, nous croyons rendre service aux égyptologues et aux coptisants en établissant à leur intention la liste ci-dessous, dans laquelle nous n'avons fait entrer que les formes pures (ou les formes «mêlées» les plus proches des formes pures, quand ces dernières faisaient défaut).
+					</p>
+					<p class="paragraph-indent">
+						Etant le résultat d'une sélection, cette liste ne reproduira donc pas tous les éléments amassés dans notre volume de «Compléments»; mais elle contiendra néanmoins quelques nouveautés absentes de ce dernier ouvrage. D'abord, reprenant tout le fonds morphologique de l'ancien dictionnaire, nous avons récupéré ici ou là^1, en faisant précéder leur sigle de l'astérisque, des formes classées par Crum sous l'un ou l'autre des dialectes connus de lui, et qui, cependant, «en droit», appartiennent à l'un des nouveaux dialectes, ou à leur sphère d'influence^2. Ensuite, grâce à l'extrême obligeance de MM. les professeurs J. Assfalg (Munich), J. Drescher (Blackpool), et T. Petersen (Washington), qui ont consenti à nous communiquer les photocopies (ou les copies) de textes inédits dont ils préparent la publication, et qui nous ont permis d'en faire usage dans ces «Compléments», nous avons pu, d'une part, déterminer un dialecte entièrement nouveau, <span class="dialect"><i>H</i></span>, l'«achmouninique», et, d'autre part, il nous a été possible de compléter largement notre connaissance du dialecte <span class="dialect"><i>M</i></span>.
+					</p>
+					<p class="paragraph-indent">
+						Les quatre nouveaux idiomes coptes dont nous parlons ici sont donc les suivants:
+					</p>
+					<p class="paragraph-indent">
+						<span class="dialect"><i>P</i></span>: ce dialecte est représenté, à ce jour, uniquement par le Papyrus Bodmer VI^3; en le comparant sommairement à <span class="dialect"><i>S</i></span> ou <span class="dialect"><i>A</i></span>, idiomes dont il est le plus proche, on voit que, dans <span class="dialect"><i>P</i></span>, <span class="coptic">ⲕ</span> est remplacé par <span class="coptic">ⲹ</span>, <span class="coptic">ϭ</span> par <span class="coptic">ⲕ</span> (ou <span class="coptic">ⳤ</span>), <span class="coptic">ⲛ</span> par <span class="coptic">ⲻ</span> ou <span class="coptic">ⲳ</span> (cette dernière lettre ayant aussi parfois la valeur d'<i>aïn</i> ou d'<i>aleph</i>); en outre, <span class="coptic">ⳋ</span>, dans certains mots, occupe la place de <span class="coptic">ϣ</span> <span class="dialect"><i>S</i></span> ou <span class="coptic">ⳉ</span> <span class="dialect"><i>A</i></span>, et <span class="coptic">ϧ</span> est conservé comme en bohaïrique.
+					</p>
+					<p class="paragraph-indent">
+						<span class="dialect"><i>M</i></span>: ce dialecte est représenté maintenant non seulement par les quelques manuscrits plus ou moins fayoumisants connus par P. Kahle (cf. <i>Bala'izah</i> I, p. 220–227), mais encore par les deux importants manuscrits déjà cités par nous^4; en le comparant sommairement à <span class="dialect"><i>S</i></span>, on voit que, dans <span class="dialect"><i>M</i></span>, au début ou au milieu du mot, <span class="coptic">ⲱ</span> est remplacé par <span class="coptic">ⲟ</span>^5.
+					</p>
+					<p class="paragraph-indent">
+						<span class="dialect"><i>H</i></span>: ce dialecte est représenté par l'important Papyrus Morgan (Codex C.31) appelé PCodMor dans le dictionnaire de Crum; copié par trois mains différentes, appelées <span class="greek">α</span>, <span class="greek">β</span>, et <span class="greek">γ</span> par Drescher, il contient aussi trois variétés dialectales différentes: dans <span class="greek">α</span> on trouve <span class="dialect"><i>H</i></span> à peu près pur, dans <span class="greek">β</span> on trouve un sahidique teinté d'achmouninique (<span class="dialect"><i>S<sup>h</sup></i></span>), et dans <span class="greek">γ</span> on trouve, très irrégulièrement, une variété dialectale malaisée à définir, où <span class="dialect"><i>H</i></span> joue cependant un rôle important (nous l'appelons par conséquent soit <span class="dialect"><i>H<sup>x</sup></i></span>, soit <span class="dialect"><i>H<sup>xm</sup></i></span>, soit <span class="dialect"><i>H<sup>xs</sup></i></span>, etc.); en comparant sommairement <span class="dialect"><i>H</i></span> à <span class="dialect"><i>S</i></span>, on remarquera que <span class="coptic">ⲉ</span> (sauf à l'initiale) et la surligne (sauf devant <span class="coptic">ϩ</span> final) sont remplacés par <span class="coptic">ⲏ</span>; la voyelle <span class="coptic">ⲟ</span>, encore, est remplacée par <span class="coptic">ⲱ</span>, <span class="coptic">ⲧⲓ</span> supplante la lettre <span class="coptic">ϯ</span> et <span class="coptic">ⲃ</span> remplace <span class="coptic">ϥ</span>; <span class="coptic">ⲛ</span> initial disparaît régulièrement (sauf dans quelques mots où il est précédé et renforcé soit par un <span class="coptic">ⲉ</span>, soit par un <span class="coptic">ⲏ</span>), et il en est souvent de même pour <span class="coptic">ⲉ</span>; <span class="coptic">ⲁ</span> est substitué à la surligne avant <span class="coptic">ϩ</span> final.
+					</p>
+					<p class="paragraph-indent">
+						<span class="dialect"><i>G</i></span>: ce dialecte n'est représenté que par un petit nombre de documents, eux-mêmes très brefs^1, et dont seul le premier contient cet idiome à l'état pur; en le comparant sommairement à <span class="dialect"><i>B</i></span>, dont il se rapproche le plus, on voit que, dans <span class="dialect"><i>G</i></span>, <span class="coptic">ϯ</span> est remplacé par <span class="coptic">ⲧⲓ</span>, <span class="coptic">ⲟⲩ</span> consonantique par <span class="coptic">ⲃ</span>, <span class="coptic">ϣ</span> par <span class="coptic">ⲥⲍ</span>, <span class="coptic">ϥ</span> par <span class="coptic">ⲫ</span>, <span class="coptic">ϧ</span> par <span class="coptic">ⲭ</span>, <span class="coptic">ϫ</span> et <span class="coptic">ϭ</span> par <span class="coptic">ⲧⲍ</span>, et <span class="coptic">ϩ</span> est éliminé; en outre <span class="coptic">ⲱ</span> devient <span class="coptic">ⲟ</span>: mais <span class="coptic">ⲱ</span> reste <span class="coptic">ⲱ</span> (et <span class="coptic">ⲟ</span> devient <span class="coptic">ⲱ</span>) après <span class="coptic">ⲧⲍ</span> (pour <span class="coptic">ϫ</span> ou <span class="coptic">ϭ</span>), <span class="coptic">ϩ</span>, <span class="coptic">ⲑ</span>, <span class="coptic">ⲭ</span>, peut-être <span class="coptic">ⲣ</span>; et <span class="coptic">ⲱ</span> devient <span class="coptic">ⲟⲩ</span> après <span class="coptic">ⲥⲍ</span> (pour <span class="coptic">ϣ</span>) et <span class="coptic">ⲃ</span> (pour <span class="coptic">ⲟⲩ</span> consonantique).
+					</p>
+					<p class="paragraph-indent">
+						La manière dont nous avons noté ici les «dialectes mêlés» (<span class="dialect"><i>S<sup>a</sup></i></span>, <span class="dialect"><i>A<sup>s</sup></i></span>, etc.) est apparemment en contradiction avec ce que nous avions écrit dans l'Introduction à notre dernier volume de «Compléments» (p. <span class="roman-small-caps">xi–xiii</span>); nous y distinguions, par exemple, trois sortes de formes «sahidiques akhmîmisantes»: <i>a</i>) <span class="dialect"><i>S<sup>a</sup></i></span>, celles provenant d'un point situé dans la zone de contact entre l'aire sahidique et l'aire akhmîmique; <i>b</i>) <span class="dialect"><i>S<sup>:a</sup></i></span>, celles formées artificiellement (et irrégulièrement) par des scribes de langue akhmîmique écrivant des copies sahidique; <i>c</i>) <span class="dialect"><i>S<sub>o</sub></i></span>, celles qui ne sont qu'apparemment des akhmîmismes, et dénotent simplement une hésitation graphique, à une époque ancienne, où l'orthographe des dialectes n'était pas encore stabilisée.
+					</p>
+					<p class="paragraph-indent">
+						Ici, comme nous nous contentons souvent de reprendre dans le dictionnaire des formes dont nous ne connaissons ni l'origine précise, ni le contexte, nous avons dû nous résigner à faire usage uniquement de la désignation traditionnelle, <span class="dialect"><i>S<sup>a</sup></i></span>, indiquant que la forme citée participe, <i>de jure</i>, aussi bien à l'aire sahidique (par prédominance) qu'à l'aire akhmîmique.
+					</p>
+					<p class="paragraph-indent">
+						En fait, nous nous sommes servi principalement de ce procédé pour marquer ce qui semble être, en droit, des influences de <span class="dialect"><i>P</i></span>, <span class="dialect"><i>M</i></span>, <span class="dialect"><i>H</i></span>, ou <span class="dialect"><i>G</i></span>; nous avons relevé, pour cela, les principales caractéristiques de ces dialectes, en les comparant avant tout à <span class="dialect"><i>S</i></span>, et en les systématisant de façon absolue (ce qui aboutit, parfois, à des résultats paradoxaux).
+					</p>
+					<p class="paragraph-indent">
+						Nous considérons comme influence de <span class="dialect"><i>P</i></span> tout transformation de <span class="coptic">ϭ</span> en <span class="coptic">ⲕ</span>, pour autant que les formes avec <span class="coptic">ⲕ</span> apparaissent moins fréquemment que les formes avec <span class="coptic">ϭ</span>; notre choix pourra paraître, ici ou là, arbitraire; d'abord, il y a des exemples où <span class="dialect"><i>B</i></span> ou <span class="dialect"><i>F</i></span> seuls ont les formes avec <span class="coptic">ⲕ</span>: là, il serait certainement exagéré de parler d'une influence de <span class="dialect"><i>P</i></span>; et qu'est-ce qui nous prouve que les formes classées dans le dictionnaire sous <span class="coptic">ⲕ</span> (avec variantes <span class="coptic">ϭ</span>) ne devraient pas être, au contraire, classées sous <span class="coptic">ϭ</span> (avec variantes <span class="coptic">ⲕ</span>)?... nous avons dû, provisoirement, nous en tenir à la classification adoptée par Crum.
+					</p>
+					<p class="paragraph-indent">
+						Nous considérons comme influence de <span class="dialect"><i>M</i></span> toute transformation de <span class="coptic">ⲱ</span> en <span class="coptic">ⲟ</span>: pourtant, ce dialecte lui-même fait quelques exceptions à cette règle (en particulier dans les finales), et l'on trouve de fréquentes mutations de <span class="coptic">ⲱ</span> en <span class="coptic">ⲟ</span> aussi dans le dialecte <span class="dialect"><i>G</i></span> et le sous-dialecte <span class="dialect"><i>H<sup>x</sup></i></span>; en poussant cette règle à l'extrême, nous avons paradoxalement noté comme étant d'influence <span class="dialect"><i>M</i></span> la forme <span class="coptic">ⲁⲩⲟ</span> «et», alors que <span class="dialect">M</span> écrit toujours <span class="coptic">ⲁⲩⲱ</span> (<span class="coptic">ⲁⲩⲱ</span> final).
+					</p>
+					<p class="paragraph-indent">
+						Nous considérons comme d'influence <span class="dialect"><i>H</i></span> toute transformation de <span class="coptic">ⲟ</span> en <span class="coptic">ⲱ</span> (mais non pas toutes celles de <span class="coptic">ⲉ</span> en <span class="coptic">ⲏ</span>, la vocalisation <span class="coptic">ⲏ</span> n'étant pas rare en <span class="dialect"><i>F</i></span> et <span class="dialect"><i>M</i></span>), parce que <span class="dialect"><i>H</i></span> utilise <span class="coptic">ⲱ</span> à l'exclusion de <span class="coptic">ⲟ</span> (sauf dans <span class="coptic">ⲟⲩ</span>); pourtant, dans le vocabulaire purement <span class="dialect"><i>H</i></span>, le <span class="coptic">ⲟ</span> sahidique devient non pas <span class="coptic">ⲱ</span>, mais <span class="coptic">ⲁ</span>; en poussant donc cette règle à l'extrême, nous avons paradoxalement noté comme étant d'influence <span class="dialect"><i>H</i></span> la forme <span class="coptic">ϭⲱⲙ</span> «puissance», alors que <span class="dialect"><i>H</i></span> écrit normalement <span class="coptic">ϭⲁⲙ</span>. Nous rattachons aussi à la sphère d'influence de <span class="dialect"><i>H</i></span> toute forme où <span class="coptic">ⲃ</span> remplace <span class="coptic">ϥ</span>... tout en sachant que cette substitution est extrêmement fréquente en copte, au point que, pour certaines formes, on peut se demander si ce n'est pas la forme avec <span class="coptic">ⲃ</span> qui est normale, la forme avec <span class="coptic">ϥ</span> étant aberrante; donc, sur ce point aussi, la sphère d'influence de <span class="dialect"><i>H</i></span> a pu être exagérément élargie.
+					</p>
+					<p class="paragraph-indent">
+						Nous considérons comme d'influence <span class="dialect"><i>G</i></span> toute omission de <span class="coptic">ϩ</span>, toute transformation de <span class="coptic">ⲟⲩ</span> consonantique en <span class="coptic">ⲃ</span>, de <span class="coptic">ϥ</span> en <span class="coptic">ⲫ</span>, et quelques <span class="coptic">ϣ</span> ou <span class="coptic">ϫ</span>, <span class="coptic">ϭ</span>, remplacés respectivement par <span class="coptic">ⲥ</span> ou <span class="coptic">ⲧ</span> (pour <span class="coptic">ⲥⲍ</span> ou <span class="coptic">ⲧⲍ</span>); mais il est évident que <span class="coptic">ϩ</span>, dont l'aspiration était devenue excessivement faible, pouvait être omis par simple distraction, sans qu'il y eût lieu de voir là une influence dialectale précise; et dans certains cas, l'omission de <span class="coptic">ϩ</span> est caractéristique des deux grands dialectes du nord (<span class="dialect"><i>B</i></span> et <span class="dialect"><i>F</i></span>)^1, voire même de tous les dialectes sauf <span class="dialect"><i>S</i></span>, par exemple dans <span class="coptic">ϩⲁⲣⲉϩ</span>, qui s'écrit d'ailleurs <span class="coptic">ⲁⲣⲉϩ</span> dans un grand nombre de manuscrits <span class="dialect"><i>S</i></span> anciens: nous ne pourrions, bien sûr, inclure ces derniers cas dans la sphère d'influence de <span class="dialect"><i>G</i></span>! Quant à la confusion entre <span class="coptic">ⲟⲩ</span> et <span class="coptic">ⲃ</span>, elle n'est pas tellement rare en bohaïrique.
+					</p>
+					<p class="paragraph-indent">
+						Notre liste comprend quatre parties: 1° (p. 25–61) le vocabulaire en général (nous suivons l'ordre adopté par Crum, et nous indiquons les pages et les colonnes, <i>a</i> ou <i>b</i>, de son dictionnaire); 2° (p. 62) les pronoms personnels; 3° (p. 62) les noms de nombres; 4° (p. 63–66) les préfixes verbaux (principalement la forme nominale et la forme pronominale de la 3<sup>e</sup> personne du singulier; les autres formes ne sont citées que lorsqu'elles présentent quelque intérêt, ou qu'elles nous ont permis de reconstituer la forme nominale ou la forme pronominale de la 3<sup>e</sup> personne du singulier: ces formes sont alors précédées d'un astérisque*).
+					</p>
+					<ol class="footnotes">
+						
+					</ol>
+					<h3 class="text-align-center uppercase">Sigles et Abréviations</h3>
+					<table>
+						<tr>
+							<td><span class="dialect"><i>A</i></span> =</td><td>dialecte akhmîmique.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>A</i><sup>2</sup></span> =</td><td>dialecte subakhmîmique.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>B</i></span> =</td><td>dialecte bohaïrique.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>B<sub>o</sub></i></span> =</td><td>dialecte bohaïrique archaïque (R. <span class="author-caps">Kasser</span>, <i>Papyrus Bodmer III, Evangile de Jean et Genèse, chap. 1–3</i>, CSCO 177–178, Louvain 1958; G. M. <span class="author-caps">Husselman</span>, <i>A Bohairic school text on papyrus</i>, JNEA VI, p. 129–151, Chicago 1947).</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>F</i></span> =</td><td>dialecte fayoumique.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>G</i></span> =</td><td>dialecte <span class="dialect"><i>G</i></span> (ou bachmourique?); cf. <i>supra</i>, p. 21.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>H</i></span> =</td><td>dialecte achmouninique; cf. <i>supra</i>, p. 20.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>H<sup>x</sup></i></span>, ou <span class="dialect"><i>H<sup>xm</sup></i></span>, etc. =</td><td>variété particulière du dialecte achmouninique; cf. <i>supra</i>, p. 21.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><sup>(h)</sup></span> =</td><td>hapax; la forme précédente n'est attestée qu'une seule fois (nous ne l'indiquons que lorsque cette forme paraît douteuse).</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>M</i></span> =</td><td>dialecte moyen-égyptien; cf. <i>supra</i>, p. 20.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><i>P</i></span> =</td><td>dialecte <span class="dialect"><i>P</i></span> (ou thébain?); cf. <i>supra</i>, p. 20.</td>
+						</tr>
+						<tr>
+							<td><span class="dialect"><sup>(qq)</sup></span> =</td><td>quelques cas (nous ne l'indiquons que lorsque cette forme paraît douteuse, ou que le dialecte mentionné emploie plus souvent une autre forme [bien que la première ait quelque chance aussi d'être caractéristique]).</td>
+						</tr>
+						<tr>
+							<td>*</td><td>précédant un sigle, cf. <i>supra</i>, p. 20, l. 1–5; précédant un préfixe verbal, etc., indique que cette forme a été reconstituée sur la base d'une forme voisine, cf. <i>supra</i>, p. 63, l. 10–11.</td>
+						</tr>
+						<tr>
+							<td>[ ]</td><td>entoure la forme mise en vedette par Crum, forme citée ici pour permettre de situer plus facilement le mot dans le dictionnaire (bien qu'elle n'appartienne ni à <span class="dialect"><i>P</i></span>, <span class="dialect"><i>M</i></span>, <span class="dialect"><i>H</i></span>, <span class="dialect"><i>G</i></span>, ni à leur sphère d'influence).</td>
+						</tr>
+					</table>
 				</div>
-				<h3>Dictionary</h3>
-				<table id="dictionary" data-gid="550010503">
-				</table>
+				<div>
+					<h3>Dictionary</h3>
+					<table id="dictionary" data-gid="550010503">
+					</table>
+				</div>
+				<div>
+					<h3 class="text-align-center uppercase">Pronoms Personnels</h3>
+					<table>
+						<tr>
+							<th style="border:0;"></th><th colspan="2"><i>Singulier</i></th><th><i>Pluriel</i></th>
+						</tr>
+						<tr>
+							<td rowspan="4">1</td><td rowspan="4"></td><td><span class="coptic">ⲁⲛⲟⲕ</span> <span class="dialect"><i>G</i></span>,</td><td><span class="coptic">ⲁⲛⲁⲛ</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>*H</i></span>;</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲁⲛⲁⲕ</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>H</i></span>,</td><td rowspan="3"><span class="coptic">ⲁⲛ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲁⲛⲟⲹ</span> <span class="dialect"><i>P</i></span>;</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲁⲛⲕ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td rowspan="8">2</td><td rowspan="5">m.</td><td><span class="coptic">ⲛⲧⲁⲕ</span> <span class="dialect"><i>M</i></span>,</td><td><span class="coptic">ⲛⲧⲟⲧⲛ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲧⲁⲕ</span> <span class="dialect"><i>H</i></span>, </td><td><span class="coptic">ⲛⲧⲉⲧⲛ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲧⲱⲕ</span> <span class="dialect"><i>S<sup>h</sup></i></span></td><td rowspan="6"><span class="coptic">-ⲧⲏⲛⲟⲩ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲛ̄ⲧⲟⲹ</span> <span class="dialect"><i>P</i></span>;</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲛⲧⲕ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td rowspan="3">f.</td><td><span class="coptic">ⲛ̄ⲧⲱ</span> <span class="dialect"><i>S<sup>h</sup></i></span>,</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲛⲧⲁ</span> <span class="dialect"><i>M</i></span>,</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲧⲁ</span> <span class="dialect"><i>H</i></span>;</td>
+						</tr>
+						<tr>
+							<td rowspan="5">3</td><td rowspan="4">m.</td><td><span class="coptic">ⲛ̄ⲧⲟϥ</span> <span class="dialect"><i>P</i></span>,</td><td><span class="coptic">ⲛ̄ⲧⲟⲟⲩ</span> <span class="dialect"><i>P</i></span>,</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲛⲧⲁϥ</span> <span class="dialect"><i>M</i></span>,</td><td><span class="coptic">ⲛⲧⲁⲩ</span> <span class="dialect"><i>M</i></span>,</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲧⲁⲃ</span> <span class="dialect"><i>H</i></span>,</td><td rowspan="3"><span class="coptic">ⲧⲁⲩ</span> <span class="dialect"><i>H</i></span></td>
+						</tr>
+						<tr>
+							<td><span class="coptic">(ⲛ)ⲧⲱⲃ</span> <span class="dialect"><i>S<sup>h</sup></i></span>;</td>
+						</tr>
+						<tr>
+							<td>f.</td><td><span class="coptic">ⲛⲧⲁⲥ</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>S<sup>h</sup></i></span></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<h3 class="text-align-center uppercase">Noms de Nombres</h3>
+					<table>
+						<tr>
+							<td rowspan="3">1</td><td rowspan="3">m.</td><td class="nombre"><span class="coptic">ⲟⲩⲁ</span> <span class="dialect"><i>H</i></span>,</td><td rowspan="3">f.</td><td rowspan="3"><span class="coptic">ⲟⲩⲓ̈</span>, <span class="coptic">-ⲟⲩⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td class="nombre"><span class="coptic">ⲟⲩⲓ̈</span> <span class="dialect"><i>P</i></span>,</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲟⲩⲉ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td rowspan="3">2</td><td rowspan="3">m.</td><td class="nombre"><span class="coptic">ⲥⲛⲁⲩ</span> <span class="dialect"><i>P</i></span>,</td><td rowspan="3">f.</td><td class="nombre"><span class="coptic">ⲥⲛⲧⲉ</span>, <span class="coptic">-ⲥⲛⲁⲟⲩⲥⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td class="nombre"><span class="coptic">ⲥⲛⲁⲟⲩ</span> <span class="dialect"><i>G</i></span> <span class="dialect"><i>*H</i></span></td><td rowspan="2"><span class="coptic">ⲥⲏⲛⲧⲓ</span> <span class="dialect"><i>*H<sup>f</sup></i></span></td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲥⲛⲉⲩ</span>, <span class="coptic">-ⲥⲛⲁⲟⲩⲥ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td rowspan="2">3</td><td rowspan="2">m.</td><td class="nombre"><span class="coptic">ϣⲁⲙ(ⲛ)ⲧ</span>, <span class="coptic">ϣⲙ(ⲧ)-</span> <span class="dialect"><i>M</i></span></td><td rowspan="2">f.</td><td rowspan="2"><span class="coptic">ϣⲁⲙ(ⲛ)ⲧⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ϣⲁⲙⲏⲧ</span> <span class="dialect"><i>H</i></span>;</td>
+						</tr>
+						<tr>
+							<td rowspan="2">4</td><td rowspan="2">m.</td><td class="nombre"><span class="coptic">ϥⲧⲁⲩ</span>, <span class="coptic">ϥⲧⲉⲩ-</span>, <span class="coptic">-ⲉϥⲧⲉ</span> <span class="dialect"><i>M</i></span></td><td rowspan="2">f.</td><td rowspan="2"></td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="coptic">-ⲏⲃⲧⲓ</span> <span class="dialect"><i>H<sup>f</sup></i></span> (cf. <span class="coptic">ϥⲇ̅</span> <span class="dialect"><i>B</i><sub>o</sub></span>)</td>
+						</tr>
+						<tr>
+							<td rowspan="2">5</td><td rowspan="2">m.</td><td class="nombre"><span class="coptic">ϯⲟⲩ</span>, <span class="coptic">-ⲧⲏ</span> <span class="dialect"><i>M</i></span></td><td rowspan="2">f.</td><td class="nombre"><span class="coptic">ϯ</span>, <span class="coptic">-ⲧⲏ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲧⲓⲟⲩ</span>, <span class="coptic">ⲧⲓⲟⲩⲟⲩ-</span> <span class="dialect"><i>H</i></span></td><td><span class="coptic">ϯ</span> <span class="dialect"><i>H</i></span></td>
+						</tr>
+						<tr>
+							<td rowspan="3">6</td><td rowspan="3">m.</td><td class="nombre"><span class="coptic">ⲥⲟⲟⲩ</span> <span class="dialect"><i>P</i></span></td><td rowspan="3">f.</td><td class="nombre"><span class="coptic">ⲥⲁ</span>, <span class="coptic">-ⲉⲥⲉ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td class="nombre"><span class="coptic">ⲥⲁⲟⲩ</span> <span class="dialect"><i>*H</i></span></td><td rowspan="2"><span class="coptic">ⲥⲁ</span> <span class="dialect"><i>H</i></span></td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲥⲁⲩ</span>, <span class="coptic">-ⲉⲥⲉ</span> <span class="dialect"><i>M</i></span>;</td>
+						</tr>
+						<tr>
+							<td rowspan="2">7</td><td rowspan="2">m.</td><td class="nombre"><span class="coptic">ⲥⲉϣϥ</span> <span class="dialect"><i>M</i></span>,</td><td rowspan="2">f.</td><td rowspan="2"></td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="coptic">ⲥⲁⳋ︤ϥ︥</span> <span class="dialect"><i>P</i></span></td>
+						</tr>
+						<tr>
+							<td rowspan="2">8</td><td rowspan="2">m.</td><td rowspan="2"><span class="coptic">ϣⲙⲟⲩⲛ</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>*H</i></span>;</td><td rowspan="2">f.</td><td class="nombre"><span class="coptic">ϣⲙⲟⲩⲛⲉ</span> <span class="dialect"><i>M</i></span>,</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ϣⲙⲟⲩⲛⲓ</span> <span class="dialect"><i>H<sup>f</sup></i></span></td>
+						</tr>
+						<tr>
+							<td>9</td><td>m.</td><td><span class="coptic">ⲯⲓⲥ</span> <span class="dialect"><i>*H</i></span></td><td>f.</td><td><span class="coptic">ⲯⲓⲧⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td rowspan="2">10</td><td rowspan="2">m.</td><td class="nombre"><span class="coptic">ⲙⲏⲧ</span>, <span class="coptic">ⲙⲛ(ⲧ)-</span> <span class="dialect"><i>M</i></span>,</td><td rowspan="2">f.</td><td class="nombre"><span class="coptic">ⲙⲏⲧⲉ</span> <span class="dialect"><i>M</i></span>,</td>
+						</tr>
+						<tr>
+							<td><span class="coptic">ⲙⲏⲧ</span> <span class="dialect"><i>H</i></span>;</td><td><span class="coptic">ⲙⲏⲧⲓ</span> <span class="dialect"><i>H<sup>f</sup></i></span></td>
+						</tr>
+						<tr>
+							<td>11</td><td>m.</td><td></td><td>f.</td><td><span class="coptic">ⲙⲛⲧⲟⲩⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td rowspan="2">12</td><td rowspan="2">m.</td><td rowspan="2"><span class="coptic">ⲙⲛⲧⲥⲛⲁⲟⲩⲥ</span> <span class="dialect"><i>M</i></span>;</td><td rowspan="2">f.</td><td class="nombre"><span class="coptic">ⲙⲛⲧⲥⲛⲁⲟⲩⲥⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td>(<span class="coptic">ⲙⲛⲧⲓ̅ⲃ̅</span> <span class="dialect"><i>M</i><sub>(qq)</sub></span>, cf. <span class="coptic">ⲙⲉⲛⲓ̅ⲃ̅</span> <span class="dialect"><i>B</i><sub>o(qq)</sub></span>)</td>
+						</tr>
+						<tr>
+							<td colspan="2">14</td><td colspan="3"><span class="coptic">ⲙⲛⲧⲉϥⲧⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">16</td><td colspan="3"><span class="coptic">ⲙⲛⲧⲉⲥⲉ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td rowspan="3" colspan="2">20</td><td class="nombre" colspan="3"><span class="coptic">ϫⲟⲩⲱⲧ</span> <span class="dialect"><i>*H</i></span>,</td>
+						</tr>
+						<tr>
+							<td class="nombre" colspan="3"><span class="coptic">ϫⲟⲩⲧ-</span> <span class="dialect"><i>H</i></span>,</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="coptic">ϫⲟⲩⲟⲧ</span>, <span class="coptic">ϫⲟⲩ(ⲧ)-</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">24</td><td colspan="3"><span class="coptic">ϫⲟⲩⲧⲏⲃⲧⲓ</span> <span class="dialect"><i>H<sup>f</sup></i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">25</td><td colspan="3"><span class="coptic">ϫⲟⲩⲧⲏ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">30</td><td colspan="3"><span class="coptic">ⲙⲉⲃ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">40</td><td colspan="3"><span class="coptic">ϩⲙⲏ</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>*H</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">50</td><td colspan="3"><span class="coptic">ⲧⲉⲓⲟⲩ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">60</td><td colspan="3"><span class="coptic">ⲥⲏ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">70</td><td colspan="3"><span class="coptic">ϣⲃⲏ</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>*H</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">75</td><td colspan="3"><span class="coptic">ϣⲙϫⲟⲩⲟⲧ ⲙⲛ ⲙⲛⲧⲏ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td rowspan="2" colspan="2">100</td><td class="nombre" colspan="3"><span class="coptic">*ϣⲏ</span> <span class="dialect"><i>H</i></span>,</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="coptic">ϣⲩ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">120</td><td colspan="3"><span class="coptic">ϣⲩ ϫⲟⲩⲟⲧ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">400</td><td colspan="3"><span class="coptic">ϥⲧⲁⲩ ⲛϣⲩ</span>, <span class="coptic">ϥⲧⲉⲩ ϣⲩ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">450</td><td colspan="3"><span class="coptic">ϥⲧⲁⲩ ⲛϣⲩ ⲙⲛ ⲧⲉⲓⲟⲩ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">1000</td><td colspan="3"><span class="coptic">ϣⲁ</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>H</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">3000</td><td colspan="3"><span class="coptic">ϣⲁⲙⲛⲧ ⲛϣⲁ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2">4000</td><td colspan="3"><span class="coptic">ϥⲧⲁⲩ ⲛϣⲁ</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td rowspan="2" colspan="2">5000</td><td class="nombre" colspan="3"><span class="coptic">ϯⲟⲩ ⲛϣⲁ</span> <span class="dialect"><i>M</i></span>,</td>
+						</tr>
+						<tr>
+							<td colspan="3"><span class="coptic">ⲧⲓⲟⲩⲟⲩ ϣⲁ</span> <span class="dialect"><i>H</i></span></td>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<h3 class="text-align-center uppercase">Préfixes Verbaux</h3>
+					<p class="paragraph-indent">
+						La terminologie utilisée ici par nous est basée en partie sur les travaux de H. J. Polotsky (cf. <i>Zur Neugestaltung der koptischen Grammatik</i>, OLZ 1959, Nr. 9/10, p. 453–460), en partie aussi sur nos propres recherches. Nous appelons «dérivés», en particulier, certains préfixes verbaux qui nous paraissent avoir été formés à partir de la forme nominale d'un temps similaire (voyez par exemple le consuétudinal, appelé communément «présent d'habitude»). Nous indiquons, chaque fois que la chose est possible, et pour chaque temps, la forme nominale et la forme de la 3<sup>e</sup> personne du singulier; suivent entre parenthèses les autres formes qui nous ont paru intéressantes, soit qu'elles présentent quelque différence importante avec les formes précédentes (<span class="coptic">ⲹ</span> pour <span class="coptic">ⲕ</span> en <span class="dialect"><i>P</i></span> n'est pas noté), soit qu'elles nous aient servi à reconstituer ces formes (lesquelles sont alors précédées de l'astérisque). Les «personnes» du singulier et du pluriel sont indiquées de la manière suivante: 1; 2; 2 f.; 3; 3 f.; 1 pl.; 2 pl.; 3 pl.; nom. (= forme nominale); donc, quand on lit simplement 3, on doit comprendre «troisième personne du masculin singulier».
+					</p>
+					<h4 class="text-align-center uppercase">Schéma Bipartite</h4>
+					<table id="bipartite">
+						<tr>
+							<td class="schema"><i>Présent I:</i></td><td>nom. <span class="coptic">—</span>; 3 <span class="coptic">ϥ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲃ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲫ-</span> <span class="dialect"><i>G</i></span>; (1 <span class="coptic">ⲧⲓ-</span> <span class="dialect"><i>H</i></span><span class="dialect"><i>G</i></span>, 1 pl. <span class="coptic">ⲧⲏⲛ-</span> <span class="dialect"><i>H</i></span>, 3 pl. <span class="coptic">ⲥⲏ-</span> <span class="dialect"><i>H</i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Présent I relatif:</i></td><td>nom. <span class="coptic">*ⲉⲧⲉⲣⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲧⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧ︤ϥ︥-</span> <span class="dialect"><i>*P</i></span><span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧ(ⲏ)ⲃ-</span> <span class="dialect"><i>H</i></span>; pronom <span class="coptic">ⲉⲧ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>H</i></span> <span class="dialect"><i>G</i></span>; (2 pl. <span class="coptic">ⲉⲧ(ⲉⲧ)ⲛ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ⲉⲧⲉⲩ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲧⲥⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲟⲩ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲛⲧⲟⲩ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, pronom <span class="coptic">ⲧ̄-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, <span class="coptic">(ⲡ)ⲏⲧ-</span> <span class="dialect"><i>H</i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Présent I circonstanciel:</i></td><td>nom. <span class="coptic">ⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲣⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲉϥ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲃ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲉⲫ-</span> <span class="dialect"><i>G</i></span>; (nom. <span class="coptic">ⲉⲣ̄-</span>, <span class="coptic">ⲣ̄ⲉ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Futur I:</i></td><td>nom. <span class="coptic">— … ⲛⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>H</i></span> <span class="dialect"><i>*G</i></span>, <span class="coptic">— … ⲛⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ϥⲛⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ϥⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲃⲛⲁ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲫⲛⲁ-</span> <span class="dialect"><i>G</i></span>; (1 <span class="coptic">ⲧⲓⲛⲁ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲧⲏⲛⲁ-</span>, <span class="coptic">ⲧⲉⲛⲁ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 2 f. <span class="coptic">ⲧⲏⲣⲛⲁ-</span> <span class="dialect"><i>H</i></span>, 3 pl. <span class="coptic">ⲥⲏⲛⲁ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲥⲓⲛⲁ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Futur I relatif:</i></td><td>nom. <span class="coptic">ⲉⲧⲉⲣⲉ- … ⲛⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲧⲉ- … ⲛⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧⲉϥⲛⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲧϥⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧ(ⲏ)ⲃⲛⲁ-</span> <span class="dialect"><i>H</i></span>; pronom <span class="coptic">ⲉⲧⲛⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>H</i></span> <span class="dialect"><i>G</i></span>, <span class="coptic">ⲉⲧⲛⲉ-</span> <span class="dialect"><i>M</i></span>; (2 pl. <span class="coptic">ⲉⲧ(ⲉⲧ)ⲛⲉ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ⲉⲧⲥⲉⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲧⲟⲩⲛⲉ-</span> <span class="dialect"><i>M</i><sub>(qq)</sub></span>, <span class="coptic">ⲧⲟⲩⲛⲁ-</span> <span class="dialect"><i>H</i></span>, nom. <span class="coptic">ⲉⲧⲉⲣⲉ- … ⲛⲉ-</span> <span class="dialect"><i>M<sup>f</sup></i></span>, pronom <span class="coptic">ⲧ̄ⲛⲁ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, <span class="coptic">(ⲡ)ⲏⲧⲛⲁ-</span> <span class="dialect"><i>H</i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Futur I circonstanciel:</i></td><td>nom. <span class="coptic">ⲉ- … ⲛⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">*ⲉⲣⲉ- … ⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲣⲏ- … ⲛⲁ-</span> <span class="dialect"><i>H</i></span>; <span class="coptic">*ⲉϥⲛⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲉϥⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲫⲛⲁ-</span> <span class="dialect"><i>G</i></span>; (3 f. <span class="coptic">ⲉⲥⲛⲁ-</span> <span class="dialect"><i>H</i></span>, nom. <span class="coptic">ⲉⲣ̄- … ⲛⲁ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, nom. <span class="coptic">ⲉⲣ̄- … ⲛⲁ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, nom. <span class="coptic">ⲉⲣ̄- … ⲛⲁ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Présent II:</i></td><td>nom. <span class="coptic">ⲉⲣⲉ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>*G</i></span>, <span class="coptic">ⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲣⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">*ⲉϥ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲁϥ-</span> <span class="dialect"><i>M</i></span>; (1 <span class="coptic">ⲉⲉⲓ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲓ-</span> <span class="dialect"><i>H</i></span> (?) <span class="dialect"><i>G</i></span>, 3 f. <span class="coptic">ⲉⲥ-</span> <span class="dialect"><i>P</i></span>, 2 pl. <span class="coptic">ⲁⲧ(ⲉⲧ)ⲛ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ⲉⲩ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>H</i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Présent II avec</i> <span class="coptic">ⲉⲛⲉ-</span> (= <i>condition irréalisée</i>)<sup>(1)</sup>:</td><td>nom. <span class="coptic">ⲉⲛⲛⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲉⲛⲛⲁϥ-</span> <span class="dialect"><i>M</i></span>; (1 pl. <span class="coptic">ⲉⲛⲛⲁⲛ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Présent II avec</i> <span class="coptic">ϫⲓⲛ-</span>:</td><td>3 <span class="coptic">ϫⲓⲛⲉϥ-</span> <span class="dialect"><i>M</i></span>; (1 <span class="coptic">ϫ︤ⲛ︥ⲓ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Futur II</i>:</td><td>nom. <span class="coptic">ⲉⲣⲉ- … ⲛⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>*G</i></span>, <span class="coptic">ⲁⲣⲉ- … ⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲣⲏ- … ⲛⲁ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲉϥⲛⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲁϥⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲃⲛⲁ-</span> <span class="dialect"><i>H</i></span>; (1 <span class="coptic">ⲉⲉⲓⲛⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲓⲛⲏ-</span> <span class="dialect"><i>H</i><sub>(h)</sub></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Futur II circonstanciel</i>:</td><td>3 <span class="coptic">*ⲉⲁϥⲛⲉ-</span> <span class="dialect"><i>M</i></span>; (1 pl. <span class="coptic">ⲉⲁⲛⲛⲉ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Imparfait (ou présent I prétérit)</i>:</td><td>nom. <span class="coptic">*ⲛⲉⲣⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲛⲉⲣⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲛⲉϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲁϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲛⲏⲃ-</span> <span class="dialect"><i>H</i></span>; (1 <span class="coptic">ⲛⲉⲉⲓ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲓ-</span> <span class="dialect"><i>H</i></span>).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Imparfait «dérivé» (= condition irréalisée?)</i>:</td><td>cf. 3 pl. <span class="coptic">ⲛⲉⲣⲉⲩ-</span> ou <span class="coptic">ⲛⲉⲣⲁⲩ-</span> <span class="dialect"><i>P</i></span>.</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Imparfait relatif</i>:</td><td>nom. <span class="coptic">ⲉⲧⲛⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧⲛⲁϥ-</span> <span class="dialect"><i>M</i></span>; (<span class="dialect"><i>P</i></span> voir imparfait II relatif).</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Imparfait futur</i>:</td><td>nom. <span class="coptic">*ⲛⲉⲣⲉ- … ⲛⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>*G</i></span>, <span class="coptic">ⲛⲁⲣⲉ- … ⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲛⲉⲣⲏ- … ⲛⲁ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">*ⲛⲉϥⲛⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲁϥⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲛⲏⲃⲛⲁ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲛⲉⲫⲛⲁ-</span> <span class="dialect"><i>G</i></span>.</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Imparfait futur relatif (ayant en <span class="dialect"><i>M</i></span> le sens du «temporel»)</i>:</td><td>3 <span class="coptic">ⲉⲧⲛⲁϥⲛⲉ-</span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td class="schema"><i>Imparfait II relatif</i>:</td><td>3 <span class="coptic">ⲉⲧⲉⲛⲉϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">*ⲉⲧⲉⲛⲁϥ-</span> <span class="dialect"><i>M</i></span>; (3 pl. <span class="coptic">ⲉⲧⲉⲛⲁⲩ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+					</table>
+					<h4 class="text-align-center uppercase">Schéma Tripartite</h4>
+					<table id="tripartite">
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I</i>:</td><td>nom. <span class="coptic">ⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>H</i></span> <span class="dialect"><i>*G</i></span>, <span class="coptic">ϩⲁ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲁϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ϩⲁϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲁⲃ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲁⲫ-</span> <span class="dialect"><i>G</i></span>; (1 <span class="coptic">ϩⲓ-</span> <span class="dialect"><i>P</i><sub>(qq)</sub></span> (= autre temps, ou forme «féminine»?), <span class="coptic">ⲁⲉⲓ-</span> <span class="dialect"><i>G</i></span>, 2 pl. <span class="coptic">ϩⲁⲧ(ⲉⲧ)ⲛ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ⲁⲟⲩ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I négatif</i>:</td><td>nom. <span class="coptic">ⲙ̄ⲡⲉ-</span> <span class="dialect"><i>*P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲡⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲙ̄ⲡ︤ϥ︥-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲡⲏⲃ-</span> <span class="dialect"><i>H</i></span>; (1 <span class="coptic">ⲙⲓ-</span> <span class="dialect"><i>G</i></span>, 2 <span class="coptic">ⲡⲏⲕ-</span> <span class="dialect"><i>H</i></span>, 3 pl. <span class="coptic">ⲡⲟⲩ-</span> <span class="dialect"><i>H</i></span>, nom. <span class="coptic">ⲙⲡ̄-</span>, <span class="coptic">ⲉⲡ̄-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I relatif</i>:</td><td>nom. <span class="coptic">ⲉⲧⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲑⲁ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧⲁ-</span> <span class="dialect"><i>H</i></span> <span class="dialect"><i>G</i></span>; 3 <span class="coptic">*ⲉⲧⲁϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲑⲁϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲁⲃ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲧⲁⲫ-</span> <span class="dialect"><i>G</i></span>; pronom <span class="coptic">ⲉⲧⲁϩ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲣ-</span> <span class="dialect"><i>M</i></span>; (1 <span class="coptic">ⲧⲁⲉⲓ-</span> <span class="dialect"><i>G</i></span>, 2 <span class="coptic">ⲛⲧⲁⲕ-</span> <span class="dialect"><i>H<sup>x</sup></i></span> <span class="dialect"><i>G</i><sub>(qq)</sub></span>, <span class="coptic">(ⲡⲏ)ⲛⲧⲁⲕ-</span> <span class="dialect"><i>H</i></span>, 2 pl. <span class="coptic">ⲉⲟⲁⲧⲛ-</span> <span class="dialect"><i>M</i></span>, nom. <span class="coptic">(ⲡⲏ)ⲛⲧⲁ-</span> <span class="dialect"><i>H</i></span>; voyez le parfait II, <i>infra</i>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I relatif négatif</i>:</td><td>nom. <span class="coptic">ⲉⲧⲉⲙⲡⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲉⲧⲉⲙⲡϥ-</span> <span class="dialect"><i>M</i></span>; (2 <span class="coptic">ⲉⲧⲉⲙⲡⲕ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I circonstanciel</i>:</td><td>nom. <span class="coptic">*ⲉⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲉϩⲁ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲉⲁϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉϩⲁϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲁⲃ-</span> <span class="dialect"><i>H</i></span>; (nom. <span class="coptic">ⲉⲁ-</span> <span class="dialect"><i>H<sup>s</sup></i></span>, 2 pl. <span class="coptic">ⲉϩⲁⲧⲛ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I avec</i> <span class="coptic">ⲉⲛⲉ-</span> <i>(= condition irréalisée)</i>:</td><td>nom. <span class="coptic">*ⲉⲛⲛⲉϩⲁ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲉⲛⲛⲉϩⲁϥ-</span> <span class="dialect"><i>M</i></span>; (3 pl. <span class="coptic">ⲉⲛⲛⲉϩⲁⲩ-</span> <span class="dialect"><i>M</i></span>; cf. présent II avec <span class="coptic">ⲉⲛⲉ-</span>, <i>supra</i>, p. 63).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I prétérit</i>:</td><td>nom. <span class="coptic">ⲛⲉϩⲁ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲛⲉϩⲁϥ-</span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait I prétérit négatif</i>:</td><td>nom. <span class="coptic">ⲛⲉⲙⲡⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲛⲉⲙⲡϥ-</span> <span class="dialect"><i>M</i></span></td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait II</i>:</td><td>nom. <span class="coptic">ⲉϩⲁ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉϩⲁϥ-</span> <span class="dialect"><i>M</i></span>; (toutes les formes <span class="coptic">ⲛ̄ⲧⲁϥ-</span> <span class="dialect"><i>S</i></span>, <span class="coptic">ⲧⲁⲃ-</span> <span class="dialect"><i>H</i></span>, etc., comme <span class="coptic">ⲉⲑⲁϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲧⲁϥ-</span> <span class="dialect"><i>B</i></span>, etc., pourraient bien n'être, à l'origine, qu'un relatif d'un parfait II <span class="coptic">*ⲉⲁϥ-</span>, etc., avec omission du pronom personnel ou démonstratif antécédent, utilisé soit en guise de parfait II, soit dans le sens du «temporel», comme l'imparfait futur relatif, cf. <i>supra</i>, et le parfait II relatif, cf. <i>infra</i>; il se distinguerait alors du parfait I relatif par la négation <span class="coptic">ⲁⲛ</span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Parfait II relatif</i>:</td><td>nom. <span class="coptic">ⲉⲧⲉϩⲁ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧⲉϩⲁϥ-</span> <span class="dialect"><i>M</i></span>; (parfois avec le sens du temporel, cf. <i>infra</i>, p. 66).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Expectatif</i>:</td><td>nom. <span class="coptic">ⲙ̄ⲡⲁⲧⲉ-</span> <span class="dialect"><i>*P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲡⲁⲧⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">*ⲙ̄ⲡⲁⲧ︤ϥ︥-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲡⲁⲧⲏⲃ-</span> <span class="dialect"><i>H</i></span>; (1 <span class="coptic">ⲙⲡⲁⲧⲓ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Expectatif circonstanciel</i>:</td><td><span class="coptic">ⲉⲙⲡⲁⲧⲉ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲙⲡⲁⲧ︤ϥ︥-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Expectatif prétérit</i>:</td><td><span class="coptic">ⲛⲉⲙⲡⲁⲧⲉ-</span> <span class="dialect"><i>M</i></span>; <span class="coptic">ⲛⲉⲙⲡⲁⲧϥ-</span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I</i>:</td><td>nom. <span class="coptic">ϣⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ϣⲁⲣⲏ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⳋⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ϣⲁϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ϣⲁⲃ-</span> <span class="dialect"><i>H</i></span>; (voyez le suivant).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I «dérivé»</i>:</td><td>nom. comme le précédent; 3 <span class="coptic">ϣⲁⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⳋⲁⲣ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I négatif</i>:</td><td>nom. <span class="coptic">ⲙⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲙⲉⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲙⲁϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲙⲉϥ-</span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I relatif</i>:</td><td>nom. <span class="coptic">ⲉⲧϣⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧϣⲁϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉϣⲁⲃ-</span> <span class="dialect"><i>H</i></span>; pronom <span class="coptic">ⲉⲧⳋⲁⲣ-</span> <span class="dialect"><i>P</i></span>; (3 <span class="coptic">(ⲡⲏ)ϣⲁⲃ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲛϣⲁϥ-</span> <span class="dialect"><i>S<sup>h</sup></i></span>; voyez le suivant).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I «dérivé» relatif</i>:</td><td>nom. comme le précédent; 3 <span class="coptic">ⲉⲧⲉϣⲁⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲧⲉⳋⲁⲣⲉϥ-</span> <span class="dialect"><i>P</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I relatif négatif</i>:</td><td>nom. <span class="coptic">*ⲉⲧⲉⲙⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲧⲉⲙⲉⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧⲉⲙⲁϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">*ⲉⲧⲉⲙⲉϥ-</span> <span class="dialect"><i>M</i></span>; (3 pl. <span class="coptic">ⲉⲧⲉⲙⲉⲩ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I circonstanciel</i>:</td><td>nom. <span class="coptic">*ⲉϣⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⳋⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ⲉϣⲁϥ-</span> <span class="dialect"><i>M</i></span>; (voyez le suivant).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I «dérivé» circonstanciel</i>:</td><td>nom. comme le précédent; 3 <span class="coptic">*ⲉϣⲁⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⳋⲁⲣ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>; (3 pl. <span class="coptic">ⲉϣⲁⲣⲟⲩ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I circonstanciel négatif</i>:</td><td>nom. <span class="coptic">*ⲉⲙⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">*ⲉⲙⲉⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲙⲁϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲙⲉϥ-</span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal I prétérit</i>:</td><td>nom. <span class="coptic">ⲛⲉϣⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲛⲉⳋⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ⲛⲉϣⲁϥ-</span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal II</i>:</td><td>nom. <span class="coptic">ⲉϣⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⳋⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ⲉϣⲁϥ-</span> <span class="dialect"><i>M</i></span>; (2 <span class="coptic">ⲉϣⲁⲕ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>; voyez le suivant).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal II «dérivé»</i>:</td><td>nom. comme le précédent; 3 <span class="coptic">ⲉⳋⲁⲣ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Consuétudinal II relatif</i>:</td><td>voyez le consuétudinal I relatif, particulièrement <span class="dialect"><i>P</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique (ou futur III)</i>:</td><td>nom. <span class="coptic">ⲉⲣⲁ- … ⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲣⲉ- … ⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲣⲏ … —</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲉⲣⲁ- … —</span> <span class="dialect"><i>G</i></span>; 3 <span class="coptic">ⲉϥⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉϥⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲃⲏ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲉⲫⲁ-</span> <span class="dialect"><i>G</i></span>; (1 <span class="coptic">ⲓⲁ-</span> <span class="dialect"><i>G</i></span>, 2 <span class="coptic">ⲉⲕⲏ-</span> <span class="dialect"><i>H</i></span>, 3 <span class="coptic">ⲉⲃⲉ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 3 pl. <span class="coptic">ⲉⲟⲩⲉ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique négatif</i>:</td><td>nom. <span class="coptic">ⲛⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲛⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲛⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲛ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲛⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲛⲏⲃ-</span> <span class="dialect"><i>H</i></span>; (1 <span class="coptic">ⲛⲛⲁ-</span> <span class="dialect"><i>M</i></span>, 2 <span class="coptic">ⲛⲉⲕ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 3 <span class="coptic">ⲛⲛ︤ⲃ︥-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 3 pl. <span class="coptic">ⲛⲟⲩ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲛⲉⲩ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique relatif</i>:</td><td>nom. <span class="coptic">*ⲉⲧⲉⲣⲁ- … ⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">*ⲉⲧⲉⲣⲉ- … ⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧⲉϥⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉⲧⲉϥⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲫⲁ-</span> <span class="dialect"><i>G</i></span>; (3 <span class="coptic">(ⲡ)ⲉⲫⲁ-</span> <span class="dialect"><i>G</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique relatif négatif</i>:</td><td>nom. <span class="coptic">*ⲉⲧⲉⲛⲛⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧⲉⲛⲛⲉϥ-</span> <span class="dialect"><i>M</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique circonstanciel négatif</i>:</td><td>nom. <span class="coptic">*ⲉⲛⲛⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲉⲛⲛⲉϥ-</span> <span class="dialect"><i>M</i></span>; (3 pl. <span class="coptic">ⲉⲛⲛⲉⲩ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique avec</i> <span class="coptic">ϫⲉ</span>:</td><td>nom. <span class="coptic">ϫⲉⲣⲁ- … ⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ϫⲉⲣⲉ- … ⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ϫⲉϥⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">*ϫⲉϥⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ϫⲏⲃⲏ-</span> <span class="dialect"><i>H</i></span> (3 <span class="coptic">ϫⲏⲃⲃⲏ</span> <span class="dialect"><i>H</i><sub>(h)</sub></span>, 1 pl. <span class="coptic">ϫⲉⲛⲉ-</span> <span class="dialect"><i>M<sup>f</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique II négatif</i>:</td><td>nom. <span class="coptic">ⲉⲛⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ⲉⲛ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Futur énergique «dérivé» = conditionnel</i> (?):</td><td>cf. 2 <span class="coptic">ⲉⲣⲁⲹ-</span> <span class="dialect"><i>P</i></span>.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Optatif</i>:</td><td>nom. <span class="coptic">ⲙⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲙⲁⲣⲏ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲙⲁⲧⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ⲙⲁⲣ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲙⲁⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲙⲁⲣⲏⲃ-</span> <span class="dialect"><i>H</i></span>; (3 <span class="coptic">ⲙⲁⲣ︤ⲃ︥-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 1 pl. <span class="coptic">ⲙⲁⲣⲛ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ⲙⲁⲣⲟⲩ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲙⲁⲣⲏⲩ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲙⲁⲣⲉⲩ-</span>, <span class="coptic">ⲙⲁⲣ︤ⲩ︥-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, nom. <span class="coptic">ⲙⲁⲣ̄-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Optatif négatif</i>:</td><td>nom. <span class="coptic">ⲙⲡⲣⲧⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲙ︤ⲛ︥ⲧⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ⲙⲡⲣⲧⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲙ︤ⲛ︥ⲧ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>; (3 f. <span class="coptic">ⲙ︤ⲛ︥ⲧ︤ⲥ︥-</span> <span class="dialect"><i>P</i></span>, 3 pl. <span class="coptic">ⲙⲡⲣⲧⲟⲩ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲙⲡⲣⲧⲣ︤ⲩ︥</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Impératif</i>:</td><td><span class="coptic">ⲙⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>H</i></span> (sauf <span class="coptic">ⲙⲉ-</span> dans <span class="coptic">ⲙⲉϣⲉ</span> «va!», pour éviter une confusion avec <span class="coptic">ⲙⲁϣⲉ</span> «marcher»).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Impératif négatif</i>:</td><td><span class="coptic">ⲙⲡⲣ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲡⲏⲣ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲙ︤ⲛ︥-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲙⲉⲛ- … ⲁⲛ</span> <span class="dialect"><i>G</i></span>; (<span class="coptic">ⲉⲡ︤ⲣ︥-</span> <span class="dialect"><i>H<sup>x</sup></i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Final</i>:</td><td>nom. <span class="coptic">*ⲛⲧⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧⲁⲣⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲛ̄ⲧⲁⲣ︤ϥ︥-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">*ⲛⲧⲁⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧⲁⲣⲏϥ-</span> <span class="dialect"><i>H</i></span>; (1 <span class="coptic">ⲧⲁ-</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>H</i></span>, 2 <span class="coptic">ⲛ̄ⲧⲁⲣⲉⲕ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲁⲣ︤ⲕ︥-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 1 pl. <span class="coptic">ⲛⲧⲁⲣⲛ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ⲛⲧⲁⲣⲟⲩ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲁⲣⲏⲩ-</span> <span class="dialect"><i>H</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Conjonctif</i>:</td><td>nom. <span class="coptic">ⲛ̄ⲧⲉ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧⲏ</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲧⲉ-</span> <span class="dialect"><i>G</i></span>; 3 <span class="coptic">ⲻ︤ϥ︥</span> ou <span class="coptic">ⲳ︤ϥ︥</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛ︤ϥ︥-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲃ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲧⲉⲫ-</span> <span class="dialect"><i>G</i></span>; (1 <span class="coptic">ⲛ̄ⲧⲁ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲁ-</span> <span class="dialect"><i>H</i></span> <span class="dialect"><i>G</i></span>, 2 <span class="coptic">ⲻ︤ⲹ︥-</span> ou <span class="coptic">ⲳ︤ⲹ︥-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲕ-</span> <span class="dialect"><i>M</i></span> <span class="dialect"><i>H<sup>x</sup></i></span> <span class="dialect"><i>G</i><sub>(qq)</sub></span>, <span class="coptic">ⲧⲉⲕ-</span> <span class="dialect"><i>G</i></span>, 2 f. <span class="coptic">ⲧⲏ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲧⲉ-</span> <span class="dialect"><i>S<sup>h</sup></i></span>, 1 pl. <span class="coptic">ⲛ̄ⲧ︤ⲛ︥-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧ︤ⲛ︥-</span>, <span class="coptic">(ⲛ)ⲧⲉⲛ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 2 pl. <span class="coptic">ⲛ̄ⲧⲉⲧ︤ⲛ︥-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲏⲧⲛ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">(ⲛ)ⲧⲉⲧⲉⲛ-</span>, <span class="coptic">ⲉⲧ̄ⲧⲉⲛ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 3 pl. <span class="coptic">ⲛ̄ⲥⲉ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲥⲏ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲥⲉ-</span>, <span class="coptic">ⲉⲥ̄-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, nom. <span class="coptic">ⲧⲉ-</span><span class="coptic">ⲛⲧ̄-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, <span class="coptic">ⲉⲛⲧⲉ-</span> <span class="dialect"><i>G</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Conjonctif avec</i> <span class="coptic">ⲙ︤ⲛ︥ⲛ̄ⲥⲁ-</span>:</td><td>nom. <span class="coptic">ⲙⲛⲛⲥⲁⲛⲧⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲙⲛⲛⲥⲁⲛϥ-</span> <span class="dialect"><i>M</i></span>; (1 <span class="coptic">ⲙⲛⲛⲥⲁⲛⲧⲁ-</span>; voyez l'infinitif causatif avec <span class="coptic">ⲙ︤ⲛ︥ⲛ̄ⲥⲁ-</span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Conjonctif avec</i> <span class="coptic">ϣⲁ-</span>:</td><td>nom. <span class="coptic">ϣⲁⲛⲧⲉ-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ϣⲁⲛⲧⲏ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲥⲍⲁⲛⲧⲉ-</span> <span class="dialect"><i>G</i></span>; 3 <span class="coptic">ϣⲁⲛⲧ︤ϥ︥-</span> <span class="dialect"><i>P</i></span> <span class="dialect"><i>M</i></span>, <span class="coptic">ϣⲁⲛⲧⲏⲃ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲥⲍⲁⲛⲧⲉⲫ-</span> <span class="dialect"><i>G</i></span>; (1 <span class="coptic">ϣⲁⲛϯ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ϣⲁⲛⲧⲓ-</span> <span class="dialect"><i>H</i></span>, 2 f. <span class="coptic">ϣⲁⲛⲧⲏⲣ-</span> <span class="dialect"><i>H</i></span>, 3 <span class="coptic">ϣⲁⲛⲧⲉⲃ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 1 pl. <span class="coptic">ϣⲁⲛⲧⲛ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ϣⲁⲛⲧⲟⲩ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Conjonctif avec</i> <span class="coptic">ϣⲁ-</span> <i>et</i> <span class="coptic">ⲉⲛⲉ-</span> <i>(= condition irréalisée)</i>:</td><td>nom. <span class="coptic">*ⲉⲛⲛⲉϣⲁⲛⲧⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲉⲛⲛⲉϣⲁⲛⲧϥ-</span> <span class="dialect"><i>M</i></span>; (1 <span class="coptic">ⲉⲛⲛⲉϣⲁⲛϯ-</span> <span class="dialect"><i>M</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Temporel</i>:</td><td>nom. <span class="coptic">*ⲛ̄ⲧⲁⲣⲉ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲧⲉⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧⲏⲣⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲛ̄ⲧⲁⲣⲉϥ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲧⲉⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲏⲣⲏⲃ-</span> <span class="dialect"><i>H</i></span>; (nom. <span class="coptic">ⲧⲉⲣ̄-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 3 pl. <span class="coptic">ⲛ̄ⲧⲁⲣⲟⲩ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲛⲧⲉⲣⲟⲩ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲏⲣⲏⲩ-</span> <span class="dialect"><i>H</i></span>); pour <span class="dialect"><i>M</i></span> voyez encore le parfait I relatif et le parfait II relatif <i>supra</i>, p. 64.</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Conditionnel (ou conditionnel primitif)</i>:</td><td>nom. <span class="coptic">ⲁⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲁϥ-</span> <span class="dialect"><i>M</i></span>; (2 <span class="coptic">ⲁⲕ-</span> <span class="dialect"><i>M</i></span>, 3 pl. <span class="coptic">ⲁⲩ-</span> <span class="dialect"><i>M</i></span>; cf. <span class="coptic">ⲉⲣⲉ-</span> <span class="dialect"><i>S</i></span> (p. ex. Ac. 5, 15) et R. <span class="author-caps">Kasser</span>, <i>A propos des différentes formes du conditionnel copte</i>, le Muséon LXXVI, p. 267–270, Louvain 1963).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Conditionnel avec</i> <span class="coptic">-ϣⲁⲛ-</span>:</td><td>nom. <span class="coptic">ⲉϣⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲁⲣⲉϣⲁⲛ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲣϣⲁⲛ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲁⲣ(ⲉ)ⲥⲍⲁⲛ-</span> <span class="dialect"><i>G</i></span>; 3 <span class="coptic">ⲉϥϣⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲁϥϣⲁⲛ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲃϣⲁⲛ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">*ⲁϥⲥⲍⲁⲛ-</span> <span class="dialect"><i>G</i></span>; (1 <span class="coptic">ⲉⲉⲓϣⲁ-</span> <span class="dialect"><i>P</i></span>, <span class="coptic">ⲉϣϣⲁⲛ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, <span class="coptic">ⲁⲕⲥⲍⲁⲛ-</span> <span class="dialect"><i>G</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="2" class="schema"><i>Conditionnel primitif négatif</i>:</td><td>nom. <span class="coptic">ⲁⲣⲉⲧⲙ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲣⲏⲧⲙ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">ⲁϥⲧⲙ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲉⲃⲧⲙ-</span> <span class="dialect"><i>H</i></span>; (3 pl. <span class="coptic">ⲉⲩⲧⲙ-</span> <span class="dialect"><i>H</i></span>).</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="nombre"><i>Infinitif causatif</i>:</td>
+						</tr>
+						<tr class="infinitif">
+							<td rowspan="6"></td><td><i>avec</i> <span class="coptic">ⲉ-</span>:</td><td>nom. <span class="coptic">ⲉⲧⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ⲧⲣⲏ-</span> <span class="dialect"><i>H</i></span>; 3 <span class="coptic">*ⲉⲧⲣⲉϥ-</span> <span class="dialect"><i>M</i></span> <span class="coptic">ⲧⲣⲏⲃ-</span> <span class="dialect"><i>H</i></span>; (1 <span class="coptic">ⲉⲧⲣⲁ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲧⲣⲁ-</span> <span class="dialect"><i>H</i></span>, 2 <span class="coptic">ⲉⲧⲣⲉⲕ-</span> <span class="dialect"><i>M</i></span>, 3 <span class="coptic">ⲉⲧⲏⲣⲏⲃ-</span> <span class="dialect"><i>H</i><sub>(qq)</sub></span>, <span class="coptic">ⲉⲧⲣ(ⲉ)ⲃ-</span> <span class="dialect"><i>H<sup>x</sup></i></span>, 3 pl. <span class="coptic">ⲉⲧⲣⲉⲩ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ⲉⲧⲣⲟⲩ-</span> <span class="dialect"><i>M</i><sub>(qq)</sub></span>, <span class="coptic">ⲧⲣⲏⲩ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ⲧⲣⲉⲩ-</span>, <span class="coptic">ⲉⲧⲣⲏⲩ-</span> <span class="dialect"><i>H</i><sub>(qq)</sub></span>);</td>
+						</tr>
+						<tr class="infinitif">
+							<td><i>avec</i> <span class="coptic">ⲉ-</span> <i>et l'article</i>:</td><td>nom. <span class="coptic">ⲉⲡⲧⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">*ⲉⲡⲧⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>; (3 pl. <span class="coptic">ⲉⲡⲧⲣⲟⲩ-</span> <span class="dialect"><i>M</i><sub>(qq)</sub></span>);</td>
+						</tr>
+						<tr class="infinitif">
+							<td><i>avec</i> <span class="coptic">ⲉ-</span>, <i>négatif</i>:</td><td>nom. <span class="coptic">ⲉⲧⲙⲧⲣⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲉⲧⲙⲧⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>; (3 pl. <span class="coptic">ⲉⲧⲙⲧⲣⲉⲩ-</span> <span class="dialect"><i>M</i><sub>(qq)</sub></span>);</td>
+						</tr>
+						<tr class="infinitif">
+							<td><i>avec</i> <span class="coptic">ϩ︤ⲛ︥-</span> <i>et l'article</i>:</td><td>nom. <span class="coptic">ϩⲙⲡⲧⲣⲉ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ϩⲏⲛⲡⲧ(ⲏ)ⲣⲏ-</span> <span class="dialect"><i>H</i></span>, <span class="coptic">ϧ︤ⲙ︥ⲡⲧⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">*ϩⲙⲡⲧⲣⲉϥ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">*ϩⲏⲛⲡⲧ(ⲏ)ⲣⲏⲃ-</span> <span class="dialect"><i>H</i></span> (3 <span class="coptic">ϩⲙⲡⲧⲣⲉⲃ-</span> <span class="dialect"><i>S<sup>h</sup></i></span>, <span class="coptic">ϩⲙⲡⲧⲣⲟⲩ-</span> <span class="dialect"><i>M</i></span>, <span class="coptic">ϩⲏⲛⲡⲧⲏⲣⲏⲩ-</span> <span class="dialect"><i>H</i></span>, 3 pl. <span class="coptic">ϧ︤ⲙ︥ⲡⲧⲟⲩ-</span> <span class="dialect"><i>P</i></span>);</td>
+						</tr>
+						<tr class="infinitif">
+							<td><i>avec</i> <span class="coptic">ⲙ︤ⲛ︥ⲛ̄ⲥⲁ-</span>:</td><td>nom. <span class="coptic">*ⲙ︤ⲛ︥ⲛ̄ⲥⲁⲧ(ⲣ)ⲉ-</span> <span class="dialect"><i>P</i></span>; 3 <span class="coptic">ⲙ︤ⲛ︥ⲛ̄ⲥⲁⲧⲣ︤ϥ︥-</span> <span class="dialect"><i>P</i><sub>(h)</sub></span>;</td>
+						</tr>
+						<tr class="infinitif">
+							<td><i>avec</i> <span class="coptic">ⲙ︤ⲛ︥ⲛ̄ⲥⲁ-</span> <i>et l'article</i>:</td><td>nom. <span class="coptic">*ⲙⲛⲛⲥⲁⲡⲧ(ⲣ)ⲉ-</span> <span class="dialect"><i>M</i></span>; 3 <span class="coptic">ⲙⲛⲛⲥⲁⲡⲧⲉϥ-</span> <span class="dialect"><i>M</i></span>; (voyez le conjonctif avec <span class="coptic">ⲙ︤ⲛ︥ⲛ̄ⲥⲁ-</span>, <i>supra</i>).</td>
+						</tr>
+					</table>
+				</div>
 			</main>
-			<hr>
-			<footer>
-				<span>© Randy Komforty 2025</span>
-			</footer>
 		</div>
+		<footer>
+			<span>© Randy Komforty 2025–2026</span>
+		</footer>
 		<script type="module" src="/kasser/scripts/scripts.js"></script>
 	</body>
 </html>

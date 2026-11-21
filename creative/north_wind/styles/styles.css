@@ -8,12 +8,6 @@
 	background: #1a1a1a;
 	background: #212121;
 	background: gold;
-	//mix-blend-mode: lighten;
-	position: sticky;
-	top: 104px;
-	//width: 100%;
-	//margin: 0 -2em;
-	z-index: 999;
 }
 audio {
 	mix-blend-mode: multiply;

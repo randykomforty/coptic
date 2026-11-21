@@ -1,72 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Lambdin (Bohairic)</title>
+		<title>CopticWiki: Lambdin (Bohairic)</title>
 		<link rel="icon" type="image/x-icon" href="/styles/images/favicon_02112026.png">
 		<link rel="stylesheet" href="/styles/fonts.css">
 		<link rel="stylesheet" href="/styles/styles.css">
-		<link rel="stylesheet" href="./styles/styles.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="format-detection" content="telephone=no">
 		<meta charset="UTF-8">
+		<style>
+			/* show/hide answers */
+
+			tr:has(> td > input[type="checkbox"]) + tr td,
+			li:has(> input[type="checkbox"]) > ul > li:last-child,
+			.list-2-part > li > ul:last-child li:has(> input[type="checkbox"]) > ul > li {
+				opacity: 0;
+				transition: opacity .5s ease;
+			}
+
+			tr:has(> td > input[type="checkbox"]:checked) + tr td,
+			li:has(> input[type="checkbox"]:checked) > ul > li:last-child,
+			.list-2-part > li > ul:last-child li:has(> input[type="checkbox"]:checked) > ul > li {
+				opacity: 1;
+			}
+			
+		</style>
 	</head>
 	<body>
+		<header>
+			<h1><a href="/">CopticWiki</a></h1>
+		</header>
 		<div id="container">
-			<header>
-				<div id="logos">
-					<h1><a href="/">CopticWiki</a></h1>
-					<div class="socials">
-						<a href="https://ko-fi.com/copticwiki"><img class="logo-kofi" src="/styles/images/logos/kofi_symbol.svg" alt="Ko-Fi"></a>
-						<a href="https://buymeacoffee.com/copticwiki"><img class="logo-buymeacoffee" src="/styles/images/logos/buymeacoffee.png" alt="Buy Me a Coffee"></a>
-						<a href="https://www.patreon.com/c/CopticWiki"><img class="logo-patreon" src="/styles/images/logos/Patreon_logo.svg.png" alt="Patreon"></a>
-						<a href="https://www.youtube.com/@coptic.wiki.official"><img class="logo-youtube" src="/styles/images/logos/yt_icon_white_digital.png" alt="YouTube"></a>
-					</div>
-				</div>
-				<div class="title">
-					<h2>Introduction to Sahidic Coptic</h2>
-					<h3>T. O. Lambdin</h3>
-				</div>
-				<div id="toc" class="">
-					<h3 class="hide">Table of Contents</h3>
+			<nav>
+				<ul>
+					<li>
+						<a href="/lambdin/"><span class="author">[Lambdin]</span> Introduction to Sahidic Coptic</a>
+					</li>
+					<li>
+						<a href="/lambdin_bohairic/"><b>WIP</b> Lambdin (Bohairic version)</a>
+					</li>
+					<li>
+						<a href="/mallon/"><span class="author">[Mallon]</span> Grammaire Copte</a>
+					</li>
+					<li>
+						<a href="/crum/"><span class="author">[Crum]</span> A Coptic Dictionary</a>
+					</li>
+					<li>
+						<a href="/kasser/"><b>WIP</b> [Kasser] Compléments au Dictionnaire Copte de Crum</a>
+					</li>
+					<li>
+						<a href="/kasser1966/"><b>WIP</b> [Kasser] Compléments Morphologiques au Dictionnaire de Crum</a>
+					</li>
+					<li>
+						<a href="/vycichl/"><b>WIP</b> [Vycichl] Dictionnaire Étymologique de la Langue Copte</a>
+					</li>
+					<li>
+						<a href="/spiegelberg/"><b>WIP</b> [Spiegelberg] Koptisches Handwörterbuch</a>
+					</li>
+					<li>
+						<a href="/westendorf/"><b>WIP</b> [Westendorf] Koptisches Handwörterbuch</a>
+					</li>
+					<li>
+						<a href="/cerny/"><b>WIP</b> [Černý] Coptic Etymological Dictionary</a>
+					</li>
+				</ul>
+			</nav>
+			<main>
+				<h2>Introduction to Sahidic Coptic</h2>
+				<h3>T. O. Lambdin</h3>
+				<div class="hide">
+					<h3>Table of Contents</h3>
 					<ul>
-						<li class="hide"><span class="section_name">Preface</span><span class="section_page">iii</span></li>
-						<li class="hide"><span class="section_name">Abbreviations and Conventions</span><span class="section_page">vi</span></li>
-						<li class="hide"><span class="section_name">Introduction</span><span class="section_page">vii</span></li>
-						<li><span class="section_name"><span class="hide">Lessons 1–30</span></span><span class="hide section_page">1</span>
+						<li><span class="section_name">Preface</span><span class="section_page">iii</span></li>
+						<li><span class="section_name">Abbreviations and Conventions</span><span class="section_page">vi</span></li>
+						<li><span class="section_name">Introduction</span><span class="section_page">vii</span></li>
+						<li><span class="section_name"><span>Lessons 1–30</span></span><span class="hide section_page">1</span>
 							<ul id="toc_lessons">
-								<li><a href="#lesson_01" class="section_name"><span class="hide">Lesson </span>1</a></li>
-								<li><a href="#lesson_02" class="section_name"><span class="hide">Lesson </span>2</a></li>
-								<li><a href="#lesson_03" class="section_name"><span class="hide">Lesson </span>3</a></li>
-								<li><a href="#lesson_04" class="section_name"><span class="hide">Lesson </span>4</a></li>
-								<li><a href="#lesson_05" class="section_name"><span class="hide">Lesson </span>5</a></li>
-								<li><a href="#lesson_06" class="section_name"><span class="hide">Lesson </span>6</a></li>
-								<li><a href="#lesson_07" class="section_name"><span class="hide">Lesson </span>7</a></li>
-								<li><a href="#lesson_08" class="section_name"><span class="hide">Lesson </span>8</a></li>
-								<li><a href="#lesson_09" class="section_name"><span class="hide">Lesson </span>9</a></li>
-								<li><a href="#lesson_10" class="section_name"><span class="hide">Lesson </span>10</a></li>
-								<li><a href="#lesson_11" class="section_name"><span class="hide">Lesson </span>11</a></li>
-								<li><a href="#lesson_12" class="section_name"><span class="hide">Lesson </span>12</a></li>
-								<li><a href="#lesson_13" class="section_name"><span class="hide">Lesson </span>13</a></li>
-								<li><a href="#lesson_14" class="section_name"><span class="hide">Lesson </span>14</a></li>
-								<li><a href="#lesson_15" class="section_name"><span class="hide">Lesson </span>15</a></li>
-								<li><a href="#lesson_16" class="section_name"><span class="hide">Lesson </span>16</a></li>
-								<li><a href="#lesson_17" class="section_name"><span class="hide">Lesson </span>17</a></li>
-								<li><a href="#lesson_18" class="section_name"><span class="hide">Lesson </span>18</a></li>
-								<li><a href="#lesson_19" class="section_name"><span class="hide">Lesson </span>19</a></li>
-								<li><a href="#lesson_20" class="section_name"><span class="hide">Lesson </span>20</a></li>
-								<li><a href="#lesson_21" class="section_name"><span class="hide">Lesson </span>21</a></li>
-								<li><a href="#lesson_22" class="section_name"><span class="hide">Lesson </span>22</a></li>
-								<li><a href="#lesson_23" class="section_name"><span class="hide">Lesson </span>23</a></li>
-								<li><a href="#lesson_24" class="section_name"><span class="hide">Lesson </span>24</a></li>
-								<li><a href="#lesson_25" class="section_name"><span class="hide">Lesson </span>25</a></li>
-								<li><a href="#lesson_26" class="section_name"><span class="hide">Lesson </span>26</a></li>
-								<li><a href="#lesson_27" class="section_name"><span class="hide">Lesson </span>27</a></li>
-								<li><a href="#lesson_28" class="section_name"><span class="hide">Lesson </span>28</a></li>
-								<li><a href="#lesson_29" class="section_name"><span class="hide">Lesson </span>29</a></li>
-								<li><a href="#lesson_30" class="section_name"><span class="hide">Lesson </span>30</a></li>
+								<li><a href="#lesson_01" class="section_name"><span>Lesson </span>1</a></li>
+								<li><a href="#lesson_02" class="section_name"><span>Lesson </span>2</a></li>
+								<li><a href="#lesson_03" class="section_name"><span>Lesson </span>3</a></li>
+								<li><a href="#lesson_04" class="section_name"><span>Lesson </span>4</a></li>
+								<li><a href="#lesson_05" class="section_name"><span>Lesson </span>5</a></li>
+								<li><a href="#lesson_06" class="section_name"><span>Lesson </span>6</a></li>
+								<li><a href="#lesson_07" class="section_name"><span>Lesson </span>7</a></li>
+								<li><a href="#lesson_08" class="section_name"><span>Lesson </span>8</a></li>
+								<li><a href="#lesson_09" class="section_name"><span>Lesson </span>9</a></li>
+								<li><a href="#lesson_10" class="section_name"><span>Lesson </span>10</a></li>
+								<li><a href="#lesson_11" class="section_name"><span>Lesson </span>11</a></li>
+								<li><a href="#lesson_12" class="section_name"><span>Lesson </span>12</a></li>
+								<li><a href="#lesson_13" class="section_name"><span>Lesson </span>13</a></li>
+								<li><a href="#lesson_14" class="section_name"><span>Lesson </span>14</a></li>
+								<li><a href="#lesson_15" class="section_name"><span>Lesson </span>15</a></li>
+								<li><a href="#lesson_16" class="section_name"><span>Lesson </span>16</a></li>
+								<li><a href="#lesson_17" class="section_name"><span>Lesson </span>17</a></li>
+								<li><a href="#lesson_18" class="section_name"><span>Lesson </span>18</a></li>
+								<li><a href="#lesson_19" class="section_name"><span>Lesson </span>19</a></li>
+								<li><a href="#lesson_20" class="section_name"><span>Lesson </span>20</a></li>
+								<li><a href="#lesson_21" class="section_name"><span>Lesson </span>21</a></li>
+								<li><a href="#lesson_22" class="section_name"><span>Lesson </span>22</a></li>
+								<li><a href="#lesson_23" class="section_name"><span>Lesson </span>23</a></li>
+								<li><a href="#lesson_24" class="section_name"><span>Lesson </span>24</a></li>
+								<li><a href="#lesson_25" class="section_name"><span>Lesson </span>25</a></li>
+								<li><a href="#lesson_26" class="section_name"><span>Lesson </span>26</a></li>
+								<li><a href="#lesson_27" class="section_name"><span>Lesson </span>27</a></li>
+								<li><a href="#lesson_28" class="section_name"><span>Lesson </span>28</a></li>
+								<li><a href="#lesson_29" class="section_name"><span>Lesson </span>29</a></li>
+								<li><a href="#lesson_30" class="section_name"><span>Lesson </span>30</a></li>
 							</ul>
 						</li>
-						<li class="hide"><span class="section_name">Reading Selections</span><span class="section_page"></span>
+						<li><span class="section_name">Reading Selections</span><span class="section_page"></span>
 							<ul>
 								<li><span class="section_name">Introductory Remarks</span><span class="section_page">146</span></li>
 								<li><span class="section_name">Luke I–V</span><span class="section_page">149</span></li>
@@ -75,22 +117,25 @@
 								<li><span class="section_name">The Life of Joseph the Carpenter</span><span class="section_page">196</span></li>
 							</ul>
 						</li>
-						<li class="hide"><span class="section_name">Glossary</span><span class="section_page">209</span></li>
-						<li class="hide"><span class="section_name">Glossary of Greek Words</span><span class="section_page">359</span></li>
-						<li class="hide"><span class="section_name">Bibliography</span><span class="section_page">364</span></li>
-						<li class="hide"><span class="section_name">Grammatical Index</span><span class="section_page">366</span></li>
-						<li class="hide"><span class="section_name">Table of Principal Verbal Conjugations</span><span class="section_page">371</span></li>
-						<li class="hide"><span class="section_name">Subject Index</span><span class="section_page">373</span></li>
+						<li><span class="section_name">Glossary</span><span class="section_page">209</span></li>
+						<li><span class="section_name">Glossary of Greek Words</span><span class="section_page">359</span></li>
+						<li><span class="section_name">Bibliography</span><span class="section_page">364</span></li>
+						<li><span class="section_name">Grammatical Index</span><span class="section_page">366</span></li>
+						<li><span class="section_name">Table of Principal Verbal Conjugations</span><span class="section_page">371</span></li>
+						<li><span class="section_name">Subject Index</span><span class="section_page">373</span></li>
 					</ul>
 				</div>
-			
-			</header>
-			<main>
-				<div id="preface" class="hide">
+				<div id="preface">
 					<h2 >Preface</h2>
-					<p>The present work is an expansion of a series of elementary lessons developed gradually during twenty years of teaching Sahidic Coptic at the college level. The Lessons are designed to provide a carefully graded introduction to the basic grammar and vocabulary of the language. The content of the Lessons and the mode of presentation were dictated by purely practical pedagogical considerations; the book is in no way intended to be a scientific reference grammar. The Reading Selections are furnished with glosses designed to facilitate the translation to unsimplified material. A thorough mastery of these and the Lessons will bring the student to the level at which any Sahidic text of average difficulty can be read with no trouble. The emphasis on basic matters has necessitated the omission of much technical linguistic data not immediately relevant to the needs of the average beginning student. Those who are interested in a detailed study of the phonology, in the relationship of Sahidic to the other Coptic dialects, or in the historical development of Coptic from ancient Egyptian may consult the standard works on these subjects as cited in the Bibliography.</p>
-					<p>A special effort has been made to provide a Glossary that will be useful to the student beyond his first year's study. In addition to covering the words used in the present text, the Glossary is intended to contain the full vocabulary of the Sahidic New Testament, including most associated phrases and idioms, as well as a generous selection of lexical items from other Biblical and literary texts. Deliberately excluded from the Glossary are words of a specialized nature, such as the names of plants, vessels, implements, drugs, and animals occurring only in technical texts that usually provide little clue to their precise meanings; nor has any effort been made to include the unusual lexical usage of Shenute. For these items the reader must consult the indispensible <i>A Coptic Dictionary</i> of W. E. Crum, which, together with M. Wilmet, <i>Concordance du nouveau testament sahidique</i>, is the main authority for the Glossary included here.</p>
-					<p>I would like to express my sincere thanks to my colleague, George W. MacRae, the Charles Chauncey Stillman Professor of Roman Catholic Theological Studies, Harvard Divinity School, for encouraging me to undertake this work and for his helpful comments on a large portion of the manuscript; to Mr. Gary A. Bisbee, for the exceptional skill and care with which he prepared the final copy for publication; to Mr. Watson E. Mills, Director of the Mercer University Press, for his part in initiating and publishing this work.</p>
+					<p>
+						The present work is an expansion of a series of elementary lessons developed gradually during twenty years of teaching Sahidic Coptic at the college level. The Lessons are designed to provide a carefully graded introduction to the basic grammar and vocabulary of the language. The content of the Lessons and the mode of presentation were dictated by purely practical pedagogical considerations; the book is in no way intended to be a scientific reference grammar. The Reading Selections are furnished with glosses designed to facilitate the translation to unsimplified material. A thorough mastery of these and the Lessons will bring the student to the level at which any Sahidic text of average difficulty can be read with no trouble. The emphasis on basic matters has necessitated the omission of much technical linguistic data not immediately relevant to the needs of the average beginning student. Those who are interested in a detailed study of the phonology, in the relationship of Sahidic to the other Coptic dialects, or in the historical development of Coptic from ancient Egyptian may consult the standard works on these subjects as cited in the Bibliography.
+					</p>
+					<p>
+						A special effort has been made to provide a Glossary that will be useful to the student beyond his first year's study. In addition to covering the words used in the present text, the Glossary is intended to contain the full vocabulary of the Sahidic New Testament, including most associated phrases and idioms, as well as a generous selection of lexical items from other Biblical and literary texts. Deliberately excluded from the Glossary are words of a specialized nature, such as the names of plants, vessels, implements, drugs, and animals occurring only in technical texts that usually provide little clue to their precise meanings; nor has any effort been made to include the unusual lexical usage of Shenute. For these items the reader must consult the indispensible <i>A Coptic Dictionary</i> of W. E. Crum, which, together with M. Wilmet, <i>Concordance du nouveau testament sahidique</i>, is the main authority for the Glossary included here.
+					</p>
+					<p>
+						I would like to express my sincere thanks to my colleague, George W. MacRae, the Charles Chauncey Stillman Professor of Roman Catholic Theological Studies, Harvard Divinity School, for encouraging me to undertake this work and for his helpful comments on a large portion of the manuscript; to Mr. Gary A. Bisbee, for the exceptional skill and care with which he prepared the final copy for publication; to Mr. Watson E. Mills, Director of the Mercer University Press, for his part in initiating and publishing this work.
+					</p>
 					<p>Thomas O. Lambdin</p>
 					<p>Cambridge, Mass.</p>
 					<p>June 1982</p>
@@ -240,23 +285,47 @@
 						<li><span class="abbreviation">+</span><span class="term">with, plus, and</span></li>
 						<li><span class="abbreviation">=</span><span class="term">is fully equivalent in function and meaning to</span></li>
 					</ul>
-					<p>The names of specific conjugations and inflected verbal forms are capitalized throughout the book.</p>
+					<p>
+						The names of specific conjugations and inflected verbal forms are capitalized throughout the book.
+					</p>
 				</div>
-				<div id="introduction" class="hide">
+				<div id="introduction">
 					<h2>Introduction</h2>
-					<p>The political unification of Egypt took place around the beginning of the third millennium B.C. with the establishment of the First Dynasty at Memphis. Soon afterward written records began to appear in the hieroglyphic script, which together with its cursive derivatives, hieratic and demotic, remained the sole medium for writing the Egyptian language until the end of the second century A.D. At that time, the missionaries of the Church, then centered in Alexandria, undertook the translation of the Bible from Greek into Egyptian in order to facilitate their task of Christianizing the country. They abandoned the three-thousand-year-old hieroglyphic writing system, probably as much because of its complexity and imperfections as for its "heathen" associations, and chose instead to employ a modified form of the Greek alphabet. Egyptian in this new guise is known as Coptic, a modern term derived from Arabic <i>qubṭî</i>, itself a corruption of the Greek word <i>(ai)gúpti(os)</i>, Egyptian.</p>
-					<p>The conquest of Egypt by Alexander the Great in 332 B.C. and the subsequent Greek-speaking administration of the country under the Ptolemies led to the thorough Hellenization of Lower (i.e. Northern) Egypt. Egyptian-Greek bilingualism was apparently commonplace in the Delta, and it is probable that much Greek technical, legal, and commercial terminology was introduced into spoken Egyptian at this time. Rough and unsystematic attempts to transcribe Egyptian in the Greek alphabet were made as early as the third century B.C. It was only natural, then, that the Coptic translators of the Bible not only adopted the Greek alphabet but also generously supplemented the native lexicon with many more borrowings from Greek. The Greek vocabulary of any Coptic text is significantly large.</p>
-					<p>Evidence of dialectal differences is found as early as the third millenium B.C., but the general conservatism of the hieroglyphic script and the practice of standardizing a particular form of the language for long periods of time (e.g. Middle Egyptian, New Egyptian) tend to obscure the great dialectal diversity that must have existed in the spoken language as one traveled the 750 miles down the Nile from Aswan to the Mediterranean. The individual dialects first become recognizable when we reach the Coptic period and see the language spelled out in the Greek alphabet. The exact geographical location of the dialects is still a matter of scholarly debate, but the reader should become familiar with their names and the approximate chronological range of their use for literary purposes.</p>
-					<p>Sahidic, the dialect treated in this book, was the dialect chosen for the official translation of the Bible mentioned above. There is conflicting evidence on its geographical location: the name Sahidic, from Arabic <i>aṣ-ṣaʿîd</i>, Upper (i.e. Southern) Egypt, places it in the south (hence its alternate name: Theban, Thebaic); linguistic considerations, however, favor a northern locale, in the neighborhood of Memphis and the eastern Delta. One cannot rule out the possibility that both locations are correct; the fact that Thebes and Memphis alternated as the capital of Egypt through much of its history and were the chief centers of religious (priestly), building, and commercial activity could have led to the development of an "urban" dialect in these two areas, quite distinct from the dialects of the "rural" areas that lay between. By the fourth century A.D. Sahidic was firmly established as the standard literary dialect and retained this status until its demise around the tenth century. Surviving texts in Sahidic include, in addition to the New Testament and a large portion of the Old, a considerable corpus of Church literature and some remnants of secular literature, nearly all of which is translated from Greek. Of native works we have only the writings of Pachomius (c. 300), the founder of Egyptian monasticism; Shenute (c. 400), the administrator of the White Monastery in Upper Egypt; and Besa, a disciple of Shenute. The Coptic writings of Shenute, who attempted to mould the language into a literary vehicle comparable to Greek, are often referred to as the "classics" of Sahidic literature. Their syntactic complexity and unusual vocabulary usage, however, place them beyond the scope of the present work, which is based on the language of the more widely studied translation literature.</p>
-					<p>Bohairic replaced Sahidic as the standard literary dialect. Bohairic texts are attested as early as the ninth century, but the dialect does not seem to have achieved wide usage until it was adopted as the official language of the Coptic Church in the eleventh century. Most Bohairic texts come from after this time, and many of them were translated from Sahidic originals. The term Bohairic comes from Arabic <i>al-buhairah</i>, Lower (i.e. Northern) Egypt; it is generally assumed that Bohairic was the dialect of the Western Delta, including Alexandria and Nitria. The designation Memphitic has also been used for this dialect.</p>
-					<p>Fayyumic, as its name implies, was the dialect of northern Middle Egypt in the vicinity of the Fayyum Basin. It is well attested in texts ranging from the fourth to the eleventh century, but it apparently never attained the status of Sahidic.</p>
-					<p>Achmimic, generally located in the area of Akhmim (Panopolis) in southern Middle Egypt, enjoyed only a brief literary period from the third to the fifth century.</p>
-					<p>Subachmimic, tentatively localized between Akhmim and Thebes, was used extensively in the fourth and fifth centuries for the translation of Manichaean and Gnostic literature. Its association with this heretical material probably had much to do with its early demise as a literary dialect. The Nag Hammadi texts are in Subachmimic or a variety of Sahidic influenced by Subachmimic in varying degrees.</p>
-					<p>For further details on the dialects the reader should consult the works of Worrell, Vergote, Kahle, and Till cited in the Bibliography.</p>
-					<p>The Arab conquest of Egypt in 641 A.D. and the subsequent suppression of the native Christian population resulted in the gradual dying out of the Egyptian language in favor of Arabic. We cannot be sure how long this process took, but it is safe to assume that by the fifteenth century Coptic had ceased to be a native spoken language, thus bringing to an end a continuous written record of over four thousand years.</p>
+					<p>
+						The political unification of Egypt took place around the beginning of the third millennium B.C. with the establishment of the First Dynasty at Memphis. Soon afterward written records began to appear in the hieroglyphic script, which together with its cursive derivatives, hieratic and demotic, remained the sole medium for writing the Egyptian language until the end of the second century A.D. At that time, the missionaries of the Church, then centered in Alexandria, undertook the translation of the Bible from Greek into Egyptian in order to facilitate their task of Christianizing the country. They abandoned the three-thousand-year-old hieroglyphic writing system, probably as much because of its complexity and imperfections as for its "heathen" associations, and chose instead to employ a modified form of the Greek alphabet. Egyptian in this new guise is known as Coptic, a modern term derived from Arabic <i>qubṭî</i>, itself a corruption of the Greek word <i>(ai)gúpti(os)</i>, Egyptian.
+					</p>
+					<p>
+						The conquest of Egypt by Alexander the Great in 332 B.C. and the subsequent Greek-speaking administration of the country under the Ptolemies led to the thorough Hellenization of Lower (i.e. Northern) Egypt. Egyptian-Greek bilingualism was apparently commonplace in the Delta, and it is probable that much Greek technical, legal, and commercial terminology was introduced into spoken Egyptian at this time. Rough and unsystematic attempts to transcribe Egyptian in the Greek alphabet were made as early as the third century B.C. It was only natural, then, that the Coptic translators of the Bible not only adopted the Greek alphabet but also generously supplemented the native lexicon with many more borrowings from Greek. The Greek vocabulary of any Coptic text is significantly large.
+					</p>
+					<p>
+						Evidence of dialectal differences is found as early as the third millenium B.C., but the general conservatism of the hieroglyphic script and the practice of standardizing a particular form of the language for long periods of time (e.g. Middle Egyptian, New Egyptian) tend to obscure the great dialectal diversity that must have existed in the spoken language as one traveled the 750 miles down the Nile from Aswan to the Mediterranean. The individual dialects first become recognizable when we reach the Coptic period and see the language spelled out in the Greek alphabet. The exact geographical location of the dialects is still a matter of scholarly debate, but the reader should become familiar with their names and the approximate chronological range of their use for literary purposes.
+					</p>
+					<p>
+						Sahidic, the dialect treated in this book, was the dialect chosen for the official translation of the Bible mentioned above. There is conflicting evidence on its geographical location: the name Sahidic, from Arabic <i>aṣ-ṣaʿîd</i>, Upper (i.e. Southern) Egypt, places it in the south (hence its alternate name: Theban, Thebaic); linguistic considerations, however, favor a northern locale, in the neighborhood of Memphis and the eastern Delta. One cannot rule out the possibility that both locations are correct; the fact that Thebes and Memphis alternated as the capital of Egypt through much of its history and were the chief centers of religious (priestly), building, and commercial activity could have led to the development of an "urban" dialect in these two areas, quite distinct from the dialects of the "rural" areas that lay between. By the fourth century A.D. Sahidic was firmly established as the standard literary dialect and retained this status until its demise around the tenth century. Surviving texts in Sahidic include, in addition to the New Testament and a large portion of the Old, a considerable corpus of Church literature and some remnants of secular literature, nearly all of which is translated from Greek. Of native works we have only the writings of Pachomius (c. 300), the founder of Egyptian monasticism; Shenute (c. 400), the administrator of the White Monastery in Upper Egypt; and Besa, a disciple of Shenute. The Coptic writings of Shenute, who attempted to mould the language into a literary vehicle comparable to Greek, are often referred to as the "classics" of Sahidic literature. Their syntactic complexity and unusual vocabulary usage, however, place them beyond the scope of the present work, which is based on the language of the more widely studied translation literature.
+					</p>
+					<p>
+						Bohairic replaced Sahidic as the standard literary dialect. Bohairic texts are attested as early as the ninth century, but the dialect does not seem to have achieved wide usage until it was adopted as the official language of the Coptic Church in the eleventh century. Most Bohairic texts come from after this time, and many of them were translated from Sahidic originals. The term Bohairic comes from Arabic <i>al-buhairah</i>, Lower (i.e. Northern) Egypt; it is generally assumed that Bohairic was the dialect of the Western Delta, including Alexandria and Nitria. The designation Memphitic has also been used for this dialect.
+					</p>
+					<p>
+						Fayyumic, as its name implies, was the dialect of northern Middle Egypt in the vicinity of the Fayyum Basin. It is well attested in texts ranging from the fourth to the eleventh century, but it apparently never attained the status of Sahidic.
+					</p>
+					<p>
+						Achmimic, generally located in the area of Akhmim (Panopolis) in southern Middle Egypt, enjoyed only a brief literary period from the third to the fifth century.
+					</p>
+					<p>
+						Subachmimic, tentatively localized between Akhmim and Thebes, was used extensively in the fourth and fifth centuries for the translation of Manichaean and Gnostic literature. Its association with this heretical material probably had much to do with its early demise as a literary dialect. The Nag Hammadi texts are in Subachmimic or a variety of Sahidic influenced by Subachmimic in varying degrees.
+					</p>
+					<p>
+						For further details on the dialects the reader should consult the works of Worrell, Vergote, Kahle, and Till cited in the Bibliography.
+					</p>
+					<p>
+						The Arab conquest of Egypt in 641 A.D. and the subsequent suppression of the native Christian population resulted in the gradual dying out of the Egyptian language in favor of Arabic. We cannot be sure how long this process took, but it is safe to assume that by the fifteenth century Coptic had ceased to be a native spoken language, thus bringing to an end a continuous written record of over four thousand years.
+					</p>
 					<div>
 						<h3>The Coptic Alphabet</h3>
-						<p>Sahidic Coptic is written in the Greek alphabet augmented by six letters borrowed from Demotic script, the last stage of Egyptian hieroglyphic writing. The letters of the full alphabet, together with their conventional transcription, are as follows:</p>
+						<p>
+							Sahidic Coptic is written in the Greek alphabet augmented by six letters borrowed from Demotic script, the last stage of Egyptian hieroglyphic writing. The letters of the full alphabet, together with their conventional transcription, are as follows:
+						</p>
 						<ul id="alphabet">
 							<li><span class="coptic">ⲁ</span><span>a</span></li>
 							<li><span class="coptic">ⲃ</span><span>b</span></li>
@@ -289,10 +358,14 @@
 							<li><span class="coptic">ϭ</span><span>č, c</span></li>
 							<li><span class="coptic">ϯ</span><span>ti</span></li>
 						</ul>
-						<p>The following paragraphs deal with the Coptic, not the Greek, pronunciation of this alphabet.</p>
+						<p>
+							The following paragraphs deal with the Coptic, not the Greek, pronunciation of this alphabet.
+						</p>
 						<h4>Spelling and Pronunciation</h4>
 						<h5>a. The Consonants</h5>
-						<p><span class="coptic">ⲃ</span> was apparently pronounced like English <i>v</i> in <i>voice</i>, but it is generally read simply as <i>b</i> in <i>back</i>.</p>
+						<p>
+							<span class="coptic">ⲃ</span> was apparently pronounced like English <i>v</i> in <i>voice</i>, but it is generally read simply as <i>b</i> in <i>back</i>.
+						</p>
 						<p><span class="coptic">ⲅ</span> occurs only as a positional variant of <span class="coptic">ⲕ</span> in a very small set of forms. Pronounced like the <i>g</i> of <i>good</i>.</p>
 						<p><span class="coptic">ⲇ</span> and <span class="coptic">ⲍ</span> do not normally occur in standard Sahidic spelling. <span class="coptic">ⲍ</span> may occur for <span class="coptic">ⲥ</span> in a few words, e.g. <span class="coptic">ⲁⲛⲍⲏⲃⲉ</span> for <span class="coptic">ⲁⲛⲥⲏⲃⲉ</span> school. Pronounced <i>d</i> as in <i>dog</i> and <i>z</i> as in <i>zoo</i> respectively.</p>
 						<p><span class="coptic">ⲫ</span>, <span class="coptic">ⲑ</span>, and <span class="coptic">ⲭ</span> occur in Sahidic Coptic words only as combinations of two consonants: <span class="coptic">ⲡ</span> + <span class="coptic">ϩ</span>, <span class="coptic">ⲧ</span> + <span class="coptic">ϩ</span>, and <span class="coptic">ⲕ</span> + <span class="coptic">ϩ</span> respectively. <span class="coptic">ⲑ</span> is fairly frequent, e.g. <span class="coptic">ⲡⲉⲑⲟⲟⲩ</span> evil, for <span class="coptic">ⲡⲉⲧ ϩⲟⲟⲩ</span>. <span class="coptic">ⲫ</span> and <span class="coptic">ⲭ</span> are rare and need not be used at all. The Copts seem to have used this same pronunciation for these letters in Greek words, contrary to the ordinary Greek pronunciation of <span class="coptic">ⲫ</span> as <i>f</i>, <span class="coptic">ⲑ</span> as <i>th</i> (<i>thin</i>), and <span class="coptic">ⲭ</span> as <i>ch</i> (German <i>ich</i>, <i>ach</i>).</p>
@@ -19850,5 +19923,8 @@
 				</div>
 			</main>
 		</div>
+		<footer>
+			<span>© Randy Komforty 2025–2026</span>
+		</footer>
 	</body>
 </html>

@@ -16,10 +16,6 @@
 @font-face {
 	font-family: rk_italic;
 	src: url("./fonts/FiraSans-Italic.ttf");
-	//src: url("./fonts/Figtree-Italic-VariableFont_wght.ttf");
-	//src: url("./fonts/Arvo-Italic.ttf");
-	//src: url("./fonts/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf");
-	//src: url("./fonts/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf");
 }
 
 @font-face {
@@ -159,6 +155,6 @@
 }
 
 @font-face {
-  font-family: old-coptic;
-  src: url('fonts/old-coptic.woff2') format('woff2');
+	font-family: old-coptic;
+	src: url('fonts/old-coptic.woff2') format('woff2');
 }

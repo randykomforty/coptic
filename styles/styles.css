@@ -1,13 +1,64 @@
-/* Noto Sans supplies the Latin glottal stop characters (e.g. ꜥ, ꜣ, ꞽ)
-   used in Demotic transliteration, which rk_sans-serif lacks. */
+/* Noto Sans supplies the Latin glottal stop characters (e.g. ꜥ, ꜣ, ꞽ) used in Demotic transliteration, which rk_sans-serif lacks. */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Noto Sans Symbols 2 supplies the Ancient Greek Numbers (e.g. 𐅵 = U+10175
-   GREEK ONE HALF SIGN, 𐆎 = U+1018E NOMISMA SIGN), which rk_greek
-   (Gentium Plus) lacks. */
+/* Noto Sans Symbols 2 supplies the Ancient Greek Numbers (e.g. 𐅵 = U+10175 GREEK ONE HALF SIGN, 𐆎 = U+1018E NOMISMA SIGN), which rk_greek (Gentium Plus) lacks. */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Symbols+2&display=swap");
 
 /* universal properties */
+
+body {
+	color: gray;
+	background: #212121;
+	/* "Noto Sans" fallback covers the Latin glottal characters used in Demotic transliteration (e.g. ꜥ, ꜣ, ꞽ), which rk_sans-serif does not include. */
+	font-family: rk_sans-serif, "Noto Sans";
+	margin: 0em auto;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	width: 100%;
+	padding-top: 0.5em;
+	background: #212121ff;
+}
+
+.hide {
+	display: none;
+}
+
+#container {
+	margin: 0 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+nav {
+	
+}
+
+nav ul {
+	padding: 0;
+}
+
+nav ul a {
+	color: lightgreen;
+	text-decoration: none;
+}
+
+main {
+	width: 100%;
+}
+
+footer {
+	
+}
+
+h1 {
+	margin-block: 0;
+	line-height: 1;
+}
+
 
 .coptic > table {
 	width: 100%;
@@ -88,11 +139,7 @@ rt,
 	padding: 1em;
 }
 
-.flex-horz-wrap {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 1em;
-}
+
 
 .translation {
 	color: inherit;
@@ -198,64 +245,15 @@ ul li.en {
 	//line-height: 2;
 }
 
-.linkpath {
-	background: #212121ff;
-	padding-block: 0.5em;
-	line-height: 1.5;
-}
 
-.linkpath a {
-	//font-size: 16px;
-	color: lightblue;
-	text-decoration: none;
-	line-height: 1;
-}
-
-.linkpath a:hover {
-	text-decoration: revert;
-}
 
 main b {
 	color: steelblue;
 }
 
-body {
-	color: gray;
-	background: #212121;
-	/* "Noto Sans" fallback covers the Latin glottal characters used in Demotic
-	   transliteration (e.g. ꜥ, ꜣ, ꞽ), which rk_sans-serif does not include. */
-	font-family: rk_sans-serif, "Noto Sans";
-	margin: 0em auto;
-	max-width: 600px;
-}
 
-body {
-	//color: #ffffff22;
-}
 
-#container {
-	position: relative;
-	max-width: 600px;
-	margin: 0 1em;
-	display: flex;
-	flex-direction: column;
-}
 
-header {
-	width: 100%;
-	max-width: 600px;
-	padding-top: 0.5em;
-	background: #212121ff;
-}
-
-main {
-	position: relative;
-}
-
-footer {
-	//display: none;
-	margin: 2rem 1.5rem;
-}
 
 hr {
 	height: 1px;
@@ -277,20 +275,6 @@ header h3 {
 	font-size: 1em;
 }
 
-main h2 {
-	color: cyan;
-	background: #ffffff55;
-	font-weight: normal;
-	position: sticky;
-	z-index: 999;
-	//outline: 1px solid red;
-	top: 80px;
-	line-height: 1;
-	margin: 0;
-	padding: 1rem 0 2rem;
-	//background: linear-gradient(to bottom, #212121, #212121, #212121, transparent);
-}
-
 main h3 {
 	color: lightgray;
 	background: #212121;
@@ -306,17 +290,9 @@ main h3 {
 	justify-content: space-between;
 }
 
-h1 {
-	font-family: rk_h1;
-	font-weight: normal;
-	letter-spacing: 2px;
-	margin-block: 0;
-	line-height: 1;
-}
 
-h1 a {
-	text-decoration: none;
-}
+
+
 
 .socials a img {
 	height: 2em;
@@ -338,9 +314,7 @@ main a {
 	color: #ffffffcc;
 }
 
-.hide {
-	display: none;
-}
+
 
 ::selection {
 	//color: white;
@@ -355,11 +329,7 @@ p.coptic.ready.rk_normalize::selection {
 	outline: 1px solid #ffffffff;
 }
 
-h1 a {
-	background: linear-gradient(to right, oklch(50% .3 200), oklch(70% .3 100));
-	-webkit-background-clip: text;
-	color: transparent;
-}
+
 
 .title {
 	margin-block: 2em;
@@ -377,20 +347,7 @@ h1 a {
 
 /* chapter selection */
 
-#toc {
-	position: sticky;
-	top: calc(32px + 48px);
-	background: #212121ff;
-	overflow-x: scroll;
-	scrollbar-color: #ffffff99 transparent;
-	scrollbar-width: thin;
-	margin-top: 0.5em;
-}
 
-#toc > ul {
-	list-style-type: none;
-	padding-left: 0;
-}
 
 #toc_lessons {
 	background: none;
@@ -617,12 +574,6 @@ ul#toc_lessons a:hover {
 /* mallon */
 
 /* mallon - chapter selection */
-
-#menu {
-	position: sticky;
-	top: 2em;
-	
-}
 
 #menu ul {
 	width: 100%;

@@ -1,8 +1,0 @@
-#menu ul {
-	grid-template-columns: auto auto auto;
-	padding-inline: .5rem;
-}
-
-#menu ul li {
-	border: 5px inset #ffffff11;
-}
