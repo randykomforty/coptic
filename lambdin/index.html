@@ -10,6 +10,57 @@
 		<meta charset="UTF-8">
 		<style>
 			/* show/hide answers */
+			
+			.subsection ol {
+				//padding-left: 1.5em;
+				//width: 100%;
+			}
+			
+			.subsection > ol {
+				//padding-left: 1em;
+			}
+			
+			.subsection > ol > li + li {
+				//margin-top: 1em;
+			}
+			
+			li:has(> input[type="checkbox"]) {
+				//display: flex;
+				//list-style-position: inside;
+				//padding-left: 1em;
+				outline: 1px solid;
+			}
+			
+			li:has(> input[type="checkbox"]) + li {
+				margin-top: 1em;
+			}
+			
+			input[type="checkbox"] {
+				appearance: none;
+				position: relative;
+				top: 4px;
+				width: 1em;
+				height: 1em;
+				aspect-ratio: 1;
+				margin-left: 1em;
+				outline: 1px solid lightgreen;
+				cursor: pointer;
+			}
+			
+			input[type="checkbox"]:checked {
+				background: lightgreen;
+			}
+			
+			input[type="checkbox"] + ul {
+				display: inline-flex;
+				flex-direction: column;
+				padding-left: 1em;
+			}
+			
+			input[type="checkbox"] + ul li {
+				margin: .5em;
+				line-height: 1.5;
+			}
 
 			tr:has(> td > input[type="checkbox"]) + tr td,
 			li:has(> input[type="checkbox"]) > ul > li:last-child,
@@ -27,12 +78,109 @@
 			/* presentation */
 			
 			a.permalink {
-				color: gold;
+				
 			}
 			
 			.chart {
 				background: #ffffff11;
+			}
+			
+			table.chart {
+				//display: inline-block;
+				margin: 0 auto;
+				border-collapse: collapse;
 				width: 100%;
+			}
+			
+			table.chart th {
+				font-weight: normal;
+			}
+			
+			table.chart th,
+			table.chart td {
+				border: 1px solid;
+				padding: .5em;
+			}
+			
+			ul.chart {
+				//display: table;
+				outline: 1px solid;
+				padding: 1em;
+			}
+			
+			table.chart + table.chart {
+				margin-top: 1em;
+				//margin-left: 1em;
+			}
+			
+			ul.chart li {
+				//display: flex;
+				//justify-content: space-between;
+			}
+			ul.chart span {
+				
+			}
+			
+			#alphabet {
+				display: flex;
+				flex-wrap: wrap;
+				
+			}
+			#alphabet li {
+				font-size: 1.5em;
+				padding: .5em;
+				outline: 1px solid;
+			}
+			#alphabet li span {
+				padding: .5em;
+			}
+			#alphabet li .coptic {
+			}
+			
+			.section :is(h3, h4) {
+				text-align: center;
+			}
+			
+			.subsection.exercises ol {
+				padding-left: 1em;
+			}
+			
+			.subsection.exercises > ol > li + li {
+				margin-top: 1em;
+			}
+			
+			/*
+			*/
+			#lesson_02,
+			#lesson_03,
+			#lesson_04,
+			#lesson_05,
+			#lesson_06,
+			#lesson_07,
+			#lesson_08,
+			#lesson_09,
+			#lesson_10,
+			#lesson_11,
+			#lesson_12,
+			#lesson_13,
+			#lesson_14,
+			#lesson_15,
+			#lesson_16,
+			#lesson_17,
+			#lesson_18,
+			#lesson_19,
+			#lesson_20,
+			#lesson_21,
+			#lesson_22,
+			#lesson_23,
+			#lesson_24,
+			#lesson_25,
+			#lesson_26,
+			#lesson_27,
+			#lesson_28,
+			#lesson_29,
+			#lesson_30 {
+				//display: none;
 			}
 		</style>
 	</head>
@@ -76,63 +224,155 @@
 				</ul>
 			</nav>
 			<main>
+				<!--
+				-->
 				<h2>Introduction to Sahidic Coptic</h2>
 				<h2>T. O. Lambdin</h2>
-				<div class="hide">
+				<div>
 					<h3>Table of Contents</h3>
 					<ul>
-						<li><span class="section_name">Preface</span><span class="section_page">iii</span></li>
-						<li><span class="section_name">Abbreviations and Conventions</span><span class="section_page">vi</span></li>
-						<li><span class="section_name">Introduction</span><span class="section_page">vii</span></li>
-						<li><span class="section_name"><span>Lessons 1–30</span></span><span class="hide section_page">1</span>
-							<ul id="toc_lessons">
-								<li><a href="#lesson_01" class="section_name"><span>Lesson </span>1</a></li>
-								<li><a href="#lesson_02" class="section_name"><span>Lesson </span>2</a></li>
-								<li><a href="#lesson_03" class="section_name"><span>Lesson </span>3</a></li>
-								<li><a href="#lesson_04" class="section_name"><span>Lesson </span>4</a></li>
-								<li><a href="#lesson_05" class="section_name"><span>Lesson </span>5</a></li>
-								<li><a href="#lesson_06" class="section_name"><span>Lesson </span>6</a></li>
-								<li><a href="#lesson_07" class="section_name"><span>Lesson </span>7</a></li>
-								<li><a href="#lesson_08" class="section_name"><span>Lesson </span>8</a></li>
-								<li><a href="#lesson_09" class="section_name"><span>Lesson </span>9</a></li>
-								<li><a href="#lesson_10" class="section_name"><span>Lesson </span>10</a></li>
-								<li><a href="#lesson_11" class="section_name"><span>Lesson </span>11</a></li>
-								<li><a href="#lesson_12" class="section_name"><span>Lesson </span>12</a></li>
-								<li><a href="#lesson_13" class="section_name"><span>Lesson </span>13</a></li>
-								<li><a href="#lesson_14" class="section_name"><span>Lesson </span>14</a></li>
-								<li><a href="#lesson_15" class="section_name"><span>Lesson </span>15</a></li>
-								<li><a href="#lesson_16" class="section_name"><span>Lesson </span>16</a></li>
-								<li><a href="#lesson_17" class="section_name"><span>Lesson </span>17</a></li>
-								<li><a href="#lesson_18" class="section_name"><span>Lesson </span>18</a></li>
-								<li><a href="#lesson_19" class="section_name"><span>Lesson </span>19</a></li>
-								<li><a href="#lesson_20" class="section_name"><span>Lesson </span>20</a></li>
-								<li><a href="#lesson_21" class="section_name"><span>Lesson </span>21</a></li>
-								<li><a href="#lesson_22" class="section_name"><span>Lesson </span>22</a></li>
-								<li><a href="#lesson_23" class="section_name"><span>Lesson </span>23</a></li>
-								<li><a href="#lesson_24" class="section_name"><span>Lesson </span>24</a></li>
-								<li><a href="#lesson_25" class="section_name"><span>Lesson </span>25</a></li>
-								<li><a href="#lesson_26" class="section_name"><span>Lesson </span>26</a></li>
-								<li><a href="#lesson_27" class="section_name"><span>Lesson </span>27</a></li>
-								<li><a href="#lesson_28" class="section_name"><span>Lesson </span>28</a></li>
-								<li><a href="#lesson_29" class="section_name"><span>Lesson </span>29</a></li>
-								<li><a href="#lesson_30" class="section_name"><span>Lesson </span>30</a></li>
-							</ul>
+						<li>
+							<span>Preface</span><span>iii</span>
 						</li>
-						<li><span class="section_name">Reading Selections</span><span class="section_page"></span>
+						<li>
+							<span>Abbreviations and Conventions</span><span>vi</span>
+						</li>
+						<li>
+							<span>Introduction</span><span>vii</span>
+						</li>
+						<li>
+							<span>Lessons 1–30</span><span>1</span>
 							<ul>
-								<li><span class="section_name">Introductory Remarks</span><span class="section_page">146</span></li>
-								<li><span class="section_name">Luke I–V</span><span class="section_page">149</span></li>
-								<li><span class="section_name">Apophthegmata Patrum</span><span class="section_page">171</span></li>
-								<li><span class="section_name">Wisdom of Solomon</span><span class="section_page">185</span></li>
-								<li><span class="section_name">The Life of Joseph the Carpenter</span><span class="section_page">196</span></li>
+								<li>
+									<a href="#lesson_01"><span>Lesson </span>1</a>
+								</li>
+								<li>
+									<a href="#lesson_02"><span>Lesson </span>2</a>
+								</li>
+								<li>
+									<a href="#lesson_03"><span>Lesson </span>3</a>
+								</li>
+								<li>
+									<a href="#lesson_04"><span>Lesson </span>4</a>
+								</li>
+								<li>
+									<a href="#lesson_05"><span>Lesson </span>5</a>
+								</li>
+								<li>
+									<a href="#lesson_06"><span>Lesson </span>6</a>
+								</li>
+								<li>
+									<a href="#lesson_07"><span>Lesson </span>7</a>
+								</li>
+								<li>
+									<a href="#lesson_08"><span>Lesson </span>8</a>
+								</li>
+								<li>
+									<a href="#lesson_09"><span>Lesson </span>9</a>
+								</li>
+								<li>
+									<a href="#lesson_10"><span>Lesson </span>10</a>
+								</li>
+								<li>
+									<a href="#lesson_11"><span>Lesson </span>11</a>
+								</li>
+								<li>
+									<a href="#lesson_12"><span>Lesson </span>12</a>
+								</li>
+								<li>
+									<a href="#lesson_13"><span>Lesson </span>13</a>
+								</li>
+								<li>
+									<a href="#lesson_14"><span>Lesson </span>14</a>
+								</li>
+								<li>
+									<a href="#lesson_15"><span>Lesson </span>15</a>
+								</li>
+								<li>
+									<a href="#lesson_16"><span>Lesson </span>16</a>
+								</li>
+								<li>
+									<a href="#lesson_17"><span>Lesson </span>17</a>
+								</li>
+								<li>
+									<a href="#lesson_18"><span>Lesson </span>18</a>
+								</li>
+								<li>
+									<a href="#lesson_19"><span>Lesson </span>19</a>
+								</li>
+								<li>
+									<a href="#lesson_20"><span>Lesson </span>20</a>
+								</li>
+								<li>
+									<a href="#lesson_21"><span>Lesson </span>21</a>
+								</li>
+								<li>
+									<a href="#lesson_22"><span>Lesson </span>22</a>
+								</li>
+								<li>
+									<a href="#lesson_23"><span>Lesson </span>23</a>
+								</li>
+								<li>
+									<a href="#lesson_24"><span>Lesson </span>24</a>
+								</li>
+								<li>
+									<a href="#lesson_25"><span>Lesson </span>25</a>
+								</li>
+								<li>
+									<a href="#lesson_26"><span>Lesson </span>26</a>
+								</li>
+								<li>
+									<a href="#lesson_27"><span>Lesson </span>27</a>
+								</li>
+								<li>
+									<a href="#lesson_28"><span>Lesson </span>28</a>
+								</li>
+								<li>
+									<a href="#lesson_29"><span>Lesson </span>29</a>
+								</li>
+								<li>
+									<a href="#lesson_30"><span>Lesson </span>30</a>
+								</li>
 							</ul>
 						</li>
-						<li><span class="section_name">Glossary</span><span class="section_page">209</span></li>
-						<li><span class="section_name">Glossary of Greek Words</span><span class="section_page">359</span></li>
-						<li><span class="section_name">Bibliography</span><span class="section_page">364</span></li>
-						<li><span class="section_name">Grammatical Index</span><span class="section_page">366</span></li>
-						<li><span class="section_name">Table of Principal Verbal Conjugations</span><span class="section_page">371</span></li>
-						<li><span class="section_name">Subject Index</span><span class="section_page">373</span></li>
+						<li>
+							<span>Reading Selections</span>
+							<ul>
+								<li>
+									<span>Introductory Remarks</span><span>146</span>
+								</li>
+								<li>
+									<span>Luke I–V</span><span>149</span>
+								</li>
+								<li>
+									<span>Apophthegmata Patrum</span><span>171</span>
+								</li>
+								<li>
+									<span>Wisdom of Solomon</span><span>185</span>
+								</li>
+								<li>
+									<span>The Life of Joseph the Carpenter</span><span>196</span>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<span>Glossary</span><span>209</span>
+						</li>
+						<li>
+							<span>Glossary of Greek Words</span><span>359</span>
+						</li>
+						<li>
+							<span>Bibliography</span><span>364</span>
+						</li>
+						<li>
+							<span>Grammatical Index</span><span>366</span>
+						</li>
+						<li>
+							<span>Table of Principal Verbal Conjugations</span><span>371</span>
+						</li>
+						<li>
+							<span>Subject Index</span><span>373</span>
+						</li>
 					</ul>
 				</div>
 				<div>
@@ -146,99 +386,265 @@
 					<p>
 						I would like to express my sincere thanks to my colleague, George W. MacRae, the Charles Chauncey Stillman Professor of Roman Catholic Theological Studies, Harvard Divinity School, for encouraging me to undertake this work and for his helpful comments on a large portion of the manuscript; to Mr. Gary A. Bisbee, for the exceptional skill and care with which he prepared the final copy for publication; to Mr. Watson E. Mills, Director of the Mercer University Press, for his part in initiating and publishing this work.
 					</p>
-					<div>
-						<p>Thomas O. Lambdin</p>
-						<p>Cambridge, Mass.</p>
-						<p>June 1982</p>
-					</div>
+					<p>
+						Thomas O. Lambdin<br>
+						Cambridge, Mass.<br>
+						June 1982
+					</p>
 				</div>
 				<div>
 					<h3>Abbreviations and Conventions</h3>
-					<ul>
-						<li><span class="abbreviation">adj.</span><span class="term">adjective, adjectival</span></li>
-						<li><span class="abbreviation">adv.</span><span class="term">adverb, adverbial</span></li>
-						<li><span class="abbreviation">aft.</span><span class="term">after</span></li>
-						<li><span class="abbreviation">art.</span><span class="term">article</span></li>
-						<li><span class="abbreviation">bef.</span><span class="term">before</span></li>
-						<li><span class="abbreviation">Boh.</span><span class="term">Bohairic</span></li>
-						<li><span class="abbreviation">c. pl.</span><span class="term">common plural</span></li>
-						<li><span class="abbreviation">caus.</span><span class="term">causative</span></li>
-						<li><span class="abbreviation">cf.</span><span class="term">compare</span></li>
-						<li><span class="abbreviation">Circum.</span><span class="term">the Circumstantial</span></li>
-						<li><span class="abbreviation">conj.</span><span class="term">conjunction</span></li>
-						<li><span class="abbreviation">Conj.</span><span class="term">the Conjunctive</span></li>
-						<li><span class="abbreviation">coord.</span><span class="term">coordinated, coordinating</span></li>
-						<li><span class="abbreviation">cpd.</span><span class="term">compound, compounded</span></li>
-						<li><span class="abbreviation">dat.</span><span class="term">dative</span></li>
-						<li><span class="abbreviation">def.</span><span class="term">definite</span></li>
-						<li><span class="abbreviation">e.g.</span><span class="term">for example</span></li>
-						<li><span class="abbreviation">eth.</span><span class="term">ethical</span></li>
-						<li><span class="abbreviation">exclam.</span><span class="term">exclamatory</span></li>
-						<li><span class="abbreviation">f., fem.</span><span class="term">feminine</span></li>
-						<li><span class="abbreviation">fig.</span><span class="term">figuratively</span></li>
-						<li><span class="abbreviation">foll.</span><span class="term">following</span></li>
-						<li><span class="abbreviation">Fut. I</span><span class="term">the First Future</span></li>
-						<li><span class="abbreviation">Fut. II</span><span class="term">the Second Future</span></li>
-						<li><span class="abbreviation">Fut. III</span><span class="term">the Third Future</span></li>
-						<li><span class="abbreviation">Gk.</span><span class="term">Greek</span></li>
-						<li><span class="abbreviation">Gr. In.</span><span class="term">Grammatical Index (Coptic)</span></li>
-						<li><span class="abbreviation">Hab.</span><span class="term">the Habitual</span></li>
-						<li><span class="abbreviation">i.e.</span><span class="term">that is</span></li>
-						<li><span class="abbreviation">idem</span><span class="term">having the same meanings as the immediately preceding word</span></li>
-						<li><span class="abbreviation">imperf.</span><span class="term">imperfect</span></li>
-						<li><span class="abbreviation">Imperf.</span><span class="term">the Imperfect</span></li>
-						<li><span class="abbreviation">imptv.</span><span class="term">imperative</span></li>
-						<li><span class="abbreviation">indef.</span><span class="term">indefinite</span></li>
-						<li><span class="abbreviation">indep.</span><span class="term">independent</span></li>
-						<li><span class="abbreviation">Inf.</span><span class="term">Infinitive</span></li>
-						<li><span class="abbreviation">Infl. Inf.</span><span class="term">Inflected Infinitive</span></li>
-						<li><span class="abbreviation">intens.</span><span class="term">intensive</span></li>
-						<li><span class="abbreviation">interrog.</span><span class="term">interrogative</span></li>
-						<li><span class="abbreviation">intr.</span><span class="term">intransitive</span></li>
-						<li><span class="abbreviation">Intro.</span><span class="term">Introduction</span></li>
-						<li><span class="abbreviation">lit.</span><span class="term">literally</span></li>
-						<li><span class="abbreviation">m., masc.</span><span class="term">masculine</span></li>
-						<li><span class="abbreviation">n.</span><span class="term">noun, nominal</span></li>
-						<li><span class="abbreviation">neg.</span><span class="term">negative</span></li>
-						<li><span class="abbreviation">no.</span><span class="term">number</span></li>
-						<li><span class="abbreviation">obj.</span><span class="term">object</span></li>
-						<li><span class="abbreviation">oft.</span><span class="term">often</span></li>
-						<li><span class="abbreviation">p.c.</span><span class="term">participium conjunctivum</span></li>
-						<li><span class="abbreviation">part.</span><span class="term">particle</span></li>
-						<li><span class="abbreviation">Perf. I</span><span class="term">the First Perfect</span></li>
-						<li><span class="abbreviation">pers.</span><span class="term">person</span></li>
-						<li><span class="abbreviation">phr.</span><span class="term">phrase</span></li>
-						<li><span class="abbreviation">pl.</span><span class="term">plural</span></li>
-						<li><span class="abbreviation">pred.</span><span class="term">predication, predicate</span></li>
-						<li><span class="abbreviation">prep.</span><span class="term">preposition</span></li>
-						<li><span class="abbreviation">Pres. I</span><span class="term">the First Present</span></li>
-						<li><span class="abbreviation">prob.</span><span class="term">probably</span></li>
-						<li><span class="abbreviation">procl.</span><span class="term">proclitic</span></li>
-						<li><span class="abbreviation">pron.</span><span class="term">pronominal</span></li>
-						<li><span class="abbreviation">Q.</span><span class="term">qualitative</span></li>
-						<li><span class="abbreviation">q.v.</span><span class="term">which see</span></li>
-						<li><span class="abbreviation">recipr.</span><span class="term">reciprocal</span></li>
-						<li><span class="abbreviation">reflex.</span><span class="term">reflexive</span></li>
-						<li><span class="abbreviation">Rel.</span><span class="term">Relative Form</span></li>
-						<li><span class="abbreviation">s.</span><span class="term">singular</span></li>
-						<li><span class="abbreviation">s.v.</span><span class="term">sub voce</span></li>
-						<li><span class="abbreviation">Sah.</span><span class="term">Sahidic</span></li>
-						<li><span class="abbreviation">sim.</span><span class="term">similar(ly)</span></li>
-						<li><span class="abbreviation">sing.</span><span class="term">singular</span></li>
-						<li><span class="abbreviation">sthg.</span><span class="term">something</span></li>
-						<li><span class="abbreviation">sub</span><span class="term">under</span></li>
-						<li><span class="abbreviation">subj.</span><span class="term">subject</span></li>
-						<li><span class="abbreviation">suff.</span><span class="term">suffix(ed)</span></li>
-						<li><span class="abbreviation">tr.</span><span class="term">transitive</span></li>
-						<li><span class="abbreviation">usu.</span><span class="term">usually</span></li>
-						<li><span class="abbreviation">vb.</span><span class="term">verb, verbal</span></li>
-						<li><span class="abbreviation">Vocab.</span><span class="term">Vocabulary</span></li>
-						<li><span class="abbreviation">w.</span><span class="term">with</span></li>
-						<li><span class="abbreviation">±</span><span class="term">with or without</span></li>
-						<li><span class="abbreviation">+</span><span class="term">with, plus, and</span></li>
-						<li><span class="abbreviation">=</span><span class="term">is fully equivalent in function and meaning to</span></li>
+					<ul class="chart">
+						<li>
+							<span>adj.</span><span>adjective, adjectival</span>
+						</li>
+						<li>
+							<span>adv.</span><span>adverb, adverbial</span>
+						</li>
+						<li>
+							<span>aft.</span><span>after</span>
+						</li>
+						<li>
+							<span>art.</span><span>article</span>
+						</li>
+						<li>
+							<span>bef.</span><span>before</span>
+						</li>
+						<li>
+							<span>Boh.</span><span>Bohairic</span>
+						</li>
+						<li>
+							<span>c. pl.</span><span>common plural</span>
+						</li>
+						<li>
+							<span>caus.</span><span>causative</span>
+						</li>
+						<li>
+							<span>cf.</span><span>compare</span>
+						</li>
+						<li>
+							<span>Circum.</span><span>the Circumstantial</span>
+						</li>
+						<li>
+							<span>conj.</span><span>conjunction</span>
+						</li>
+						<li>
+							<span>Conj.</span><span>the Conjunctive</span>
+						</li>
+						<li>
+							<span>coord.</span><span>coordinated, coordinating</span>
+						</li>
+						<li>
+							<span>cpd.</span><span>compound, compounded</span>
+						</li>
+						<li>
+							<span>dat.</span><span>dative</span>
+						</li>
+						<li>
+							<span>def.</span><span>definite</span>
+						</li>
+						<li>
+							<span>e.g.</span><span>for example</span>
+						</li>
+						<li>
+							<span>eth.</span><span>ethical</span>
+						</li>
+						<li>
+							<span>exclam.</span><span>exclamatory</span>
+						</li>
+						<li>
+							<span>f., fem.</span><span>feminine</span>
+						</li>
+						<li>
+							<span>fig.</span><span>figuratively</span>
+						</li>
+						<li>
+							<span>foll.</span><span>following</span>
+						</li>
+						<li>
+							<span>Fut. I</span><span>the First Future</span>
+						</li>
+						<li>
+							<span>Fut. II</span><span>the Second Future</span>
+						</li>
+						<li>
+							<span>Fut. III</span><span>the Third Future</span>
+						</li>
+						<li>
+							<span>Gk.</span><span>Greek</span>
+						</li>
+						<li>
+							<span>Gr. In.</span><span>Grammatical Index (Coptic)</span>
+						</li>
+						<li>
+							<span>Hab.</span><span>the Habitual</span>
+						</li>
+						<li>
+							<span>i.e.</span><span>that is</span>
+						</li>
+						<li>
+							<span>idem</span><span>having the same meanings as the immediately preceding word</span>
+						</li>
+						<li>
+							<span>imperf.</span><span>imperfect</span>
+						</li>
+						<li>
+							<span>Imperf.</span><span>the Imperfect</span>
+						</li>
+						<li>
+							<span>imptv.</span><span>imperative</span>
+						</li>
+						<li>
+							<span>indef.</span><span>indefinite</span>
+						</li>
+						<li>
+							<span>indep.</span><span>independent</span>
+						</li>
+						<li>
+							<span>Inf.</span><span>Infinitive</span>
+						</li>
+						<li>
+							<span>Infl. Inf.</span><span>Inflected Infinitive</span>
+						</li>
+						<li>
+							<span>intens.</span><span>intensive</span>
+						</li>
+						<li>
+							<span>interrog.</span><span>interrogative</span>
+						</li>
+						<li>
+							<span>intr.</span><span>intransitive</span>
+						</li>
+						<li>
+							<span>Intro.</span><span>Introduction</span>
+						</li>
+						<li>
+							<span>lit.</span><span>literally</span>
+						</li>
+						<li>
+							<span>m., masc.</span><span>masculine</span>
+						</li>
+						<li>
+							<span>n.</span><span>noun, nominal</span>
+						</li>
+						<li>
+							<span>neg.</span><span>negative</span>
+						</li>
+						<li>
+							<span>no.</span><span>number</span>
+						</li>
+						<li>
+							<span>obj.</span><span>object</span>
+						</li>
+						<li>
+							<span>oft.</span><span>often</span>
+						</li>
+						<li>
+							<span>p.c.</span><span>participium conjunctivum</span>
+						</li>
+						<li>
+							<span>part.</span><span>particle</span>
+						</li>
+						<li>
+							<span>Perf. I</span><span>the First Perfect</span>
+						</li>
+						<li>
+							<span>pers.</span><span>person</span>
+						</li>
+						<li>
+							<span>phr.</span><span>phrase</span>
+						</li>
+						<li>
+							<span>pl.</span><span>plural</span>
+						</li>
+						<li>
+							<span>pred.</span><span>predication, predicate</span>
+						</li>
+						<li>
+							<span>prep.</span><span>preposition</span>
+						</li>
+						<li>
+							<span>Pres. I</span><span>the First Present</span>
+						</li>
+						<li>
+							<span>prob.</span><span>probably</span>
+						</li>
+						<li>
+							<span>procl.</span><span>proclitic</span>
+						</li>
+						<li>
+							<span>pron.</span><span>pronominal</span>
+						</li>
+						<li>
+							<span>Q.</span><span>qualitative</span>
+						</li>
+						<li>
+							<span>q.v.</span><span>which see</span>
+						</li>
+						<li>
+							<span>recipr.</span><span>reciprocal</span>
+						</li>
+						<li>
+							<span>reflex.</span><span>reflexive</span>
+						</li>
+						<li>
+							<span>Rel.</span><span>Relative Form</span>
+							</li>
+						<li>
+							<span>s.</span><span>singular</span>
+						</li>
+						<li>
+							<span>s.v.</span><span>sub voce</span>
+						</li>
+						<li>
+							<span>Sah.</span><span>Sahidic</span>
+						</li>
+						<li>
+							<span>sim.</span><span>similar(ly)</span>
+						</li>
+						<li>
+							<span>sing.</span><span>singular</span>
+						</li>
+						<li>
+							<span>sthg.</span><span>something</span>
+						</li>
+						<li>
+							<span>sub</span><span>under</span>
+						</li>
+						<li>
+							<span>subj.</span><span>subject</span>
+						</li>
+						<li>
+							<span>suff.</span><span>suffix(ed)</span>
+						</li>
+						<li>
+							<span>tr.</span><span>transitive</span>
+						</li>
+						<li>
+							<span>usu.</span><span>usually</span>
+						</li>
+						<li>
+							<span>vb.</span><span>verb, verbal</span>
+						</li>
+						<li>
+							<span>Vocab.</span><span>Vocabulary</span>
+						</li>
+						<li>
+							<span>w.</span><span>with</span>
+						</li>
+						<li>
+							<span>±</span><span>with or without</span>
+						</li>
+						<li>
+							<span>+</span><span>with, plus, and</span>
+						</li>
+						<li>
+							<span>=</span><span>is fully equivalent in function and meaning to</span>
+						</li>
 					</ul>
-					<p>The names of specific conjugations and inflected verbal forms are capitalized throughout the book.</p>
+					<p>
+						The names of specific conjugations and inflected verbal forms are capitalized throughout the book.
+					</p>
 				</div>
 				<div>
 					<h3>Introduction</h3>
@@ -278,36 +684,96 @@
 							Sahidic Coptic is written in the Greek alphabet augmented by six letters borrowed from Demotic script, the last stage of Egyptian hieroglyphic writing. The letters of the full alphabet, together with their conventional transcription, are as follows:
 						</p>
 						<ul id="alphabet">
-							<li><span class="coptic">ⲁ</span><span>a</span></li>
-							<li><span class="coptic">ⲃ</span><span>b</span></li>
-							<li><span class="coptic">ⲅ</span><span>g</span></li>
-							<li><span class="coptic">ⲇ</span><span>d</span></li>
-							<li><span class="coptic">ⲉ</span><span>e</span></li>
-							<li><span class="coptic">ⲍ</span><span>z</span></li>
-							<li><span class="coptic">ⲏ</span><span>ē</span></li>
-							<li><span class="coptic">ⲑ</span><span>th</span></li>
-							<li><span class="coptic">ⲓ</span><span>i</span></li>
-							<li><span class="coptic">ⲕ</span><span>k</span></li>
-							<li><span class="coptic">ⲗ</span><span>l</span></li>
-							<li><span class="coptic">ⲙ</span><span>m</span></li>
-							<li><span class="coptic">ⲛ</span><span>n</span></li>
-							<li><span class="coptic">ⲝ</span><span>ks</span></li>
-							<li><span class="coptic">ⲟ</span><span>o</span></li>
-							<li><span class="coptic">ⲡ</span><span>p</span></li>
-							<li><span class="coptic">ⲣ</span><span>r</span></li>
-							<li><span class="coptic">ⲥ</span><span>s</span></li>
-							<li><span class="coptic">ⲧ</span><span>t</span></li>
-							<li><span class="coptic">ⲩ</span><span>u</span></li>
-							<li><span class="coptic">ⲫ</span><span>ph</span></li>
-							<li><span class="coptic">ⲭ</span><span>kh</span></li>
-							<li><span class="coptic">ⲯ</span><span>ps</span></li>
-							<li><span class="coptic">ⲱ</span><span>ō</span></li>
-							<li><span class="coptic">ϣ</span><span>š</span></li>
-							<li><span class="coptic">ϥ</span><span>f</span></li>
-							<li><span class="coptic">ϩ</span><span>h</span></li>
-							<li><span class="coptic">ϫ</span><span>j, ǧ</span></li>
-							<li><span class="coptic">ϭ</span><span>č, c</span></li>
-							<li><span class="coptic">ϯ</span><span>ti</span></li>
+							<li>
+								<span class="coptic">ⲁ</span><span>a</span>
+							</li>
+							<li>
+								<span class="coptic">ⲃ</span><span>b</span>
+							</li>
+							<li>
+								<span class="coptic">ⲅ</span><span>g</span>
+							</li>
+							<li>
+								<span class="coptic">ⲇ</span><span>d</span>
+							</li>
+							<li>
+								<span class="coptic">ⲉ</span><span>e</span>
+							</li>
+							<li>
+								<span class="coptic">ⲍ</span><span>z</span>
+							</li>
+							<li>
+								<span class="coptic">ⲏ</span><span>ē</span>
+							</li>
+							<li>
+								<span class="coptic">ⲑ</span><span>th</span>
+							</li>
+							<li>
+								<span class="coptic">ⲓ</span><span>i</span>
+							</li>
+							<li>
+								<span class="coptic">ⲕ</span><span>k</span>
+							</li>
+							<li>
+								<span class="coptic">ⲗ</span><span>l</span>
+							</li>
+							<li>
+								<span class="coptic">ⲙ</span><span>m</span>
+							</li>
+							<li>
+								<span class="coptic">ⲛ</span><span>n</span>
+							</li>
+							<li>
+								<span class="coptic">ⲝ</span><span>ks</span>
+							</li>
+							<li>
+								<span class="coptic">ⲟ</span><span>o</span>
+							</li>
+							<li>
+								<span class="coptic">ⲡ</span><span>p</span>
+							</li>
+							<li>
+								<span class="coptic">ⲣ</span><span>r</span>
+							</li>
+							<li>
+								<span class="coptic">ⲥ</span><span>s</span>
+							</li>
+							<li>
+								<span class="coptic">ⲧ</span><span>t</span>
+							</li>
+							<li>
+								<span class="coptic">ⲩ</span><span>u</span>
+							</li>
+							<li>
+								<span class="coptic">ⲫ</span><span>ph</span>
+							</li>
+							<li>
+								<span class="coptic">ⲭ</span><span>kh</span>
+							</li>
+							<li>
+								<span class="coptic">ⲯ</span><span>ps</span>
+							</li>
+							<li>
+								<span class="coptic">ⲱ</span><span>ō</span>
+							</li>
+							<li>
+								<span class="coptic">ϣ</span><span>š</span>
+							</li>
+							<li>
+								<span class="coptic">ϥ</span><span>f</span>
+							</li>
+							<li>
+								<span class="coptic">ϩ</span><span>h</span>
+							</li>
+							<li>
+								<span class="coptic">ϫ</span><span>j, ǧ</span>
+							</li>
+							<li>
+								<span class="coptic">ϭ</span><span>č, c</span>
+							</li>
+							<li>
+								<span class="coptic">ϯ</span><span>ti</span>
+							</li>
 						</ul>
 						<p>
 							The following paragraphs deal with the Coptic, not the Greek, pronunciation of this alphabet.
@@ -450,7 +916,7 @@
 						<p>
 							One of the most distinctive features of Sahidic spelling is the short stroke placed over certain consonants or groups of consonants. This supralinear stroke, as it is called, indicates a syllable, but there is some disagreement among Coptic scholars on how this syllabification actually sounded in the spoken language. When the stroke is used over a voiced consonant such as <span class="coptic">ⲛ</span>, it probably meant that the consonant is functioning as the vowel, i.e. the most sonorous part, of the syllable in question, exactly like the final <i>n</i> of English <i>button</i> and <i>sudden</i>, phonetically [-tn̥] and [-dn̥]. Thus, <span class="coptic">ϣⲛ̄ⲧ</span> (to seek me) was pronounced [šn̥t] and <span class="coptic">ⲛ̄ⲧ</span> (to bring me) as [n̥t]. The voiced consonants capable of having this syllabic pronunciation are <span class="coptic">ⲃ</span>, <span class="coptic">ⲗ</span>, <span class="coptic">ⲙ</span>, <span class="coptic">ⲛ</span>, and <span class="coptic">ⲣ</span>, known mnemonically as the <i>blemner</i> consonants. Note that they are all voiced continuants, i.e. consonants whose voiced duration may be prolonged at will (remember that <span class="coptic">ⲃ</span> is <i>v</i>, not <i>b</i>). E.g.
 						</p>
-						<table>
+						<table class="chart">
 							<tr>
 								<td class="coptic">ⲧⲛ̄ⲥⲱⲧⲙ̄</td><td>(we hear)</td><td>[tn̥sótm̥]</td>
 							</tr>
@@ -538,7 +1004,7 @@
 						<p>
 							Greek words in Coptic are usually spelled correctly. Certain types of errors do occasionally occur, however, resulting in part from the discrepancy between the classical spelling and the contemporary pronunciation, and they must be taken into account when consulting a standard Greek dictionary. The most frequent of these are confusions between (1) <span class="coptic">ⲏ</span> and <span class="coptic">ⲩ</span>; (2) <span class="coptic">ⲉ</span> and <span class="coptic">ⲁⲓ</span>; (3) <span class="coptic">ⲓ</span> and <span class="coptic">ⲏ</span>; (4) <span class="coptic">ⲟ</span> and <span class="coptic">ⲱ</span>; (5) <span class="coptic">ⲅ</span> and <span class="coptic">ⲕ</span>; (6) <span class="coptic">ⲓ</span> and <span class="coptic">ⲉⲓ</span>; (7) <span class="coptic">ⲏ</span> and <span class="coptic">ⲉ</span>; (8) <span class="coptic">ⲧ</span> and <span class="coptic">ⲇ</span>; (9) initial <span class="coptic">ϩ</span> and zero. All of these are illustrated by the following words chosen from our Reading Selections.
 						</p>
-						<ul>
+						<ul class="chart">
 							<li>
 								<span class="coptic">ⲃⲩⲙⲁ</span> = <span class="coptic">ⲃⲏⲙⲁ</span> (<span class="greek">βῆμα</span>)
 							</li>
@@ -916,7 +1382,7 @@
 						</table>
 					</div>
 					<h4>Exercises</h4>
-					<div class="subsection">
+					<div class="subsection exercises">
 						<ol>
 							<li>
 								<ol>

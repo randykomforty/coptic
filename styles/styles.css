@@ -6,28 +6,28 @@
 
 /* universal properties */
 
-body {
-	color: gray;
-	background: #212121;
-	/* "Noto Sans" fallback covers the Latin glottal characters used in Demotic transliteration (e.g. ꜥ, ꜣ, ꞽ), which rk_sans-serif does not include. */
-	font-family: rk_sans-serif, "Noto Sans";
-	margin: 0em auto;
-	display: flex;
-	flex-direction: column;
-}
-
-header {
-	width: 100%;
-	padding-top: 0.5em;
-	background: #212121ff;
+* {
+	box-sizing: border-box;
 }
 
 .hide {
 	display: none;
 }
 
+body {
+	color: gray;
+	background: #212121;
+	/* "Noto Sans" fallback covers the Latin glottal characters used in Demotic transliteration (e.g. ꜥ, ꜣ, ꞽ), which rk_sans-serif does not include. */
+	font-family: rk_sans-serif, "Noto Sans";
+	line-height: 2;
+	margin: 0em auto;
+}
+
+header {
+	
+}
+
 #container {
-	margin: 0 1em;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -37,26 +37,24 @@ nav {
 	
 }
 
-nav ul {
-	padding: 0;
-}
-
-nav ul a {
-	color: lightgreen;
-	text-decoration: none;
-}
-
 main {
-	width: 100%;
+	margin: 1em;
 }
 
 footer {
 	
 }
 
+a {
+	color: lightgreen;
+}
+
+nav ul a {
+	text-decoration: none;
+}
+
 h1 {
-	margin-block: 0;
-	line-height: 1;
+	
 }
 
 
@@ -85,6 +83,7 @@ h1 {
 .coptic {
 	font-family: rk_coptic, rk_coptic-fallback;
 	color: #46a65d;
+	color: goldenrod;
 }
 
 .old.coptic {
@@ -219,10 +218,6 @@ main > ul > li > ol {
 
 main > ul > li > ol {
 	
-}
-
-main ol li {
-	margin-top: 1rem;
 }
 
 ul li.coptic,
@@ -552,9 +547,7 @@ li ul {
 	//list-style-type: none;
 }
 
-li:has(> input[type="checkbox"]) {
-	//margin-block: 1rem;
-}
+
 
 
 
