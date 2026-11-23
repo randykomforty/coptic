@@ -11,68 +11,17 @@
 		<style>
 			/* show/hide answers */
 			
-			.subsection ol {
-				//padding-left: 1.5em;
-				//width: 100%;
-			}
-			
-			.subsection > ol {
-				//padding-left: 1em;
-			}
-			
-			.subsection > ol > li + li {
-				//margin-top: 1em;
-			}
-			
-			li:has(> input[type="checkbox"]) {
-				//display: flex;
-				//list-style-position: inside;
-				//padding-left: 1em;
-				outline: 1px solid;
-			}
-			
-			li:has(> input[type="checkbox"]) + li {
-				margin-top: 1em;
-			}
-			
-			input[type="checkbox"] {
-				appearance: none;
-				position: relative;
-				top: 4px;
-				width: 1em;
-				height: 1em;
-				aspect-ratio: 1;
-				margin-left: 1em;
-				outline: 1px solid lightgreen;
-				cursor: pointer;
-			}
-			
-			input[type="checkbox"]:checked {
-				background: lightgreen;
-			}
-			
-			input[type="checkbox"] + ul {
-				display: inline-flex;
-				flex-direction: column;
-				padding-left: 1em;
-			}
-			
-			input[type="checkbox"] + ul li {
-				margin: .5em;
-				line-height: 1.5;
-			}
-
 			tr:has(> td > input[type="checkbox"]) + tr td,
 			li:has(> input[type="checkbox"]) > ul > li:last-child,
 			.list-2-part > li > ul:last-child li:has(> input[type="checkbox"]) > ul > li {
-				opacity: 0;
-				transition: opacity .5s ease;
+				color: transparent;
+				transition: color .5s ease;
 			}
-
+			
 			tr:has(> td > input[type="checkbox"]:checked) + tr td,
 			li:has(> input[type="checkbox"]:checked) > ul > li:last-child,
 			.list-2-part > li > ul:last-child li:has(> input[type="checkbox"]:checked) > ul > li {
-				opacity: 1;
+				color: currentColor;
 			}
 			
 			/* presentation */
@@ -149,7 +98,50 @@
 				margin-top: 1em;
 			}
 			
+			.subsection.exercises table {
+				//width: 100%;
+				border-collapse: collapse;
+				//border: 1px solid;
+			}
+			
+			li:has(> input[type="checkbox"]),
+			.subsection.exercises table tr {
+				//border: 1px solid;
+			}
+			
+			li:has(> input[type="checkbox"]) + li {
+				margin-top: 1em;
+			}
+			
+			input[type="checkbox"] {
+				appearance: none;
+				position: relative;
+				top: 4px;
+				width: 1.5em;
+				height: 1.5em;
+				aspect-ratio: 1;
+				margin-left: 1em;
+				outline: 1px solid lightgreen;
+				cursor: pointer;
+			}
+			
+			input[type="checkbox"]:checked {
+				background: lightgreen;
+			}
+			
+			input[type="checkbox"] + ul {
+				display: inline-flex;
+				flex-direction: column;
+				padding-left: 1em;
+			}
+			
+			input[type="checkbox"] + ul li {
+				margin: .5em;
+				line-height: 1.5;
+			}
+			
 			/*
+			#lesson_01,
 			*/
 			#lesson_02,
 			#lesson_03,
@@ -1383,7 +1375,183 @@
 					</div>
 					<h4>Exercises</h4>
 					<div class="subsection exercises">
-						<ol>
+						<table>
+							<tr>
+								<th>1.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓ ⲧⲉϩⲓⲏ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on the road</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓ ⲡⲧⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on the mountain</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲧⲉϩⲓⲏ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the road</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲙ̄ ⲡⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the house</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲡⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under the house</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲡⲱⲛⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under the stone</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓ ⲡϫⲱⲱⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in / on the book</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ ⲡⲣⲱⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with the man</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ ⲧⲉⲥϩⲓⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with the woman</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲛ̄ ⲛⲉϩⲓⲟⲟⲩⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>upon the roads</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲛ̄ⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under the houses</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲛ̄ ⲛ̄ⲧⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on the mountains</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲛ̄ⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the houses</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ ⲛⲉϩⲓⲟⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with the women</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓ ⲡⲛⲟⲩⲃ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on the gold</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲛⲟⲩⲃ ⲙⲛ̄ ⲛ̄ϫⲱⲱⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the gold and the books</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡϩⲗ̄ⲗⲟ ⲙⲛ̄ ⲑⲗ̄ⲗⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the old man and the old woman</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲣⲱⲙⲉ ⲙⲛ̄ ⲧⲉⲥϩⲓⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the man and the woman</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲣⲱⲙⲉ ⲙⲛ̄ ⲛⲉϩⲓⲟⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the men and the women</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϩⲗ̄ⲗⲟ ⲙⲛ̄ ⲛ̄ϩⲗ̄ⲗⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the old men and the old women</td>
+							</tr>
+							<tr>
+								<th>2.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲱⲛⲉ ϩⲓϫⲛ̄ ⲧⲉϩⲓⲏ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The stone is on the road.</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϩⲗ̄ⲗⲟ ϩⲓ ⲧⲉϩⲓⲏ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The old men are on the road.</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϩⲗ̄ⲗⲱ ϩⲙ̄ ⲡⲏⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The old women are in the house.</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲛⲟⲩⲃ ϩⲁ ⲡⲱⲛⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The gold is under the stone.</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡϫⲱⲱⲙⲉ ϩⲓ ⲡⲱⲛⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The book is on the stone.</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲏⲓ ϩⲓϫⲙ̄ ⲡⲧⲟⲟⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The house is on the mountain.</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲣⲱⲙⲉ ϩⲓϫⲙ̄ ⲡⲧⲟⲟⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The men are on the mountain.</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲧⲉⲥϩⲓⲙⲉ ⲙⲛ̄ ⲡⲣⲱⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The woman is with the man.</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϫⲱⲱⲙⲉ ϩⲙ̄ ⲡⲏⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The books are in the house.</td>
+							</tr>
+						</table>
+						<ol class="hide">
 							<li>
 								<ol>
 									<li>
