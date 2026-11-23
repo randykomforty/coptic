@@ -15,7 +15,7 @@
 			li:has(> input[type="checkbox"]) > ul > li:last-child,
 			.list-2-part > li > ul:last-child li:has(> input[type="checkbox"]) > ul > li {
 				color: transparent;
-				transition: color .5s ease;
+				transition: color .25s ease;
 			}
 			
 			tr:has(> td > input[type="checkbox"]:checked) + tr td,
@@ -104,13 +104,22 @@
 				//border: 1px solid;
 			}
 			
+			.subsection.exercises table td:has(> input) {
+				padding-left: 1em;
+			}
+			
 			th {
 				font-weight: normal;
+				text-align: right;
 			}
 			
 			li:has(> input[type="checkbox"]),
 			.subsection.exercises table tr {
 				//border: 1px solid;
+			}
+			
+			.subsection.exercises table tr:nth-child(even) td {
+				padding-bottom: 2em;
 			}
 			
 			li:has(> input[type="checkbox"]) + li {
@@ -1972,8 +1981,262 @@
 						</table>
 					</div>
 					<h4>Exercises</h4>
-					<div class="subsection">
-						<ol>
+					<div class="subsection exercises">
+						<table>
+							<tr>
+								<th>1.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲙ̄ ⲡϫⲟⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on the boat</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲧⲡⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under the sky</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲙ̄ⲡⲏⲩⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the heavens</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲡⲣ̄ⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about the king</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ ⲑⲙ̄ϩⲁⲗ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with the (female) slave</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲧⲉⲙⲣⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the harbor</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓ ⲡⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on the river</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲡⲛⲟⲩⲃ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about the gold</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲛⲉⲙⲣⲟⲟⲩⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the harbors</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲡϫⲟⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under the boat</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ϩⲉⲛⲣ̄ⲣⲱⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about some kings</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲉⲛⲣⲱⲙⲉ ⲙⲛ̄ ϩⲉⲛϩⲓⲟⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>some men and some women</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲉⲛⲧⲟⲟⲩ ⲙⲛ̄ ϩⲉⲛϩⲓⲟⲟⲩⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>some mountains and some roads</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲟⲩⲱⲛⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under a stone</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲛ̄ ⲟⲩⲧⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on a mountain</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲟⲩⲧⲃ̄ⲧ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in a fish</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓ ϩⲉⲛⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on some houses</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ ⲟⲩϩⲗ̄ⲗⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with an old woman</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩϫⲱⲱⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about a book</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲡⲟⲩⲟⲉⲓⲛ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about the light</td>
+							</tr>
+							<tr>
+								<th>2.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲧⲃ̄ⲧ ⲙ̄ ⲡⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the fish (pl.) of the river</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲉϫⲏⲩ ⲛ̄ ⲛ̄ⲣⲱⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the men's boats</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲏⲓ ⲙ̄ ⲡⲣ̄ⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the king's houses</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲣⲁⲛ ⲙ̄ ⲡϩⲗ̄ⲗⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the old man's name</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲟⲩⲟⲉⲓⲛ ⲛ̄ ⲧⲡⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the light of the sky</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲙⲟⲟⲩ ⲛ̄ ⲧⲉⲙⲣⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the water of the harbor</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲣⲁⲛ ⲛ̄ ⲧⲣ̄ⲣⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the queen's name</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϫⲱⲱⲙⲉ ⲙ̄ ⲡϩⲗ̄ⲗⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the monk's books</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲙⲟⲟⲩ ⲙ̄ ⲡⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the water of the river</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲉⲛⲱⲛⲉ ⲛ̄ⲧⲉ ⲡⲧⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>some stones of the mountain</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩϩⲙ̄ϩⲁⲗ ⲛ̄ⲧⲉ ⲡⲣ̄ⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>a slave of the king</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲧⲉⲥϩⲓⲙⲉ ⲙ̄ ⲡϩⲙ̄ϩⲁⲗ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the wife of the slave</td>
+							</tr>
+							<tr>
+								<th>3.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ⲟⲩⲟⲩⲟⲉⲓⲛ ϩⲛ̄ ⲙ̄ⲡⲏⲩⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is (a) light in the heavens. / Light is in the heavens.</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ⲧⲃ̄ⲧ ϩⲛ̄ ⲧⲉⲙⲣⲱ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There are no fish in the harbor. / No fish are in the harbor.</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ⲙⲟⲟⲩ ϩⲙ̄ ⲡⲉⲓⲉⲣⲟ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is no water in the river. / No water is in the river.</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ⲟⲩϩⲗ̄ⲗⲟ ϩⲓ ⲧⲉϩⲓⲏ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>An old man is on the road. / There is an old man on the road.</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ϩⲉⲛⲱⲛⲉ ϩⲛ̄ ⲧⲉⲙⲣⲱ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There are some stones in the harbor. / Some stones are in the harbor.</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ⲏⲓ ϩⲓϫⲙ̄ ⲡⲧⲟⲟⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is no house on the mountain. / No house is on the mountain.</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲉϫⲏⲩ ϩⲓ ⲡⲉⲓⲉⲣⲟ ⲁⲛ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The boats are not on the river.</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ϫⲟⲓ ϩⲓ ⲡⲉⲓⲉⲣⲟ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>No boat is on the river. / There is not a boat on the river.</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϫⲱⲱⲙⲉ ϩⲓϫⲙ̄ ⲡϫⲟⲓ ⲁⲛ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The books are not on the boat.</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ⲛⲟⲩⲃ ϩⲙ̄ ⲡⲏⲓ ⲙ̄ ⲡϩⲙ̄ϩⲁⲗ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is no gold in the slave's house. / No gold is in the slave's house.</td>
+							</tr>
+						</table>
+						<ol class="hide">
 							<li>
 								<ol>
 									<li>
@@ -2541,8 +2804,292 @@
 						</table>
 					</div>
 					<h4>Exercises</h4>
-					<div class="subsection">
-						<ol>
+					<div class="subsection exercises">
+						<table>
+							<tr>
+								<th>1.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲛ̄ ⲧⲉⲕⲕⲗⲏⲥⲓⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at the entrance of the church</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲛⲁϩⲣⲙ̄ ⲡⲣ̄ⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the presence of the king</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲙ̄ ⲡⲧⲁⲫⲟⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the tomb</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ ⲙ̄ⲙⲁⲑⲏⲧⲏⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with the disciples</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲣⲟ ⲙ̄ ⲡⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the door of the house</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡϫⲟⲉⲓⲥ ⲙ̄ ⲡϫⲟⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the boat's owner</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϫⲓⲥⲟⲟⲩⲉ ⲛ̄ ⲛⲉϫⲏⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the owners of the boats</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲧϣⲉⲉⲣⲉ ⲙ̄ ⲡϩⲙ̄ϩⲁⲗ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the (male) slave's daughter</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲙ̄ ⲡⲣⲟ ⲙ̄ ⲡⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at the entranceway / doorway of the house</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲉⲕⲕⲗⲏⲥⲓⲁ ⲛ̄ⲧⲉ ⲡϯⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>a church of the village</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲉⲡⲓⲥⲧⲟⲗⲏ ⲛ̄ⲧⲉ ⲡⲁⲩⲗⲟⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>a letter of Paul</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙ̄ⲙⲁⲑⲏⲧⲏⲥ ⲛ̄ ⲓ̄ⲥ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the disciples of Jesus</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲙ̄ ⲡⲣⲁⲛ ⲙ̄ ⲡϫⲟⲉⲓⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the name of the Lord</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲁϩⲣⲙ̄ ⲡⲛⲟⲩⲧⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the presence of God</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲉⲕⲣⲟ ⲙ̄ ⲡⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the bank of the river</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲙ̄ ⲡⲉⲕⲣⲟ ⲛ̄ ⲑⲁⲗⲁⲥⲥⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>upon the shore of the sea</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲟⲩⲕⲁⲕⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in darkness</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲙ̄ ⲡⲣⲟ ⲙ̄ ⲡⲧⲁⲫⲟⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at the entrance / door of the tomb</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϫⲱⲱⲙⲉ ⲙ̄ ⲡⲙⲁⲑⲏⲧⲏⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the disciple's books</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲣⲱⲙⲉ ⲛ̄ ⲛⲉⲧⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the men of the villages</td>
+							</tr>
+							<tr>
+								<th>2.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲱⲛⲉ ⲉⲧ ϩⲛ̄ ⲧⲉⲙⲣⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the stone which is in the harbor</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙ̄ⲙⲁⲑⲏⲧⲏⲥ ⲉⲧ ⲙⲛ̄ ⲓ̄ⲥ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the disciples who are with Jesus</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲕⲁⲕⲉ ⲉⲧ ϩⲓϫⲛ̄ ⲧⲡⲟⲗⲓⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the darkness which is upon the city</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲉⲕⲕⲗⲏⲥⲓⲁ ⲉⲧ ϩⲛ̄ ⲧⲡⲟⲗⲓⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the churches which are in the city</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲟⲩⲟⲉⲓⲛ ⲉⲧ ϩⲛ̄ ⲙ̄ⲡⲏⲩⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the light which is in the heavens</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲧⲃ̄ⲧ ⲉⲧ ϩⲛ̄ ⲑⲁⲗⲁⲥⲥⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the fish which are in the sea</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡϩⲙ̄ϩⲁⲗ ⲉⲧ ⲛ̄ⲛⲁϩⲣⲙ̄ ⲡϫⲟⲉⲓⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the slave who is in the presence of the master</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲙⲟⲟⲩ ⲉⲧ ϩⲙ̄ ⲡⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the water which is in the river</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲁⲅⲅⲉⲗⲟⲥ ⲉⲧ ϩⲛ̄ ⲙ̄ⲡⲏⲩⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the angels who are in the heavens</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϩⲗ̄ⲗⲟ ⲉⲧ ϩⲙ̄ ⲡⲧⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the monks who are in the monastery</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲣⲱⲙⲉ ⲛ̄ ⲧⲡⲟⲗⲓⲥ ⲉⲧ ⲙ̄ⲙⲁⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the men of that city</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲉⲧⲙⲉ ⲉⲧ ⲙ̄ⲙⲁⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>those villages</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙ̄ⲙⲁⲑⲏⲧⲏⲥ ⲙ̄ ⲡⲣⲱⲙⲉ ⲉⲧ ⲙ̄ⲙⲁⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>that man's disciples</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϣⲏⲣⲉ ⲙ̄ ⲡϩⲙ̄ϩⲁⲗ ⲉⲧ ⲙ̄ⲙⲁⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the children / sons of that (male) slave</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲉϫⲏⲩ ⲉⲧ ϩⲓϫⲙ̄ ⲡⲉⲕⲣⲟ ⲙ̄ ⲡⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>the ships which are on the bank of the river</td>
+							</tr>
+							<tr>
+								<th>3.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲛⲟⲩⲧⲉ ϩⲛ̄ ⲧⲡⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>God is in heaven.</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ⲉⲕⲕⲗⲏⲥⲓⲁ ϩⲙ̄ ⲡϯⲙⲉ ⲉⲧ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>No church is in that village. / There is no church in that village.</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ⲟⲩⲁⲅⲅⲉⲗⲟⲥ ϩⲓⲣⲙ̄ ⲡⲣⲟ ⲙ̄ ⲡⲧⲁⲫⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is an angel at the door of the tomb. / An angel is at the door of the tomb.</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲉⲡⲓⲥⲧⲟⲗⲏ ⲙⲛ̄ ⲛ̄ϫⲱⲱⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The letters are with the books.</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ϫⲱⲱⲙⲉ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is no book there. / No book is there.</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ⲟⲩⲙⲁⲑⲏⲧⲏⲥ ⲛ̄ⲧⲉ ⲡⲁⲩⲗⲟⲥ ϩⲓⲣⲙ̄ ⲡⲣⲟ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is a disciple of Paul in the doorway. / A disciple of Paul is in the doorway.</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄-ⲟⲩⲟⲉⲓⲛ ϩⲙ̄ ⲡⲕⲁⲕⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is no light in the darkness.</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡϫⲟⲉⲓⲥ ⲙ̄ ⲡⲏⲓ ϩⲙ̄ ⲡⲏⲓ ⲁⲛ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The owner of the house is not in the house.</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡϫⲟⲓ ϩⲓϫⲙ̄ ⲡⲉⲓⲉⲣⲟ ⲁⲛ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The boat is not on the river.</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϣⲏⲣⲉ ⲙ̄ ⲡϯⲙⲉ ϩⲓ ⲧⲉϩⲓⲏ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The children of the village are on the road.</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ϩⲉⲛⲧⲁⲫⲟⲥ ϩⲛ̄ ⲛⲉⲕⲣⲱⲟⲩ ⲉⲧ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There are some tombs in those banks.</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ⲟⲩⲕⲁⲕⲉ ϩⲓϫⲛ̄ ⲧⲡⲟⲗⲓⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There is (a) darkness upon the city.</td>
+							</tr>
+						</table>
+						<ol class="hide">
 							<li>
 								<ol>
 									<li>
