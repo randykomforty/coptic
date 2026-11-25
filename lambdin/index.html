@@ -13,6 +13,7 @@
 			
 			tr:has(> td > input[type="checkbox"]) + tr td,
 			li:has(> input[type="checkbox"]) > ul > li:last-child,
+			tr.list-2-part > td + td,
 			.list-2-part > li > ul:last-child li:has(> input[type="checkbox"]) > ul > li {
 				opacity: 0;
 				//transition: opacity .25s ease;
@@ -20,8 +21,21 @@
 			
 			tr:has(> td > input[type="checkbox"]:checked) + tr td,
 			li:has(> input[type="checkbox"]:checked) > ul > li:last-child,
+			tr.list-2-part > td:has(> input[type="checkbox"]:checked) + td,
 			.list-2-part > li > ul:last-child li:has(> input[type="checkbox"]:checked) > ul > li {
 				opacity: 1;
+			}
+			
+			tr.list-2-part > th:nth-child(2) {
+				font-size: 2em;
+				padding-bottom: 0.5em;
+				line-height: 1;
+			}
+			
+			tr.list-2-part > th:nth-child(2):before {
+				content: "↳";
+				position: relative;
+				top: -3px;
 			}
 			
 			/* presentation */
@@ -6492,8 +6506,286 @@
 						</table>
 					</div>
 					<h4>Exercises</h4>
-					<div class="subsection">
-						<ol>
+					<div class="subsection exercises">
+						<table>
+							<tr>
+								<th></th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲛⲉⲥⲛⲏⲩ ⲃⲱⲕ ⲉ ⲧⲡⲟⲗⲓⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The brothers went to the city.</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡϣⲏⲣⲉ ⲁϥⲉⲓ ⲉ ⲡⲉⲛⲏⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The boy came to our house.</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲥⲃⲱⲕ ⲛ̄ϭⲓ ⲧⲉϥⲥⲱⲛⲉ ⲉⲣⲙ̄ ⲡⲣⲟ ⲛ̄ ⲧⲉⲕⲕⲗⲏⲥⲓⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>His sister went to the doorway of the church.</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲉⲓ ⲛ̄ⲥⲁ ⲛⲉⲩϣⲏⲣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They came after their children.</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲧⲉϥⲙⲁⲁⲩ ⲙⲟⲟϣⲉ ⲉ ⲡⲧⲁⲫⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>His mother walked to the tomb.</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲁⲗⲉ ⲉ ⲡϫⲟⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>His disciples climbed onto the boat.</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲃⲱⲕ ϣⲁ ⲕⲉⲥⲟⲛ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He went to another brother.</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲉⲓ ⲉⲣⲙ̄ ⲡⲉϥⲏⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We came to the entrance of his house.</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲙⲟⲟϣⲉ ⲛ̄ϭⲓ ⲓ̄ⲥ̄ ⲉϫⲙ̄ ⲡⲉⲕⲣⲟ ⲛ̄ ⲑⲁⲗⲁⲥⲥⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Jesus walked on the shore of the sea.</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙ̄ⲙⲟⲛⲁⲭⲟⲥ ⲁⲩⲁⲗⲉ ⲉ ⲡⲧⲟⲟⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The monks went up to the monastery.</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ ⲡⲱⲧ ⲉ ⲕⲉⲙⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>His disciples ran to another place.</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥϣⲗⲏⲗ ⲉⲧⲃⲉ ⲛⲉϥϣⲏⲣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He prayed for his children.</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁⲧⲉⲧⲛ̄ⲡⲱⲧ ⲉϫⲛ̄ ⲧⲉϩⲓⲏ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why did you (pl.) run onto the road?</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲙⲟⲟϣⲉ ⲙⲛ̄ ⲛⲉⲛϩⲓⲟⲙⲉ ⲉ ⲡϯⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We walked with our wives to the village.</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩϩⲗ̄ⲗⲟ ⲃⲱⲕ ϣⲁ ⲡⲉⲡⲓⲥⲕⲟⲡⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>A monk went to the bishop.</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥϣⲗⲏⲗ ⲉⲧⲃⲉ ⲛⲉⲛⲛⲟⲃⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He prayed for our sins.</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲥⲉⲓ ⲛ̄ϭⲓ ⲑⲙ̄ϩⲁⲗ ⲛ̄ⲛⲁϩⲣⲙ̄ ⲡⲉⲥϫⲟⲉⲓⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The (female) slave came into the presence of her master.</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲁⲗⲉ ⲛ̄ϭⲓ ⲡⲉⲛϫⲟⲉⲓⲥ ⲉ ⲧⲡⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Our Lord ascended to heaven.</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁⲕⲡⲱⲧ ⲛ̄ⲥⲁ ⲡⲁⲉⲓⲱⲧ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why did you (ms. sg.) pursue my father?</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁⲣⲣⲓⲙⲉ ⲉⲧⲃⲉ ⲛ̄ⲣⲱⲙⲉ ⲉⲧ ⲙ̄ⲙⲁⲩ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why did you weep over those men?</td>
+							</tr>
+							<tr>
+								<th></th><th>21.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥϩⲙⲟⲟⲥ ⲉϫⲙ̄ ⲡⲉⲕⲣⲟ ⲙ̄ ⲡⲉⲓⲉⲣⲟ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He sat down on the river's bank.</td>
+							</tr>
+							<tr>
+								<th></th><th>22.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲑⲗ̄ⲗⲱ ⲣⲓⲙⲉ ⲉ ⲡⲉⲥϣⲏⲣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The old woman wept for her son.</td>
+							</tr>
+							<tr>
+								<th></th><th>23.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩϩⲙⲟⲟⲥ ⲙⲛ̄ ⲛⲉⲩⲥⲛⲏⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They sat down with their brothers.</td>
+							</tr>
+							<tr>
+								<th></th><th>24.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲓⲙⲟⲟϣⲉ ϩⲓ ⲧⲉϩⲓⲏ ⲙⲛ̄ ⲧⲁϣⲉⲉⲣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>I walked on the road with my daughter.</td>
+							</tr>
+							<tr>
+								<th></th><th>25.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲃⲱⲕ ϩⲓ ⲧⲉϩⲓⲏ ⲉⲧ ⲙ̄ⲙⲁⲩ ⲉ ⲧⲡⲟⲗⲓⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They went on that road to the city.</td>
+							</tr>
+							<tr>
+								<th></th><th>26.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡⲉϥϩⲧⲟ ⲡⲱⲧ ϣⲁ ⲧⲉϩⲧⲱⲣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>His (male) horse ran up to the mare.</td>
+							</tr>
+							<tr>
+								<th></th><th>27.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲁⲗⲉ ⲉϫⲙ̄ ⲡⲉϥϩⲧⲟ ⲛ̄ϭⲓ ⲡⲉⲕⲓⲥⲕⲟⲡⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The bishop mounted his horse.</td>
+							</tr>
+							<tr>
+								<th></th><th>28.</th><td><input type="checkbox"></td><td><span class="coptic">ⲧⲉϥⲙⲁⲁⲩ ⲁⲥⲉⲓ ϣⲁ ⲡⲣ̄ⲣⲟ ⲛ̄ ⲧⲡⲟⲗⲓⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>His mother came to the king in / of the city.</td>
+							</tr>
+							<tr>
+								<th></th><th>29.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛϣⲗⲏⲗ ϩⲁ ⲛⲉⲛⲥⲛⲏⲩ ⲉⲧ ϩⲙ̄ ⲡⲧⲟⲟⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We prayed for our brothers who were / are in the monastery.</td>
+							</tr>
+							<tr>
+								<th></th><th>30.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲓⲣⲓⲙⲉ ⲉϫⲛ̄ ⲛⲁⲛⲟⲃⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>I wept over my sins.</td>
+							</tr>
+							<tr>
+								<th></th><th>31.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡⲣ̄ⲣⲟ ϩⲙⲟⲟⲥ ⲉϫⲙ̄ ⲡⲉϥⲑⲣⲟⲛⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The king sat down on his throne.</td>
+							</tr>
+							<tr>
+								<th></th><th>32.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡⲙⲁⲑⲏⲧⲏⲥ ϩⲙⲟⲟⲥ ϩⲓⲣⲙ̄ ⲡⲣⲟ ⲙ̄ ⲡⲏⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The disciple sat down in the doorway of the house.</td>
+							</tr>
+							<tr>
+								<th></th><th>33.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲡⲱⲧ ⲛ̄ϭⲓ ⲛ̄ϣⲏⲣⲉ ϩⲓ ⲧⲉϩⲓⲏ ⲉ ⲧⲉⲙⲣⲱ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The children ran on the road to the harbor.</td>
+							</tr>
+							<tr>
+								<th></th><th>34.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡⲉⲓⲱ ⲙⲟⲟϣⲉ ⲛ̄ⲥⲁ ⲡⲉϥϫⲟⲉⲓⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The donkey walked behind its owner.</td>
+							</tr>
+							<tr>
+								<th></th><th>35.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲁⲗⲉ ⲉϫⲛ̄ ⲛⲉⲛⲉⲟⲟⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We mounted our donkeys.</td>
+							</tr>
+							<tr>
+								<th></th><th>36.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩϩⲙⲟⲟⲥ ⲉ ⲧⲉⲧⲣⲁⲡⲉⲍⲁ ⲛ̄ϭⲓ ⲧⲉϥⲥϩⲓⲙⲉ ⲙⲛ̄ ⲛⲉϥϣⲉⲉⲣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>His wife and his daughters sat down at the table.</td>
+							</tr>
+							<tr>
+								<th></th><th>37.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ϩⲉⲛⲣⲱⲙⲉ ⲉⲓ ϩⲁϩⲧⲛ̄ ⲧⲉⲕⲕⲗⲏⲥⲓⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Some men came near the church.</td>
+							</tr>
+							<tr>
+								<th></th><th>38.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁⲕⲙⲟⲟϣⲉ ⲛ̄ⲥⲁ ⲡⲉⲓⲱ ϩⲓϫⲛ̄ ⲧⲉϩⲓⲏ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why did you walk behind the donkey on the road?</td>
+							</tr>
+							<tr>
+								<th></th><th>39.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲓ̄ⲥ̄ ϩⲙⲟⲟⲥ ϩⲁϩⲧⲛ̄ ⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Jesus sat down with his disciples.</td>
+							</tr>
+							<tr>
+								<th></th><th>40.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲙⲟⲟϣⲉ ⲛ̄ϭⲓ ⲛ̄ϣⲟⲟⲥ ⲛ̄ⲥⲁ ⲛⲉⲩⲉⲥⲟⲟⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The shepherds walked behind their sheep.</td>
+							</tr>
+							<tr>
+								<th></th><th>41.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡϭⲁⲙⲟⲩⲗ ⲡⲱⲧ ⲉ ⲧⲥⲱϣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The camel ran to the field.</td>
+							</tr>
+							<tr>
+								<th></th><th>42.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛϣⲗⲏⲗ ⲉ ⲟⲩⲙⲁⲉⲓⲛ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We prayed for a sign.</td>
+							</tr>
+							<tr>
+								<th></th><th>43.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡⲗⲁⲟⲥ ⲛ̄ ⲧⲡⲟⲗⲓⲥ ⲉⲓ ϣⲁ ⲡϩⲏⲅⲉⲙⲱⲛ ⲛ̄ ϯⲟⲩⲇⲁⲓⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The people of the city came to the governor of Judea.</td>
+							</tr>
+							<tr>
+								<th></th><th>44.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲧϣⲉⲉⲣⲉ ϩⲙⲟⲟⲥ ⲙⲛ̄ ⲛⲉⲥⲥⲩⲅⲅⲉⲛⲏⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The girl sat down with her relatives.</td>
+							</tr>
+							<tr>
+								<th></th><th>45.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲃⲱⲕ ⲛ̄ϭⲓ ⲡϩⲏⲅⲉⲙⲱⲛ ⲉ ⲧⲥⲩⲣⲓⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The governor went to Syria.</td>
+							</tr>
+							<tr>
+								<th></th><th>46.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲁⲓ ⲡⲉ ⲡⲛⲟⲩⲧⲉ ⲙ̄ ⲡⲓ̄ⲏ̄ⲗ̄.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>This is the God of Israel.</td>
+							</tr>
+						</table>
+						<ol class="hide">
 							<li>
 								<input type="checkbox">
 							<ul>
@@ -6976,8 +7268,364 @@
 						</p>
 					</div>
 					<h4>Exercises</h4>
-					<div class="subsection">
-						<ol>
+					<div class="subsection exercises">
+						<table>
+							<tr>
+								<th>1.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲛ̄ ⲛⲉⲕϣⲗⲏⲗ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through your (ms. sg.) prayers</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲉ ⲛⲉⲛⲥⲛⲏⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against our brothers</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲓⲧⲛ̄ ⲧⲉⲓϩⲓⲏ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>out through this road</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ⲉ ⲡⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>away to the river</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲛ̄ ⲧⲡⲟⲗⲓⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>out of the city</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲓ ⲧⲉⲧⲣⲁⲡⲉⲍⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>away from the table</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲡⲉϥϩⲱⲃ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about his task</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲉ ⲛⲉⲧⲛ̄ϣⲁϫⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against your (pl.) words</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲛ̄ ⲛⲉϥϣⲁϫⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through his words</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϩⲟⲩⲛ ⲉ ⲣⲁⲕⲟⲧⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>into Alexandria</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϩⲣⲁⲓ ⲉ ⲡⲃⲏⲙⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>up to the platform</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϩⲣⲁⲓ ⲉϫⲙ̄ ⲡⲧⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>up onto the mountain</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϩⲟⲩⲛ ⲉ ⲧⲁⲣⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>into my cell</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲛⲉⲓϩⲃⲏⲩⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under these tasks / because of these things</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ϣⲁ ⲛⲉϥⲙⲁⲑⲏⲧⲏⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to his disciples</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲛ̄ ⲧⲉϥⲣⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at the entrance of his cell</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲡⲟⲩⲣⲓⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about your (fm. sg.) weeping</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲙ̄ ⲡⲉϥⲡⲱⲧ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in his flight</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲡⲉⲥⲏⲧ ⲉ ⲑⲁⲗⲁⲥⲥⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>down to the sea</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲡⲉⲥⲏⲧ ⲉ ⲡⲙⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>down to the water</td>
+							</tr>
+							<tr>
+								<th></th><th>21.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲡⲁϩⲟⲩ ⲉ ⲡⲉⲩϯⲙⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>back to their village</td>
+							</tr>
+							<tr>
+								<th></th><th>22.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲑⲏ ⲉ ⲛ̄ⲧⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>ahead to the mountains</td>
+							</tr>
+							<tr>
+								<th></th><th>23.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲓ ⲡⲃⲏⲙⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>away from the platform</td>
+							</tr>
+							<tr>
+								<th></th><th>24.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϩⲣⲁⲓ ⲉϫⲙ̄ ⲡⲉϩⲧⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>up onto the horse</td>
+							</tr>
+							<tr>
+								<th></th><th>25.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲓⲧⲙ̄ ⲡⲣⲟ ⲙ̄ ⲡⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>out through the door of the house</td>
+							</tr>
+							<tr>
+								<th></th><th>26.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲙ̄ ⲡⲉⲓⲙⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>away from here</td>
+							</tr>
+							<tr>
+								<th></th><th>27.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲉ ⲡⲣⲁⲛ ⲙ̄ ⲡⲣ̄ⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against the name of the king</td>
+							</tr>
+							<tr>
+								<th></th><th>28.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲓⲧⲙ̄ ⲡϫⲟⲉⲓⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through the agency of the Lord</td>
+							</tr>
+							<tr>
+								<th></th><th>29.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲡⲉⲧⲛ̄ⲡⲱⲧ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about your (pl.) flight</td>
+							</tr>
+							<tr>
+								<th>2.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲧⲱⲟⲩⲛ, ⲁⲩⲡⲱⲧ ⲉⲃⲟⲗ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They got up and ran away.</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲉⲓ ⲉϩⲟⲩⲛ, ⲁⲛϩⲙⲟⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We came in and sat down.</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲃⲱⲕ ⲉⲡⲁϩⲟⲩ ⲉ ⲡⲉϥϯⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He went back to his village.</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥϩⲙⲟⲟⲥ ⲁⲩⲱ ⲁϥϣⲁϫⲉ ⲙⲛ̄ ⲛ̄ⲣⲱⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He sat down and spoke with the men.</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲓⲧⲱⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓ ⲧⲉⲧⲣⲁⲡⲉⲍⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>I got up from the table.</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲙⲟⲟϣⲉ ⲉϩⲟⲩⲛ ⲉ ⲣⲁⲕⲟⲧⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We walked in to Alexandria.</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲡⲕⲉⲣⲱⲙⲉ ⲁϥⲁⲗⲉ ⲉϩⲣⲁⲓ ⲉϫⲙ̄ ⲡⲉⲓⲱ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The other man got up onto the donkey.</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁⲣⲡⲱⲧ ⲉⲃⲟⲗ ϩⲙ̄ ⲡⲟⲩⲏⲓ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why have you (feminine sing.) run out of your house?</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡϩⲗ̄ⲗⲟ ⲃⲱⲕ ⲉϩⲟⲩⲛ ⲉ ⲧⲉϥⲣⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The monk went into his cell.</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁⲧⲉⲧⲛ̄ϣⲁϫⲉ ⲛ̄ⲥⲁ ⲡⲉⲛϫⲟⲉⲓⲥ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why have you (pl.) spoken against our Lord?</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲓϩⲙⲟⲟⲥ ϩⲁϩⲧⲙ̄ ⲡⲁⲉⲓⲱⲧ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>I sat down beside my father.</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩϣⲁϫⲉ ϩⲁ ⲡⲉⲩⲏⲣⲡ̄.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They spoke about their wine.</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲛ̄-ϩⲉⲛⲉⲟⲟⲩ ⲙⲛ̄ ϩⲉⲛϩⲧⲱⲱⲣ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>There are some donkeys and some horses there.</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲉⲓ ⲉⲡⲉⲥⲏⲧ ⲉⲃⲟⲗ ϩⲓ ⲡⲃⲏⲙⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He came down from the platform.</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲧⲱⲟⲩⲛ ⲛ̄ϭⲓ ⲛ̄ⲣⲱⲙⲉ ⲉϩⲣⲁⲓ ⲉϫⲙ̄ ⲡⲣ̄ⲣⲟ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The men rose up against the king.</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲓϣⲁϫⲉ ⲉⲧⲃⲉ ⲛⲁⲛⲟⲃⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>I talked about my sins.</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲛⲉϩⲓⲟⲙⲉ ⲙⲟⲟϣⲉ ⲉⲡⲉⲥⲏⲧ ⲉ ⲡⲉⲕⲣⲟ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The women walked down to the shore.</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲃⲱⲕ ⲉϩⲣⲁⲓ ⲉ ⲛⲉⲛⲧⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We went up / down to our villages.</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲥⲡⲱⲧ ⲉⲃⲟⲗ ϩⲓⲧⲛ̄ ⲛ̄ⲣⲱⲙⲉ ⲉⲧ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>She fled from those men.</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲃⲱⲕ ⲉϩⲟⲩⲛ ⲛ̄ⲛⲁϩⲣⲙ̄ ⲡⲉⲡⲓⲥⲕⲟⲡⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We went into the presence of the bishop.</td>
+							</tr>
+							<tr>
+								<th></th><th>21.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁⲕⲃⲱⲕ ⲉⲡⲁϩⲟⲩ ⲉ ⲧⲁⲅⲟⲣⲁ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why did you (ms. sg.) go back to the marketplace?</td>
+							</tr>
+							<tr>
+								<th></th><th>22.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲃⲱⲕ ⲉⲃⲟⲗ ϩⲙ̄ ⲡⲉⲓⲕⲟⲥⲙⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He went out of this world.</td>
+							</tr>
+							<tr>
+								<th></th><th>23.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲥϣⲁϫⲉ ⲙⲛ̄ ⲧⲉⲥⲙⲁⲁⲩ ⲉⲧⲃⲉ ⲛⲉⲥϣⲏⲣⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>She spoke with her mother about her children.</td>
+							</tr>
+							<tr>
+								<th></th><th>24.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲁⲗⲉ ⲛ̄ϭⲓ ⲛ̄ⲣⲱⲙⲉ ⲉϩⲣⲁⲓ ⲉϫⲛ̄ ⲛⲉⲩϩⲧⲱⲱⲣ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The men mounted their horses.</td>
+							</tr>
+							<tr>
+								<th></th><th>25.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩϣⲁϫⲉ ⲉ ⲡⲟⲉⲓⲕ ⲙⲛ̄ ⲛ̄ⲧⲃ̄ⲧ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They spoke about the bread and the (pl.) fish.</td>
+							</tr>
+							<tr>
+								<th></th><th>26.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩϣⲁϫⲉ ⲟⲩⲃⲉ ⲛⲉϥⲉⲛⲧⲟⲗⲏ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They spoke against his commandments.</td>
+							</tr>
+							<tr>
+								<th></th><th>27.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲧⲱⲟⲩⲛ ⲉⲃⲟⲗ ϩⲓ ⲡⲉⲑⲣⲟⲛⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He arose from the throne.</td>
+							</tr>
+							<tr>
+								<th></th><th>28.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛⲙⲟⲟϣⲉ ⲉⲑⲏ ϩⲙ̄ ⲡⲕⲁⲕⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We walked ahead in the darkness.</td>
+							</tr>
+							<tr>
+								<th></th><th>29.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲁⲗⲉ ⲉϩⲣⲁⲓ ⲉ ⲡⲃⲏⲙⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He went up to the platform.</td>
+							</tr>
+							<tr>
+								<th></th><th>30.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥϣⲁϫⲉ ⲉⲧⲃⲉ ⲛⲉϩⲃⲏⲩⲉ ⲙ̄ ⲡⲙⲟⲛⲁⲭⲟⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He spoke about the monk's affairs.</td>
+							</tr>
+						</table>
+						<ol class="hide">
 							<li>
 								<ol>
 									<li>
@@ -7714,11 +8362,583 @@
 						</table>
 					</div>
 					<h4>Exercises</h4>
-					<div class="subsection">
+					<div class="subsection exercises">
 						<p>
 							Translate the following prepositional phrases. Replace the nominal object with the appropriate pronominal suffix. E.g. <span class="coptic">ⲉⲧⲃⲉ ⲡⲉⲓϩⲱⲃ</span> → <span class="coptic">ⲉⲧⲃⲏⲏⲧϥ̄</span>.
 						</p>
-						<ol>
+						<table>
+							<tr>
+								<th>1.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϫⲙ̄ ⲡⲕⲁϩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>onto the ground</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲉϫⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>onto it</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲉ ⲡⲉⲩϫⲟⲉⲓⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against their master</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲏϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against him</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓ ⲡⲉϥϭⲗⲟϭ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on his bed</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲱϥ / ϩⲓⲱⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on it</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲙ̄ ⲡⲧⲁⲫⲟⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at the entrance of the tomb</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at its entrance</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲁ ⲡⲉϥⲙⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>after his death</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>after it</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲁϩⲣⲙ̄ ⲡⲛⲟⲩⲧⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the presence of God</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲁϩⲣⲁϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in his presence</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲛ̄ⲉⲓⲉⲣⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the rivers</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϩⲏⲧⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in them</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲛ̄ ⲛⲉⲓϩⲓⲥⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through these afflictions</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲟⲟⲧⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through them</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉ ⲛ̄ⲧⲃ̄ⲧ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to the fish</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲣⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to them</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲡⲉⲩϩⲕⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about their hunger</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲏⲏⲧϥ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about it</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉ ⲡⲉⲥⲣⲁⲛ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to her name</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲣⲟϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to it</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ϣⲁ ⲛⲉϥϩⲙ̄ϩⲁⲗ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to his slaves</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϣⲁⲣⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to them</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲙ̄ ⲡⲕⲁϩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>upon the ground</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>upon it</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲥⲁ ⲡⲉϥϣⲏⲣⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>behind his son</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲥⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>behind him</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲙ̄ ⲡⲉϩⲕⲟ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through the famine</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲟⲟⲧϥ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through it</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲡⲁϭⲗⲟϭ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under my bed</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁⲣⲟϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under it</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲁ ⲡⲉⲛⲡⲱⲧ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>after our flight</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>after it</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲛ̄ ⲧⲉϥⲣⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in his cell</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ϩⲏⲧⲥ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in it</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲙ̄ ⲡⲉⲕϫⲟⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>upon your (ms. sg.) boat</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓϫⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>upon it</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁ ⲛⲉⲧⲛ̄ϩⲓⲥⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under your (pl.) afflictions</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁⲣⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>under them</td>
+							</tr>
+							<tr>
+								<th></th><th>21.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲛ̄ϣⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about the festivals</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲏⲏⲧⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>about them</td>
+							</tr>
+							<tr>
+								<th></th><th>22.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲛ̄ ⲧⲉⲕⲕⲗⲏⲥⲓⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at the entrance of the church</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲣⲱⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>at its entrance</td>
+							</tr>
+							<tr>
+								<th></th><th>23.</th><td><input type="checkbox"></td><td><span class="coptic">ϣⲁ ⲧϩⲗ̄ⲗⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to the old woman</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϣⲁⲣⲟⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>to her</td>
+							</tr>
+							<tr>
+								<th></th><th>24.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲉ ⲛⲁϣⲁϫⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against my words</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲏⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against them</td>
+							</tr>
+							<tr>
+								<th></th><th>25.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲁϩⲣⲛ̄ ⲧⲉϥⲙⲁⲁⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the presence of his mother</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲁϩⲣⲁⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in her presence</td>
+							</tr>
+							<tr>
+								<th></th><th>26.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲙ̄ ⲡⲟⲩⲟⲉⲓⲛ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through the light</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲧⲟⲟⲧϥ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>through it</td>
+							</tr>
+							<tr>
+								<th></th><th>27.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁϩⲧⲛ̄ ⲧⲉⲙⲣⲱ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>near the harbor</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁϩⲧⲏⲥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>near it</td>
+							</tr>
+							<tr>
+								<th></th><th>28.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϫⲙ̄ ⲡⲃⲏⲙⲁ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>onto the platform</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲉϫⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>onto it</td>
+							</tr>
+							<tr>
+								<th></th><th>29.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙ̄ ⲡⲙⲟⲟⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in the water</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲙ̄ⲙⲟϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in it</td>
+							</tr>
+							<tr>
+								<th></th><th>30.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲁ ⲡϣⲁ ⲉⲧ ⲙ̄ⲙⲁⲩ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>after that festival</td>
+							</tr>
+							<tr class="list-2-part">
+								<th></th><th></th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲱϥ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>after it</td>
+							</tr>
+							<tr>
+								<th>2.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ϩⲓⲱⲱⲛ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>away from us</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲙ̄ⲙⲁⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with me</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲃⲟⲗ ⲛ̄ϩⲏⲧ-ⲧⲏⲩⲧⲛ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>from among you (pl.)</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲏⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against me</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲏⲏⲧⲛ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>because of us</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲁϩⲧⲏⲛ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>near us</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉϩⲣⲁⲓ ⲉϫⲱⲛ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>down upon us</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲟⲩⲃⲉ-ⲧⲏⲩⲧⲛ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>against you (pl.)</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲙ̄ⲙⲏⲧⲛ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with you (pl.)</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲡⲉⲥⲏⲧ ⲉϫⲱⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>down onto me</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛ̄ⲛⲁϩⲣⲁⲓ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in my presence</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲏⲏⲧⲕ̄</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>because of you (ms. sg.)</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲁϩⲣⲉ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>in your (fm. sg.) presence</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ϩⲓⲱⲕ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>on you (ms. sg.)</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ⲛⲙ̄ⲙⲁⲛ</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>with us</td>
+							</tr>
+							<tr>
+								<th>3.</th><th>1.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡⲙⲟⲩ ϣⲱⲡⲉ ϩⲙ̄ ⲡⲕⲟⲥⲙⲟⲥ ⲉⲃⲟⲗ ϩⲓⲧⲛ̄ ⲛⲉⲛⲛⲟⲃⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Death came into the world through our sins.</td>
+							</tr>
+							<tr>
+								<th></th><th>2.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲁ ⲛⲁⲓ ⲇⲉ ⲁϥⲙⲟⲩ ⲛ̄ϭⲓ ⲡⲣ̄ⲣⲟ ⲉⲧ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>After these things, that king died.</td>
+							</tr>
+							<tr>
+								<th></th><th>3.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡϣⲏⲣⲉ ϩⲉ ⲉⲡⲉⲥⲏⲧ ⲉϫⲙ̄ ⲡⲕⲁϩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The boy fell down onto the ground.</td>
+							</tr>
+							<tr>
+								<th></th><th>4.</th><td><input type="checkbox"></td><td><span class="coptic">ⲉⲧⲃⲉ ⲟⲩ ⲁ-ⲛⲉⲓϩⲓⲥⲉ ϣⲱⲡⲉ ⲙ̄ⲙⲟⲓ?</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Why have these afflictions befallen me?</td>
+							</tr>
+							<tr>
+								<th></th><th>5.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲛ̄ⲕⲟⲧⲕ̄ ⲉϫⲙ̄ ⲡⲉϭⲗⲟϭ, ⲁϥⲣⲓⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He lay down on the bed and wept.</td>
+							</tr>
+							<tr>
+								<th></th><th>6.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲛ̄ⲣⲱⲙⲉ ϩⲱⲛ ⲉϩⲟⲩⲛ ⲉ ⲡϯⲙⲉ ⲉⲧ ϩⲓϫⲙ̄ ⲡⲧⲟⲟⲩ ⲉⲧ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The men approached the village which was / is on that mountain.</td>
+							</tr>
+							<tr>
+								<th></th><th>7.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲱⲥ ⲇⲉ ⲁⲩϩⲉ ⲉ ⲡⲉⲩϣⲏⲣⲉ ϩⲛ̄ ⲧⲥⲩⲛⲁⲅⲱⲅⲏ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Afterwards, they found their son in the synagogue.</td>
+							</tr>
+							<tr>
+								<th></th><th>8.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩⲙⲟⲩ ⲛ̄ϭⲓ ⲛ̄ⲣⲱⲙⲉ ⲛ̄ ⲧⲉⲓⲡⲟⲗⲓⲥ ϩⲁ ⲟⲩϩⲕⲟ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The men of this city died of a famine.</td>
+							</tr>
+							<tr>
+								<th></th><th>9.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲟⲩϣⲁ ϣⲱⲡⲉ ⲙ̄ ⲡⲉⲓⲙⲁ ⲙ̄ ⲡⲉϩⲟⲟⲩ ⲉⲧ ⲙ̄ⲙⲁⲩ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>A festival happened here on that day.</td>
+							</tr>
+							<tr>
+								<th></th><th>10.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲛϩⲓⲥⲉ ϩⲓⲧⲙ̄ ⲡⲉϩⲕⲟ ⲁⲩⲱ ⲁⲛⲧⲱⲟⲩⲛ, ⲁⲛⲃⲱⲕ ⲉ ⲕⲉϯⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>We grew weary through the famine, and arose and went to another village.</td>
+							</tr>
+							<tr>
+								<th></th><th>11.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥϣⲁϫⲉ ⲛⲙ̄ⲙⲁⲛ ⲉⲧⲃⲉ ⲛ̄ϫⲱⲱⲙⲉ ⲉⲧ ϩⲛ̄ ⲧⲡⲟⲗⲓⲥ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>He spoke with us about the books which were / are in the city.</td>
+							</tr>
+							<tr>
+								<th></th><th>12.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲓϩⲓⲥⲉ, ⲁⲓⲛ̄ⲕⲟⲧⲕ̄, ⲁⲓϣⲗⲏⲗ ⲉ ⲡⲛⲟⲩⲧⲉ ⲉⲧⲃⲉ ⲛⲉⲓϣⲁϫⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>I became weary, I lay down, and I prayed to God about these things.</td>
+							</tr>
+							<tr>
+								<th></th><th>13.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥϩⲱⲛ ⲉϩⲟⲩⲛ ⲛ̄ϭⲓ ⲡⲉϩⲟⲟⲩ ⲙ̄ ⲡϣⲁ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The day of the festival drew near.</td>
+							</tr>
+							<tr>
+								<th></th><th>14.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲡϩⲗ̄ⲗⲟ ⲙⲟⲩ ϩⲓⲣⲙ̄ ⲡⲣⲟ ⲛ̄ ⲧⲉϥⲣⲓ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The monk died at the doorway of his cell.</td>
+							</tr>
+							<tr>
+								<th></th><th>15.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲩϩⲕⲟ ⲁⲩⲱ ⲁⲩⲉⲓ ⲉⲡⲁϩⲟⲩ ⲉ ⲡϯⲙⲉ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>They became hungry and they came back to the village.</td>
+							</tr>
+							<tr>
+								<th></th><th>16.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲱⲥ ⲇⲉ ⲁ-ⲧⲉⲛⲡⲟⲗⲓⲥ ϩⲉ ⲉⲃⲟⲗ ϩⲓⲧⲟⲟⲧϥ̄.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>Afterwards, our city perished by means of it / him.</td>
+							</tr>
+							<tr>
+								<th></th><th>17.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁϥⲧⲱⲟⲩⲛ ⲛ̄ϭⲓ ⲡϣⲏⲣⲉ ⲉⲃⲟⲗ ϩⲓ ⲡⲕⲁϩ, ⲁϥⲡⲱⲧ ϣⲁ ⲡⲉϥⲉⲓⲱⲧ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The boy arose from the ground and ran to his father.</td>
+							</tr>
+							<tr>
+								<th></th><th>18.</th><td><input type="checkbox"></td><td><span class="coptic">ⲙⲛ̄ⲛ̄ⲥⲁ ⲛⲉⲓϣⲁϫⲉ ⲁ-ⲡⲉⲛϫⲟⲉⲓⲥ ⲛ̄ⲕⲟⲧⲕ̄.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>After these things, our Lord died.</td>
+							</tr>
+							<tr>
+								<th></th><th>19.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁⲥϣⲱⲡⲉ ⲇⲉ ⲁⲥϩⲉ ⲉ ⲡⲛⲟⲩⲃ ϩⲁ ⲡⲉϭⲗⲟϭ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>It happened that she found the gold under the bed.</td>
+							</tr>
+							<tr>
+								<th></th><th>20.</th><td><input type="checkbox"></td><td><span class="coptic">ⲁ-ⲛⲉϫⲏⲩ ϩⲱⲛ ⲉϩⲟⲩⲛ ⲉ ⲧⲉⲙⲣⲱ.</span></td>
+							</tr>
+							<tr>
+								<th></th><th></th><td></td><td>The boats approached the harbor.</td>
+							</tr>
+						</table>
+						<ol class="hide">
 							<li>
 								<ol class="list-2-part">
 									<li>
